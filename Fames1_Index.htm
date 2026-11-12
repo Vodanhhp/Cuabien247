@@ -3,117 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frame1_Welcome</title>
-    
+    <title>Trang Chủ | CuaBien247</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            padding: 12px;
-            background-color: #ffffff;
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-page: #ffffff;
+            --bg-card: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 10px;
         }
 
-        /* Thiết kế dạng các card bài viết hiện đại, mượt mà */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 14.5px;
+            padding: 16px;
+        }
+
+        .post-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
         .post-card {
             display: flex;
             gap: 20px;
             align-items: center;
-            background: #fff;
-            padding: 15px 0;
-            border-bottom: 1px solid #eaeaea;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px;
+            transition: all 0.2s ease;
         }
 
-        .post-card:last-of-type {
-            border-bottom: none;
+        .post-card:hover {
+            background: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            transform: translateY(-2px);
         }
 
-        /* Hình ảnh tự động co giãn thông minh, không bao giờ bị vỡ khung */
         .post-img {
-            flex: 0 0 240px;
-            max-width: 100%;
+            flex: 0 0 230px;
+            height: 155px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: #ffffff;
         }
 
         .post-img img {
             width: 100%;
-            height: auto;
-            border-radius: 8px;
+            height: 100%;
             object-fit: cover;
-            border: 1px solid #e2e8f0;
             display: block;
         }
 
         .post-content {
             flex: 1;
             min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
         .post-title {
-            font-size: 15px;
+            font-size: 15.5px;
             font-weight: 700;
-            color: #0056b3;
-            margin-bottom: 8px;
+            color: var(--primary);
             line-height: 1.4;
         }
 
         .post-desc {
             font-size: 13.5px;
-            color: #475569;
-            margin-bottom: 12px;
+            color: var(--text-muted);
             text-align: justify;
         }
 
-        /* Nút xem thêm tinh tế */
+        .post-desc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .post-desc a:hover {
+            text-decoration: underline;
+        }
+
+        .post-footer {
+            margin-top: 4px;
+        }
+
         .btn-more {
-            display: inline-block;
-            background: #2563eb;
-            color: #fff;
-            padding: 6px 14px;
-            border-radius: 4px;
-            font-size: 12.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary);
+            color: #ffffff;
+            padding: 7px 16px;
+            border-radius: 999px;
+            font-size: 13px;
             font-weight: 600;
             text-decoration: none;
-            transition: background 0.2s;
+            transition: background 0.2s ease;
         }
+
         .btn-more:hover {
-            background: #1d4ed8;
+            background: var(--primary-hover);
         }
 
         /* Khung danh ngôn cuối trang */
         .quote-box {
-            margin-top: 20px;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-left: 4px solid #2563eb;
-            padding: 16px;
-            border-radius: 6px;
+            margin-top: 22px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-left: 4px solid var(--primary);
+            padding: 18px;
+            border-radius: var(--radius);
             text-align: center;
         }
 
         .quote-box p {
-            font-size: 14px;
-            color: #0056b3;
-            font-weight: 500;
-            margin-bottom: 6px;
+            font-size: 14.5px;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 4px;
         }
 
         .quote-box i {
             font-size: 13px;
-            color: #64748b;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 8px;
         }
 
         .quote-box a {
             display: inline-block;
-            margin-top: 8px;
-            font-size: 12.5px;
-            color: #2563eb;
+            font-size: 13px;
+            color: var(--primary);
             font-weight: 700;
             text-decoration: none;
         }
 
-        /* Tối ưu riêng cho màn hình điện thoại (Mobile) */
-        @media (max-width: 768px) {
+        .quote-box a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 720px) {
+            body { padding: 12px; }
             .post-card {
                 flex-direction: column;
                 align-items: stretch;
@@ -122,74 +171,73 @@
             .post-img {
                 flex: none;
                 width: 100%;
-                max-width: 280px;
-                margin: 0 auto;
+                height: 180px;
+            }
+            .btn-more {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
-
-    <script language="JavaScript">
-        // Giữ lại hàm đổi ảnh nút bấm gốc của bạn (nếu cần)
-        function FP_swapImg() {
-            var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length; n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm; elm.$src=elm.src; elm.src=args[n+1]; } }
-        }
-        function FP_preloadImgs() {
-            var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array(); for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-        }
-        function FP_getObjectByID(id,o) {
-            var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id); else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el; if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c) for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; } f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements; for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } } return null;
-        }
-    </script>
 </head>
+<body>
 
-<body onload="FP_preloadImgs('Data/Hinh_Anh/button16.jpg', 'Data/Hinh_Anh/button15.jpg')">
+    <div class="post-list">
 
-    <!-- BÀI 1: INTERNET DOWNLOAD MANAGER -->
-    <div class="post-card">
-        <div class="post-img">
-            <img src="Data/Hinh_Anh/download-idm-2018.jpg" alt="IDM">
+        <!-- BÀI 1: INTERNET DOWNLOAD MANAGER -->
+        <div class="post-card">
+            <div class="post-img">
+                <img src="Data/Hinh_Anh/download-idm-2018.jpg" alt="Internet Download Manager (IDM)">
+            </div>
+            <div class="post-content">
+                <h2 class="post-title">Internet Download Manager (IDM) - Tải file tốc độ cao, hỗ trợ mọi định dạng</h2>
+                <p class="post-desc">
+                    Phần mềm <a href="https://taimienphi.vn/download-internet-download-manager-idm-5" target="_blank">IDM</a> hay Internet Download Manager giúp bạn tải nhiều file, định dạng từ trên internet về máy tính của mình như các file Video, EXE, RAR, ZIP... IDM tương thích với hầu hết các trình duyệt web như Chrome, Firefox, tự động bắt link download mà không cần bạn phải gán link.
+                </p>
+                <div class="post-footer">
+                    <a class="btn-more" target="_self" href="Download/Softwares/Internet_Download_Manager.htm">👁 Xem thêm »</a>
+                </div>
+            </div>
         </div>
-        <div class="post-content">
-            <h2 class="post-title">Internet Download Manager (IDM) - Tải file tốc độ cao, hỗ trợ mọi định dạng</h2>
-            <p class="post-desc">
-                Phần mềm <a href="https://taimienphi.vn/download-internet-download-manager-idm-5" style="color: #0056b3;">IDM</a> hay Internet Download Manager giúp bạn tải nhiều file, định dạng từ trên internet về máy tính của mình như các file Video, EXE, RAR, ZIP... IDM tương thích với hầu hết các trình duyệt web như Chrome, Firefox, tự động bắt link download mà không cần bạn phải gán link.
-            </p>
-            <a class="btn-more" target="_self" href="Download/Softwares/Internet_Download_Manager.htm">Xem thêm »</a>
-        </div>
-    </div>
 
-    <!-- BÀI 2: WANDRIVER 7 -->
-    <div class="post-card">
-        <div class="post-img">
-            <img src="Data/Hinh_Anh/aee5027dc417accb1130a99c16e150ad.jpeg" alt="Wandriver 7">
+        <!-- BÀI 2: WANDRIVER 7 -->
+        <div class="post-card">
+            <div class="post-img">
+                <img src="Data/Hinh_Anh/aee5027dc417accb1130a99c16e150ad.jpeg" alt="Wandriver 7 (EasyDrv7)">
+            </div>
+            <div class="post-content">
+                <h2 class="post-title">WANDRIVER 7 (EASYDRV7) ENGLISH - BỘ DRIVER TỰ ĐỘNG, ĐẦY ĐỦ CHO WINDOWS</h2>
+                <p class="post-desc">
+                    Bộ Offline Wandriver nay đã đổi thành EasyDrv là một công cụ phần mềm cài Driver bị thiếu cho Windows một cách nhanh chóng và hiệu quả. Phiên bản tiếng Anh được rebuild lại bởi Ghoster Lehait giúp thao tác thuận tiện và dễ sử dụng hơn rất nhiều.
+                </p>
+                <div class="post-footer">
+                    <a class="btn-more" target="_self" href="Download/Drivers/EazyDrv7_full.htm">👁 Xem thêm »</a>
+                </div>
+            </div>
         </div>
-        <div class="post-content">
-            <h2 class="post-title">WANDRIVER 7 (EASYDRV7) ENGLISH - BỘ DRIVER TỰ ĐỘNG, ĐẦY ĐỦ CHO WINDOWS</h2>
-            <p class="post-desc">
-                Bộ Offline Wandriver nay đã đổi thành EasyDrv là một công cụ phần mềm cài Driver bị thiếu cho Windows một cách nhanh chóng và hiệu quả. Phiên bản tiếng Anh được rebuild lại bởi Ghoster Lehait giúp thao tác thuận tiện và dễ sử dụng hơn rất nhiều.
-            </p>
-            <a class="btn-more" target="_self" href="Download/Drivers/EazyDrv7_full.htm">Xem thêm »</a>
-        </div>
-    </div>
 
-    <!-- BÀI 3: WINDOWS 10 VERSION 1809 -->
-    <div class="post-card">
-        <div class="post-img">
-            <img src="Data/Hinh_Anh/c58ac4b50cfcd69523db6c8364df24ea.jpeg" alt="Windows 10 1809">
+        <!-- BÀI 3: WINDOWS 10 VERSION 1809 -->
+        <div class="post-card">
+            <div class="post-img">
+                <img src="Data/Hinh_Anh/c58ac4b50cfcd69523db6c8364df24ea.jpeg" alt="Windows 10 Version 1809">
+            </div>
+            <div class="post-content">
+                <h2 class="post-title">DOWNLOAD ISO WINDOWS 10 VERSION 1809 CHÍNH THỨC</h2>
+                <p class="post-desc">
+                    Sau một thời gian dài kể từ khi Windows 10 October 2018 được công bố, Microsoft đã cho phát hành chính thức file ISO bộ cài của Windows 10 Version 1809 mới nhất. Bạn có thể tham khảo bài viết để cập nhật hoặc cài mới dễ dàng.
+                </p>
+                <div class="post-footer">
+                    <a class="btn-more" target="_self" href="Download/Windows/Windows10_1809.htm">👁 Xem thêm »</a>
+                </div>
+            </div>
         </div>
-        <div class="post-content">
-            <h2 class="post-title">DOWNLOAD ISO WINDOWS 10 VERSION 1809 CHÍNH THỨC</h2>
-            <p class="post-desc">
-                Sau một thời gian dài kể từ khi Windows 10 October 2018 được công bố, Microsoft đã cho phát hành chính thức file ISO bộ cài của Windows 10 Version 1809 mới nhất. Bạn có thể tham khảo bài viết để cập nhật hoặc cài mới dễ dàng.
-            </p>
-            <a class="btn-more" target="_self" href="Download/Windows/Windows10_1809.htm">Xem thêm »</a>
-        </div>
+
     </div>
 
     <!-- KHUNG DANH NGÔN -->
     <div class="quote-box">
         <p>"Không có con đường nào dẫn tới vinh quang lại trải đầy hoa."</p>
-        <i>There is no road of flowers leading to glory.</i><br>
+        <i>There is no road of flowers leading to glory.</i>
         <a target="_blank" href="https://danhngoncuocsong.vn/tac-gia/la-fontaine.html">— La Fontaine</a>
     </div>
 

@@ -1,306 +1,315 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Download_Frame</title>
-   
- <style type="text/css">
-        .lienket{       
-            background-color: white;
-            color: black;
-            border: 2px solid #73AD21;
-            border-radius:5px;
-            padding: 10px 20px;
-            text-align: center;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kho Táº£i Bá»™ CÃ i Há»‡ Äiá»u HÃ nh Windows | CuaBien247</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-page: #ffffff;
+            --bg-card: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-size: 14.5px;
+            padding: 20px;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eff6ff;
+        }
+
+        .page-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eff6ff;
+            color: var(--primary);
+            border: 1px solid #bfdbfe;
             text-decoration: none;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        /* Tháº» bÃ i ná»•i báº­t trÃªn cÃ¹ng */
+        .featured-card {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 24px;
+            transition: all 0.2s ease;
+        }
+
+        .featured-card:hover {
+            background: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.08);
+        }
+
+        .featured-thumb {
+            width: 260px;
+            height: 175px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: #eff6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .featured-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .badge-os {
             display: inline-block;
-            font-size: 16px;
-            font-family: "Lucida Sans Unicode";
+            width: fit-content;
+            background: #dbeafe;
+            color: var(--primary);
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 999px;
         }
-        .lienket:hover{
-            background-color: #73AD21;
-            color:white;
+
+        .featured-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            line-height: 1.4;
         }
-        .lienket:active{
-            background-color: green;
-            border-color: green;
+
+        .featured-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12.5px;
+            color: var(--text-muted);
+        }
+
+        .featured-desc {
+            font-size: 14px;
+            color: var(--text-dark);
+            text-align: justify;
+            margin-top: 4px;
+        }
+
+        .featured-footer {
+            margin-top: auto;
+            padding-top: 8px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .btn-more:hover {
+            background: var(--primary-hover);
+        }
+
+        /* LÆ°á»›i 2 cá»™t cÃ¡c phiÃªn báº£n Windows bÃªn dÆ°á»›i */
+        .win-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .win-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 18px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: all 0.2s ease;
+        }
+
+        .win-card:hover {
+            background: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .win-card-top {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .win-title {
+            font-size: 15.5px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.4;
+        }
+
+        .win-desc {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            text-align: justify;
+            line-height: 1.5;
+        }
+
+        .win-footer {
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 6px;
+            border-top: 1px solid var(--border);
+        }
+
+        .btn-card {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #eff6ff;
+            color: var(--primary);
+            border: 1px solid #bfdbfe;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 12.5px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn-card:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        @media (max-width: 760px) {
+            body { padding: 12px; }
+            .featured-card { flex-direction: column; }
+            .featured-thumb { width: 100%; height: 180px; }
+            .win-grid { grid-template-columns: 1fr; }
+            .btn-more { width: 100%; justify-content: center; }
         }
     </style>
-
-<script language="JavaScript">
-<!--
-function FP_preloadImgs() {//v1.0
- var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-}
-
-function FP_swapImg() {//v1.0
- var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- elm.$src=elm.src; elm.src=args[n+1]; } }
-}
-
-function FP_getObjectByID(id,o) {//v1.0
- var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- return null;
-}
-// -->
-</script>
-
 </head>
+<body>
 
-<body onload="FP_preloadImgs(/*url*/'Data/Hinh_Anh/button15.jpg', /*url*/'Data/Hinh_Anh/button16.jpg')">
+    <div class="page-header">
+        <h1 class="page-title">ðŸªŸ Kho Táº£i Bá»™ CÃ i Há»‡ Äiá»u HÃ nh Windows</h1>
+        <a href="javascript:history.back()" class="btn-back">â† Quay láº¡i danh má»¥c</a>
+    </div>
 
-  
-<table border="0" width="99%" id="table1">
-	<tr>
-		<td width="1%" rowspan="2" style="border-bottom-style: solid; border-bottom-width: 1px">&nbsp;</td>
-		<td colspan="3" height="259">
-		<div class="leading-left" style="margin: 0px 15px 0px 0px; padding: 0px; font-size: 12px; float: left; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; width: 300px;">
-			<div class="image-content image-leading ifloat" style="margin: 0px; padding: 0px; font-size: 12px;">
-				<img src="https://www.tienichmaytinh.com/cache/ytools/c58ac4b50cfcd69523db6c8364df24ea.jpeg" alt="download windows 10 version 1809 chinh thuc" style="display: block; float: left; margin: 0px auto; padding: 0px"></div>
-		</div>
-		<div class="leading-right" style="margin: 0px; padding: 0px; font-size: 12px; min-width: 340px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<h2 class="contentheading" style="margin: 0px 0px 5px; padding: 0px; font-weight: bold; line-height: 1.5; font-size: 18px; text-transform: uppercase;">
-			<font color="#3366FF">DOWNLOAD ISO WINDOWS 10 VERSION 1809 CHÍNH 
-			TH&#7912;C</font></h2>
-			<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden;">
-				<ul class="actions" style="margin: 0px; padding: 0px; list-style: none; float: right;">
-					<li class="print-icon" style="line-height: 19.2px; display: inline; margin: 0px; padding: 0px; background: none">
-					</li>
-				</ul>
-				<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 209.391px;">
-					<dd class="modified" style="margin: 0px; padding: 0px 0px 2px; font-size: 11.508px;">
-					C&#7853;p nh&#7853;t ngày Th&#7913; ba, 20 /11/ 2018 14:52</dd>
-					<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">&nbsp;</dd>
-				</dl>
-			</div>
-			<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px;">
-				<p style="margin: 0px 0px 10px; padding: 0px;">&nbsp;</p>
-				<p style="margin: 0px 0px 10px; padding: 0px;">&nbsp;</p>
-				<p style="margin: 0px 0px 10px; padding: 0px;" align="justify">
-				<span style="font-size: 11pt">Sau h&#417;n g&#7847;n 
-				kho&#7843;ng m&#7897;t th&#7901;i gian dài k&#7875; t&#7915; khi&nbsp;Windows 10 October 2018 &#273;&#432;&#7907;c 
-				công b&#7889; &#273;&#7871;n ng&#432;&#7901;i dùng, thì &#273;&#7871;n nay Microsoft &#273;ã cho phát hành 
-				chính th&#7913;c file ISO b&#7897; cài c&#7911;a Windows 10 Verion 1809 m&#7899;i nh&#7845;t 
-				trong n&#259;m 2018 này. Ngay bây gi&#7901;, n&#7871;u b&#7841;n có d&#7921; &#273;&#7883;nh cài m&#7899;i 
-				mu&#7889;n c&#7853;p nh&#7853;t lên phiên b&#7843;n m&#7899;i nh&#7845;t t&#7915; MS thì có th&#7875; tham kh&#7843;o 
-				bài vi&#7871;t hôm nay nhé.</span></div>
-		</div>
-		<p align="justify"><span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Windows/Windows10_1809.htm">
-		<img border="0" id="img12" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img12',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img12',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img12',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img12',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-	</tr>
-	<tr>
-		<td colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px">
-		&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%" height="64">&nbsp;</td>
-		<td width="50%" height="64" style="border-right-style: solid; border-right-width: 1px">
-		<h2 class="contentheading" style="margin: 0px 0px 5px; padding: 0px; font-weight: bold; line-height: 1.5; font-size: 15px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-		<font color="#3366FF">Download Windows 10 Pro Lite Version 1803 (x64 + 
-		x86) Phiên B&#7843;n Rút G&#7885;n</font></h2>
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			&nbsp;</div></td>
-		<td width="1%" height="64">&nbsp;</td>
-		<td width="47%" height="64">
-		<h2 class="contentheading" style="font-weight: bold; line-height: 1.5; text-transform: uppercase; color: #3366FF; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 5px; padding: 0px; background-color: rgb(255, 255, 255)" align="left">
-		<font size="3">DOWNLOAD WINDOWS 8.1 PRO UPDATE 3 TÍCH H&#7906;P C&#7852;P NH&#7852;T M&#7898;I 
-		NH&#7844;T</font></h2>
-		</td>
-	</tr>
-	<tr>
-		<td width="1%" height="184" style="border-bottom-style: solid; border-bottom-width: 1px">&nbsp;</td>
-		<td width="50%" height="184" style="border-right-style: solid; border-right-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/fab0884aeb867a4bc1e9e2d0a42caa75.jpeg" alt="download windows 10 pro lite ver 1803" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;"></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="padding: 0px; font-size: 11pt;margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:10px" align="justify">
-			V&#7899;i &#273;&#7897; hot hi&#7879;n t&#7841;i c&#7911;a&nbsp;Windows 10 Version 1803 April 2018 Update 
-			thì&nbsp;&#273;ã làm nên c&#417;n sóng c&#7921;c kì m&#7841;nh m&#7869; trên các di&#7877;n &#273;àn, hàng nghìn 
-			l&#432;&#7907;t download &#273;&#7889;i v&#7899;i phiên b&#7843;n này. Nh&#432;ng &#273;&#7889;i v&#7899;i m&#7897;t s&#7889; máy có c&#7845;u 
-			hình th&#7845;p thì v&#7851;n ch&#432;a có c&#417; t&#7843;i v&#7873; &#273;&#7875; s&#7917; d&#7909;ng, vì h&#7885; &#273;&#7863;t cao v&#7845;n &#273;&#7873; 
-			Full CPU &amp; Full Disk trên máy c&#7911;a mình. N&#7855;m b&#7855;t &#273;&#432;&#7907;c tình hình &#273;ó 
-			nên chính vì v&#7853;y Ghoster NguyenTuan &#273;ã tranh th&#7911; vào hôm 1/5 v&#7915;a r&#7891;i 
-			&#273;&#7875; xây d&#7921;ng phiên b&#7843;n Windows 10 Pro Lite Version 1803 Build 
-			(17134.1) siêu m&#432;&#7907;t này.</div>
-		<p align="justify">
-		<span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Windows/Windows10ProLite1803.htm">
-		<img border="0" id="img13" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img13',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img13',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img13',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img13',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-		<td width="1%" height="184" style="border-bottom-style: solid; border-bottom-width: 1px">&nbsp;</td>
-		<td width="47%" height="184" style="border-bottom-style: solid; border-bottom-width: 1px">
-		<p align="justify"><span style="font-size: 11pt">
-		<img style="display: block; margin-left: auto; margin-right: auto;" src="https://www.tienichmaytinh.com/cache/ytools/bf28efaa8b5d8103961ba8ed46734688.jpeg" alt="download windows 8.1 tich hop cap nhat moi nhat" width="196" height="133" align="left"></span><span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none">Khi 
-		b&#7841;n cài m&#7899;i Windows 8.1 t&#7915; file iso th&#432;&#7901;ng tích h&#7907;p s&#7861;n gói c&#7853;p nh&#7853;t 
-		Update 3. Tuy nhiên &#273;ây v&#7851;n ch&#432;a ph&#7843;i là phiên b&#7843;n m&#7899;i nh&#7845;t, sau khi cài 
-		xong n&#7871;u mu&#7889;n s&#7917; d&#7909;ng phiên b&#7843;n m&#7899;i nh&#7845;t thì ph&#7843;i c&#7853;p nh&#7853;t các phiên b&#7843;n 
-		tr&#432;&#7899;c &#273;ó, quá trình này khá m&#7845;t th&#7901;i gian và b&#259;ng thông m&#7841;ng.</span></p>
-		<p>&nbsp;</p>
-		<p><span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Windows/Windows81update.htm">
-		<img border="0" id="img14" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img14',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img14',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img14',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img14',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-	</tr>
-	<tr>
-		<td width="1%">&nbsp;</td>
-		<td width="50%" style="border-right-style: solid; border-right-width: 1px">
-		<h2 class="contentheading" style="font-weight: bold; line-height: 1.5; font-size: 15px; color: #3366FF; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 5px; padding: 0px; background-color: rgb(255, 255, 255)">
-		Download Windows 8.1 Pro Nguyên G&#7889;c</h2>
-&nbsp;</td>
-		<td width="1%">&nbsp;</td>
-		<td width="47%">
-		<h2 class="contentheading" style="font-weight: bold; line-height: 1.5; font-size: 15px; color: #3366FF; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 5px; padding: 0px; background-color: rgb(255, 255, 255)">
-		Download Windows 7 All In One - T&#7845;t C&#7843; Trong 1 C&#7853;p Nh&#7853;t Liên T&#7909;c</h2>
-&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%" height="145" style="border-bottom-style: solid; border-bottom-width: 1px">&nbsp;</td>
-		<td width="50%" height="145" style="border-right-style: solid; border-right-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p align="justify"><span style="font-size: 11pt">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/cb27d08b4b818743ae2e03330962f9cd.jpeg" alt="download windows 8.1 pro nguyen goc" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;">Windows 8.1 Pro c&#361;ng t&#432;&#417;ng t&#7921; nh&#432; Windows 8.1 nh&#432;ng &#273;&#432;&#7907;c b&#7893; sung 
-			thêm m&#7897;t vài tính n&#259;ng qu&#7843;n lý và m&#7841;ng nâng cao. Phiên b&#7843;n này phù 
-			h&#7907;p cho ng&#432;&#7901;i dùng cá nhân nh&#432;ng thích s&#7917; d&#7909;ng các tính n&#259;ng cao 
-			c&#7845;p. Phiên b&#7843;n này t&#432;&#417;ng &#273;&#432;&#417;ng v&#7899;i Windows 7 Professional tr&#432;&#7899;c kia.</span></div>
-		<span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Windows/Windows_81nguyengoc.htm">
-		<img border="0" id="img5" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-		<td width="1%" height="145" style="border-bottom-style: solid; border-bottom-width: 1px">&nbsp;</td>
-		<td width="47%" height="145" style="border-bottom-style: solid; border-bottom-width: 1px">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/23f534e078d3e417e3feacfe5f0e60fd.jpeg" alt="windows7 all in one" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;"></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="margin: 0px 0px 10px; padding: 0px; text-align: justify;">
-			<span style="font-size: 11pt">B&#7841;n là m&#7897;t k&#7929; thu&#7853;t viên hay ch&#7881; là m&#7897;t anh cài win d&#7841;o? Dù th&#7871; nào 
-			&#273;i n&#7919;a thì lúc cài win cho khách hàng c&#361;ng khó chi&#7873;u lòng h&#7885; vì m&#7895;i 
-			ng&#432;&#7901;i, m&#7895;i máy phù h&#7907;p v&#7899;i m&#7897;t b&#7843;n win khác nhau, không nh&#7869; l&#7841;i mang 
-			c&#7843; m&#7845;y ch&#7909;c cái &#273;&#297;a hay usb boot &#273;i. Gi&#7843;i pháp cho v&#7845;n &#273;&#7873; này là 
-			Windows All In One - T&#7845;t c&#7843; trong m&#7897;t, ti&#7879;n l&#7907;i, g&#7885;n nh&#7865; v&#7915;a m&#7897;t USB 
-			hay m&#7897;t DVD mà thôi</span><span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)"><a target="_self" href="Download/Windows/Windows7Al%20InOne.htm"><img border="0" id="img15" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img15',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img15',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img15',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img15',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></div>
-		<p>&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%">&nbsp;</td>
-		<td width="50%" style="border-right-style: solid; border-right-width: 1px">
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 191.391px;">
-				<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-				<h2 class="contentheading" style="font-weight: bold; line-height: 1.5; font-size: 15px; color: #3366FF; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 5px; padding: 0px; background-color: rgb(255, 255, 255)" align="justify">
-				Windows 7 Ultimate SP1&nbsp; Lite Mod C&#7921;c &#272;&#7865;p</h2>
-				</dd>
-			</dl>
-		</div>
-		</td>
-		<td width="1%">&nbsp;</td>
-		<td width="47%">
-		<h2 class="contentheading" style="font-weight: bold; line-height: 1.5; font-size: 15px; color: #3366FF; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 5px; padding: 0px; background-color: rgb(255, 255, 255)">
-		Download Windows 7 Lite - Cho Máy Y&#7871;u</h2>
-&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%" height="122" style="border-bottom-style: solid; border-bottom-width: 1px">&nbsp;</td>
-		<td width="50%" height="122" style="border-right-style: solid; border-right-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/ba8d3e77f85aca52c30f8add490f8db5.jpeg" alt="windows-7-mod-lite" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;"></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="margin: 0px 0px 10px; padding: 0px; text-align: justify;">
-			<span style="font-size: 11pt; color: rgb(0, 0, 0); margin: 0px; padding: 0px">&#272;ây là 
-			b&#7843;n Win 32 Bit &#273;&#432;&#7907;c rút g&#7885;n và mod t&#7915; b&#7843;n Windows 7 Ultimate SP1 
-			chính th&#7913;c t&#7915; MS. M&#7863;c dù rút g&#7885;n cho nh&#7865; nh&#432; XP nh&#432;ng v&#7851;n gi&#7919; l&#7841;i 
-			các thành ph&#7847;n c&#417; b&#7843;n, giao di&#7879;n &#273;&#432;&#7907;c mod l&#7841;i &#273;&#7865;p m&#7855;t.</span><span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)"><a target="_self" href="Download/Windows/Windows7UltimateSP1LiteMod.htm"><img border="0" id="img16" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img16',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img16',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img16',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img16',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></div>
-		<p>&nbsp;</td>
-		<td width="1%" height="122" style="border-bottom-style: solid; border-bottom-width: 1px">&nbsp;</td>
-		<td width="47%" height="122" style="border-bottom-style: solid; border-bottom-width: 1px">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/965f4ab9cf181fe2f46a4e07a3caee72.jpeg" alt="win7lite" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;"></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="margin: 0px 0px 10px; padding: 0px; text-align: justify;">
-			<span style="font-size: 11pt">Máy c&#7911;a b&#7841;n c&#7845;u hình không &#273;&#432;&#7907;c cao l&#7855;m nh&#432;ng &#273;ã quá chán v&#7899;i 
-			Windows XP c&#361; k&#7929; thì b&#7843;n Windows này là th&#7913; b&#7841;n &#273;ang c&#7847;n. Ch&#7881; rút 
-			g&#7885;n m&#7897;t s&#7889; thành ph&#7847;n r&#7845;t ít khi dùng &#273;&#7871;n nên dung l&#432;&#7907;ng b&#7843;n Windows 
-			khá nh&#7865;, ch&#7845;t l&#432;&#7907;ng c&#7921;c k&#7923; &#7893;n &#273;&#7883;nh. &#272;ây là m&#7897;t trong nh&#7919;ng phiên b&#7843;n 
-			Windows 7 Lite t&#7889;t nh&#7845;t mình t&#7915;ng dùng.</span><span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)"><a target="_self" href="Download/Windows/Windows7Lite.htm"><img border="0" id="img17" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img17',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img17',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img17',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img17',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></div>
-		<p>
-		</td>
-	</tr>
-	<tr>
-		<td width="1%">&nbsp;</td>
-		<td width="50%" style="border-right-style: solid; border-right-width: 1px">
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 191.391px;">
-				<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-				<h2 class="contentheading" style="font-weight: bold; line-height: 1.5; font-size: 15px; color: #3366FF; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 5px; padding: 0px; background-color: rgb(255, 255, 255)">
-				Windows 7 Ultimate SP1 Mod Super Lite</h2>
-				</dd>
-			</dl>
-		</div>
-		</td>
-		<td width="1%">&nbsp;</td>
-		<td width="47%">
-		<h1 style="font-weight: bold; overflow: hidden; zoom: 1; color: #3366FF; font-family: Tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255)">
-		<font size="3">B&#7843;n Win XP rút g&#7885;n lite siêu nh&#7865; th&#432;&#417;ng m&#7841;i</font></h1>
-&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%">&nbsp;</td>
-		<td width="50%" style="border-right-style: solid; border-right-width: 1px">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<span style="font-size: 11pt">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/a8119afc330907037cbd5e626156052f.jpeg" alt="windows-7-super-lite" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;"></span></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="padding: 0px; margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:10px" align="justify">
-			<span style="font-size: 11pt; color: rgb(0, 0, 0); margin: 0px; padding: 0px">&#7902; bài 
-			vi&#7871;t tr&#432;&#7899;c mình &#273;ã gi&#7899;i thi&#7879;u &#273;&#7871;n các b&#7841;n m&#7897;t b&#7843;n Windows 7 Lite 2 
-			trong 1 ch&#7841;y khá m&#432;&#7907;t mà và nh&#7865;. Bài vi&#7871;t này ti&#7871;p t&#7909;c gi&#7899;i thi&#7879;u 
-			&#273;&#7871;n các b&#7841;n m&#7897;t b&#7843;n Windows &#273;ã &#273;&#432;&#7907;c rút g&#7885;n và ch&#7881;nh s&#7917;a m&#7897;t chút có 
-			dung l&#432;&#7907;ng ch&#7881; b&#7857;ng b&#7843;n Win XP.</span><span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)"><a target="_self" href="Download/Windows/Windows7UltimateSupeLite.htm"><img border="0" id="img9" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img9',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img9',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img9',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img9',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></p>
-			<p style="margin: 0px 0px 10px; padding: 0px; text-align: justify;">&nbsp;</p>
-			<p style="margin: 0px 0px 10px; padding: 0px; text-align: justify;">
-		</div>
-		</td>
-		<td width="1%">&nbsp;</td>
-		<td width="47%">
-		<span style="font-size: 11pt">
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuiJRqoJCk35X7IyD3z_BTk9aXAUnZoffIt_544YQ8DUILY27DJg" alt="Káº¿t quáº£ hÃ¬nh áº£nh cho winxp lite" width="177" height="101" align="left"></span><font face="Tahoma" style="font-size: 11pt"><span style="color: rgb(20, 20, 20); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">&#272;ây 
-		là b&#7843;n th&#432;&#417;ng m&#7841;i &#273;&#432;&#7907;c b&#7887; b&#7899;t ch&#432;&#417;ng trình t&#7915; ISO b&#7843;n quy&#7873;n XP sp3, c&#7845;u 
-		hình th&#7845;p cho nh&#7919;ng máy phòng game n&#259;m 2000. CPU pentium 3 tr&#7903; lên &#273;&#7873;u 
-		ch&#7841;y &#273;&#432;&#7907;c</span></font><span style="color: rgb(20, 20, 20); font-family: Helvetica, Arial, sans-serif; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">.</span><span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)"><a target="_self" href="Download/Windows/WindowsXP_rutgon.htm"><img border="0" id="img18" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img18',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img18',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img18',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img18',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span><p>
-		</td>
-	</tr>
-	<tr>
-		<td width="1%">&nbsp;</td>
-		<td width="50%" style="border-right-style: solid; border-right-width: 1px">
-		&nbsp;</td>
-		<td width="1%">&nbsp;</td>
-		<td width="47%">
-		&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%" height="67">&nbsp;</td>
-		<td width="50%" height="67">
-		&nbsp;</td>
-		<td width="1%" height="67">&nbsp;</td>
-		<td width="47%" height="67">
-		&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%" height="28">&nbsp;</td>
-		<td width="50%" height="28">
-		&nbsp;</td>
-		<td width="1%" height="28">&nbsp;</td>
-		<td width="47%" height="28">
-		&nbsp;</td>
-	</tr>
-</table>
+    <!-- 1. BÃ i viáº¿t ná»•i báº­t: Windows 10 1809 -->
+    <div class="featured-card">
+        <div class="featured-thumb">
+            <img src="https://tienichmaytinh.com" alt="Download ISO Windows 10 Version 1809 ChÃ­nh Thá»©c">
+        </div>
+        <div class="featured-body">
+            <span class="badge-os">Windows 10 â€¢ ISO NguyÃªn Gá»‘c</span>
+            <h2 class="featured-title">DOWNLOAD ISO WINDOWS 10 VERSION 1809 CHÃNH THá»¨C</h2>
+            <div class="featured-meta">
+                <span>ðŸ“… Cáº­p nháº­t: Thá»© ba, 20/11/2018</span>
+            </div>
+            <p class="featured-desc">Sau má»™t thá»i gian ká»ƒ tá»« khi Windows 10 October 2018 Ä‘Æ°á»£c cÃ´ng bá»‘ Ä‘áº¿n ngÆ°á»i dÃ¹ng, Microsoft Ä‘Ã£ cho phÃ¡t hÃ nh chÃ­nh thá»©c file ISO bá»™ cÃ i cá»§a Windows 10 Version 1809 má»›i nháº¥t. Náº¿u báº¡n cÃ³ dá»± Ä‘á»‹nh cÃ i má»›i hoáº·c muá»‘n cáº­p nháº­t lÃªn phiÃªn báº£n á»•n Ä‘á»‹nh nÃ y tá»« Microsoft thÃ¬ cÃ³ thá»ƒ tham kháº£o chi tiáº¿t bÃªn trong.</p>
+            <div class="featured-footer">
+                <a href="Download/Windows/Windows10_1809.htm" target="_self" class="btn-more">ðŸ‘ Xem thÃªm & Táº£i vá»</a>
+            </div>
+        </div>
+    </div>
 
-<p>&nbsp;</p>
+    <!-- LÆ°á»›i 8 phiÃªn báº£n Windows bÃªn dÆ°á»›i -->
+    <div class="win-grid">
 
-</body>
+        <!-- 2. Windows 10 Pro Lite 1803 -->
+        <div class="win-card">
+            <div class="win-card-top">
+                <span class="badge-os">Windows 10 â€¢ Lite</span>
+                <h3 class="win-title">Download Windows 10 Pro Lite Version 1803 (x64 + x86) PhiÃªn Báº£n RÃºt Gá»n</h3>
+                <p class="win-desc">PhiÃªn báº£n Windows 10 Pro Lite Version 1803 Build (17134.1) siÃªu mÆ°á»£t do Ghoster NguyenTuan xÃ¢y dá»±ng, kháº¯c phá»¥c triá»‡t Ä‘á»ƒ tÃ¬nh tráº¡ng Full CPU & Full Disk cho cÃ¡c mÃ¡y cáº¥u hÃ¬nh tháº¥p.</p>
+            </div>
+            <div class="win-footer">
+                <a href="Download/Windows/Windows10_Lite_1803.htm" target="_self" class="btn-card">Xem thÃªm â†’</a>
+            </div>
+        </div>
 
-</html>
+        <!-- 3. Windows 8.1 Pro Update 3 -->
+        <div class="win-card">
+            <div class="win-card-top">
+                <span class="badge-os">Windows 8.1 â€¢ Full Update</span>
+                <h3 class="win-title">DOWNLOAD WINDOWS 8.1 PRO UPDATE 3 TÃCH Há»¢P Cáº¬P NHáº¬T Má»šI NHáº¤T</h3>
+                <p class="win-desc">Báº£n cÃ i Windows 8.1 Pro tá»« file ISO Ä‘Ã£ tÃ­ch há»£p sáºµn gÃ³i Update 3 cÃ¹ng Ä‘áº§y Ä‘á»§ cÃ¡c báº£n vÃ¡ má»›i nháº¥t, giÃºp báº¡n tiáº¿t kiá»‡m thá»i gian vÃ  bÄƒng thÃ´ng máº¡ng sau khi cÃ i Ä‘áº·t.</p>
+            </div>
+            <div class="win-footer">
+                <a href="Download/Windows/Windows81_Update3.htm" target="_self" class="btn-card">Xem thÃªm â†’</a>
+            </div>
+        </div>
+
+        <!-- 4. Windows 8.1 Pro NguyÃªn Gá»‘c -->
+        <div class="win-card">
+            <div class="win-card-top">
+                <span class="badge-os">Windows 8.1 â€¢ NguyÃªn Gá»‘c</span>
+                <h3 class="win-title">Download Windows 8.1 Pro NguyÃªn Gá»‘c</h3>

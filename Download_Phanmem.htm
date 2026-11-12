@@ -1,260 +1,226 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>T&#7893;ng h&#7907;p nh&#7919;ng&nbsp; ph&#7847;n m&#7873;m hay</title>
-<style type="text/css">
-        .lienket{       
-            background-color: white;
-            color: black;
-            border: 2px solid #73AD21;
-            border-radius:5px;
-            padding: 10px 20px;
-            text-align: center;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tá»•ng Há»£p Nhá»¯ng Pháº§n Má»m Hay | CuaBien247</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-page: #ffffff;
+            --bg-card: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-size: 14.5px;
+            padding: 20px;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eff6ff;
+        }
+
+        .page-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eff6ff;
+            color: var(--primary);
+            border: 1px solid #bfdbfe;
             text-decoration: none;
-            display: inline-block;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .soft-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .soft-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: all 0.2s ease;
+        }
+
+        .soft-card:hover {
+            background: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .soft-thumb {
+            width: 160px;
+            height: 110px;
+            flex-shrink: 0;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .soft-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .soft-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .soft-title {
             font-size: 16px;
-            font-family: "Lucida Sans Unicode";
+            font-weight: 700;
+            color: var(--text-dark);
         }
-        .lienket:hover{
-            background-color: #73AD21;
-            color:white;
+
+        .soft-desc {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            text-align: justify;
+            line-height: 1.5;
         }
-        .lienket:active{
-            background-color: green;
-            border-color: green;
+
+        .btn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 9px 18px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+            flex-shrink: 0;
         }
-    </style
+
+        .btn-more:hover {
+            background: var(--primary-hover);
+        }
+
+        @media (max-width: 680px) {
+            body { padding: 12px; }
+            .soft-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .soft-thumb {
+                width: 100%;
+                height: 150px;
+            }
+            .btn-more {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
+<body>
 
-<script language="JavaScript">
-<!--
-function FP_swapImg() {//v1.0
- var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- elm.$src=elm.src; elm.src=args[n+1]; } }
-}
+    <div class="page-header">
+        <h1 class="page-title">ðŸ’» Tá»•ng Há»£p Nhá»¯ng Pháº§n Má»m Hay & Tiá»‡n Ãch</h1>
+        <a href="javascript:history.back()" class="btn-back">â† Quay láº¡i danh má»¥c</a>
+    </div>
 
-function FP_preloadImgs() {//v1.0
- var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-}
+    <div class="soft-list">
 
-function FP_getObjectByID(id,o) {//v1.0
- var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- return null;
-}
-// -->
-</script>
+        <!-- Pháº§n má»m 1: PDF-XChange Viewer -->
+        <div class="soft-card">
+            <div class="soft-thumb">
+                <img src="Download/Softwares/Hinh_Anh/pdfxchange.jpg" alt="PDF-XChange Viewer">
+            </div>
+            <div class="soft-info">
+                <h3 class="soft-title">PDF-XChange Viewer - Pháº§n má»m xem vÃ  chá»‰nh sá»­a file PDF</h3>
+                <p class="soft-desc">PDF-XChange Viewer 2.5.322.10 lÃ  má»™t á»©ng dá»¥ng xem file PDF trÃªn Windows vá»›i dung lÆ°á»£ng nhá» gá»n hÆ¡n Adobe Acrobat Reader vÃ  Ä‘Æ°á»£c xem lÃ  phiÃªn báº£n nÃ¢ng cao cá»§a Foxit Reader. Chá»©c nÄƒng chÃ­nh lÃ  Ä‘á»c file PDF vá»›i tá»‘c Ä‘á»™ cá»±c nhanh, há»— trá»£ Ä‘áº§y Ä‘á»§ má»i Ä‘á»‹nh dáº¡ng tÃ i liá»‡u PDF.</p>
+            </div>
+            <a href="https://download.com.vn/pdf-xchange-viewer-32-bit-5766" target="_blank" class="btn-more">ðŸ‘ Xem thÃªm</a>
+        </div>
 
+        <!-- Pháº§n má»m 2: Proteus 8.9 -->
+        <div class="soft-card">
+            <div class="soft-thumb">
+                <img src="Download/Softwares/Hinh_Anh/Proteus8.jpg" alt="Proteus 8.9">
+            </div>
+            <div class="soft-info">
+                <h3 class="soft-title">Proteus 8.9 - Pháº§n má»m váº½ máº¡ch vÃ  cháº¡y mÃ´ phá»ng Äiá»‡n tá»­</h3>
+                <p class="soft-desc">Proteus 8.9 lÃ  bá»™ pháº§n má»m chuyÃªn dá»¥ng hÃ ng Ä‘áº§u dÃ nh cho dÃ¢n ká»¹ thuáº­t Ä‘iá»‡n tá»­ dÃ¹ng Ä‘á»ƒ váº½ sÆ¡ Ä‘á»“ nguyÃªn lÃ½ (ISIS), thiáº¿t káº¿ máº¡ch in chuyÃªn nghiá»‡p (ARES) vÃ  mÃ´ phá»ng hoáº¡t Ä‘á»™ng cá»§a vi Ä‘iá»u khiá»ƒn cÃ¹ng cÃ¡c linh kiá»‡n Ä‘iá»‡n tá»­ trá»±c quan theo thá»i gian thá»±c.</p>
+            </div>
+            <a href="Download/Softwares/proteus_8.htm" target="_self" class="btn-more">ðŸ‘ Xem thÃªm</a>
+        </div>
 
-<body onload="FP_preloadImgs(/*url*/'Data/Hinh_Anh/button16.jpg', /*url*/'Data/Hinh_Anh/button15.jpg', /*url*/'Data/Hinh_Anh/button2.jpg', /*url*/'Data/Hinh_Anh/button3.jpg')">
+        <!-- Pháº§n má»m 3: Internet Download Manager (IDM) (Báº¡n nhá»› thay link href cá»§a trang chi tiáº¿t IDM tá»« file gá»‘c vÃ o chá»— href="#" bÃªn dÆ°á»›i) -->
+        <div class="soft-card">
+            <div class="soft-thumb">
+                <img src="http://taimienphi.vn/tmp/cf/images/2018/11/ba/download-idm-2018.jpg" alt="Internet Download Manager (IDM)">
+            </div>
+            <div class="soft-info">
+                <h3 class="soft-title">Internet Download Manager (IDM) - Táº£i file tá»‘c Ä‘á»™ cao, há»— trá»£ má»i Ä‘á»‹nh dáº¡ng</h3>
+                <p class="soft-desc">Internet Download Manager (IDM) giÃºp báº¡n tÄƒng tá»‘c Ä‘á»™ táº£i nhiá»u file vÃ  Ä‘á»‹nh dáº¡ng tá»« Internet vá» mÃ¡y tÃ­nh nhÆ° Video, EXE, RAR, ZIP... IDM tÆ°Æ¡ng thÃ­ch vá»›i háº§u háº¿t cÃ¡c trÃ¬nh duyá»‡t web phá»• biáº¿n nhÆ° Chrome, Firefox, Edge vÃ  tá»± Ä‘á»™ng báº¯t link táº£i cá»±c ká»³ tiá»‡n lá»£i.</p>
+            </div>
+            <a href="#" target="_self" class="btn-more">ðŸ‘ Xem thÃªm</a>
+        </div>
 
-<table border="0" width="94%" id="table1" height="687">
-	<tr>
-		<td width="19%" rowspan="2">
-		<p align="center">
-		<img border="0" src="Download/Softwares/Hinh_Anh/pdfxchange.jpg" width="237" height="168"></td>
-		<td width="81%" height="41">
-		<b><font face="Tahoma" color="#0066FF">PDF-XChange Viewer Ph&#7847;n m&#7873;m 
-		xem và ch&#7881;nh s&#7917;a file PDF</font></b></td>
-	</tr>
-	<tr>
-		<td width="81%" height="135">
-		<p align="justify">
-		<span style="font-size: 11pt">PDF-XChange Viewer 2.5.322.10 là m&#7897;t &#7913;ng 
-		d&#7909;ng xem file PDF trên Windows v&#7899;i m&#7897;t dung l&#432;&#7907;ng nh&#7887; h&#417;n Adobe Arcobat 
-		Reader và &#273;&#432;&#7907;c xem là phiên b&#7843;n nâng cao c&#7911;a Foxit Reader. V&#7899;i ch&#7913;c n&#259;ng 
-		chính là &#273;&#7885;c file PDF v&#7899;i t&#7889;c &#273;&#7897; c&#7921;c nhanh, &#273;&#7863;c bi&#7879;t là nó h&#7895; tr&#7907; t&#7845;t c&#7843; 
-		các file PDF.</span><p>
-		<span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_blank" href="https://download.com.vn/pdf-xchange-viewer-32-bit-5766">
-		<img border="0" id="img18" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img18',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img18',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img18',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img18',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-	</tr>
-	<tr>
-		<td colspan="2" height="30">
-		<hr> 
-		</td>
-	</tr>
-	<tr>
-		<td width="19%" rowspan="2">
-		<font face="Tahoma">
-		<img border="0" src="Download/Softwares/Hinh_Anh/Proteus8.jpg" width="244" height="150"></font></td>
-		<td width="81%" height="41">
-		<b><font face="Tahoma" color="#0066FF">Proteus 8.9- Ph&#7847;n m&#7873;m v&#7869; m&#7841;ch và 
-		ch&#7841;y mô ph&#7887;ng &#272;i&#7879;n t&#7917;</font></b></td>
-	</tr>
-	<tr>
-		<td width="81%" height="135">
-		<p align="justify">
-		<strong style="font-style: normal; text-decoration: none; color: rgb(51, 51, 51); font-family: Tahoma; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; font-weight: 400; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255)">
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<span style="font-size: 11pt">Ph&#7847;n m&#7873;m&nbsp;<a style="text-decoration: none; color: rgb(46, 46, 46);" href="http://taimienphi.vn/download-internet-download-manager-idm-5">IDM</a>&nbsp;hay 
-		Internet Download Manager giúp b&#7841;n t&#7843;i nhi&#7873;u file, &#273;&#7883;nh d&#7841;ng t&#7915; trên 
-		internet v&#7873; máy tính c&#7911;a mình nh&#432; các file Video, EXE, RAR, ZIP ... IDM 
-		t&#432;&#417;ng thích v&#7899;i h&#7847;u h&#7871;t các trình duy&#7879;t web nh&#432; Chrome, Firefox, t&#7921; &#273;&#7897;ng 
-		b&#7855;t link download mà không c&#7847;n b&#7841;n ph&#7843;i gán link, m&#7863;c dù b&#7841;n có th&#7875; th&#7921;c 
-		hi&#7879;n th&#7911; công, và còn r&#7845;t nhi&#7873;u tính n&#259;ng thú v&#7883; khác mà IDM mang l&#7841;i.</span></strong><p>
-		<span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Softwares/proteus_8.htm">
-		<img border="0" id="img16" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img16',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img16',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img16',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img16',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-	</tr>
-	<tr>
-		<td colspan="2" height="30">
-		<hr> 
-		</td>
-	</tr>
-	<tr>
-		<td width="19%" rowspan="2">
-		<font face="Tahoma">
-		<img alt="download idm 2018" height="152" src="http://taimienphi.vn/tmp/cf/images/2018/11/ba/download-idm-2018.jpg" width="236"></font></td>
-		<td width="81%" height="41">
-		<b>
-		<font size="3" face="Tahoma" color="#0066FF">Internet Download Manager (IDM) - T&#7843;i file t&#7889;c &#273;&#7897; cao, h&#7895; 
-		tr&#7907; m&#7885;i &#273;&#7883;nh d&#7841;ng</font></b></td>
-	</tr>
-	<tr>
-		<td width="81%" height="135">
-		<p align="justify">
-		<strong style="font-style: normal; text-decoration: none; color: rgb(51, 51, 51); font-family: Tahoma; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; font-weight: 400; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255)">
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<span style="font-size: 11pt">Ph&#7847;n m&#7873;m&nbsp;<a style="text-decoration: none; color: rgb(46, 46, 46);" href="http://taimienphi.vn/download-internet-download-manager-idm-5">IDM</a>&nbsp;hay 
-		Internet Download Manager giúp b&#7841;n t&#7843;i nhi&#7873;u file, &#273;&#7883;nh d&#7841;ng t&#7915; trên 
-		internet v&#7873; máy tính c&#7911;a mình nh&#432; các file Video, EXE, RAR, ZIP ... IDM 
-		t&#432;&#417;ng thích v&#7899;i h&#7847;u h&#7871;t các trình duy&#7879;t web nh&#432; Chrome, Firefox, t&#7921; &#273;&#7897;ng 
-		b&#7855;t link download mà không c&#7847;n b&#7841;n ph&#7843;i gán link, m&#7863;c dù b&#7841;n có th&#7875; th&#7921;c 
-		hi&#7879;n th&#7911; công, và còn r&#7845;t nhi&#7873;u tính n&#259;ng thú v&#7883; khác mà IDM mang l&#7841;i.</span></strong><p>
-		<span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Softwares/Internet_Download_Manager.htm">
-		<img border="0" id="img12" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img12',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img12',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img12',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img12',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-	</tr>
-	<tr>
-		<td colspan="2" height="30">
-		<hr> 
-		</td>
-	</tr>
-	<tr>
-		<td height="167" rowspan="2">
-		<p align="center">
-		<font face="Tahoma">
-		<img style="max-width: 800px;" src="Data/Hinh_Anh/echo.gif" alt="echoXP - &#40614;&#20811;&#39118;&#28151;&#21709;&#25928;&#26524;&#22120; 1" title="echoXP - &#40614;&#20811;&#39118;&#28151;&#21709;&#25928;&#26524;&#22120; 1" data-lazy-src="http://img1.appinn.com/yupoo/jdvip/00162603a79d/medium.jpg" class="lazyloaded" data-was-processed="true" align="left" width="232" height="137"></font></td>
-		<td height="43">
-		<font style="font-size: 11pt; font-weight:700" face="Tahoma" color="#0066FF">CH&#431;&#416;NG TRÌNH T&#7840;O ECHO-REVERB &#272;&#7874; HÁT 
-		KARAOKE </font></td>
-	</tr>
-	<tr>
-		<td height="122">
-		<h3 class="intro" style="text-align: justify; color: #333333; font-family: Tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 10px; background-color: rgb(255, 255, 255)">
-		<strong><span style="font-size: 11pt; font-weight: 400">&nbsp;&nbsp; Hát 
-		karaoke mà không có echo, reverb và delay thì th&#7853;t là chán ph&#7843;i không?&nbsp;<br>
-		<br>
-		Các ch&#432;&#417;ng trình ca nhac live show hay phòng thu h&#7885; &#273;&#7873;u dùng echo, 
-		reverb và delay &#273;&#7875; h&#7893; tr&#7907; cho gi&#7885;ng hát ca s&#297; thì lý do gì chúng ta t&#7915; 
-		ch&#7889;i.&nbsp;</span></strong></h3>
-		<span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Softwares/EchoXp.htm">
-		<img border="0" id="img13" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img13',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img13',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img13',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img13',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span><p>&nbsp;</td>
-	</tr>
-	<tr>
-		<td colspan="2" height="38">
-		<hr> 
-		</td>
-	</tr>
-	<tr>
-		<td height="191" rowspan="2">
-		<p align="center">
-		<font face="Tahoma">
-		<img alt="download teamviewer" height="133" src="http://i2.taimienphi.vn/tmp/cf/images/2018/3/ba/download-teamviewer.jpg" width="236" align="left"></font></td>
-		<td height="37">
-		<h2 style="font-style: normal; text-decoration: none; color: #0066FF; font-family: Tahoma; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255)">
-		<font size="3">Download TeamViewer - K&#7871;t n&#7889;i máy tính t&#7915; xa</font></h2></td>
-	</tr>
-	<tr>
-		<td height="150">
-		<p align="justify">
-		<strong style="font-style: normal; font-weight: 400; text-decoration: none; color: rgb(51, 51, 51); font-family: &quot;Tahoma&quot;; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255)">
-		<span style="font-size: 11pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TeamViewer&nbsp;</span></strong><span style="font-size: 11pt"><span style="color: rgb(51, 51, 51); font-family: &quot;Tahoma&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none">là 
-		ph&#7847;n m&#7873;m qu&#7843;n lý, &#273;i&#7873;u khi&#7875;n máy tính t&#7915; xa, và b&#7841;n có th&#7875; truy c&#7853;p &#273;&#7875; 
-		&#273;i&#7873;u khi&#7875;n máy tính c&#7911;a ng&#432;&#7901;i khác &#7903; m&#7897;t v&#7883; trí r&#7845;t xa r&#7845;t d&#7877; dàng thông 
-		qua m&#7841;ng internet.&nbsp;</span><strong style="font-weight: 400"><span style="font-family: 'Tahoma'; color: #333333; letter-spacing: normal; background-color: #FFFFFF">Cài</span></strong><strong style="font-style: normal; text-decoration: none; color: rgb(51, 51, 51); font-family: 'Tahoma'; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255); font-weight:400">
-		TeamViewer</strong></span><span style="font-size: 11pt; color: rgb(51, 51, 51); font-family: Tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline; float: none; background-color: rgb(255, 255, 255)">&nbsp;t&#7889;n 
-		khá ít dung l&#432;&#7907;ng và d&#7877; s&#7917; d&#7909;ng v&#7899;i nh&#7919;ng tính n&#259;ng h&#7919;u ích, h&#7895; tr&#7907; t&#7889;t 
-		cho ng&#432;&#7901;i s&#7917; d&#7909;ng.</span></p>
-		<p>
-		<span style="color: rgb(0, 0, 0); font-family: Tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)"><a target="_self" href="Download/Softwares/Teamviewer.htm"><img border="0" id="img14" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img14',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img14',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img14',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img14',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-	</tr>
-</table>
-
-<table border="0" width="94%" id="table2" height="31">
-	<tr>
-		<td height="27">
-		<hr> 
-		</td>
-	</tr>
-</table>
-
-<table border="0" width="94%" id="table3" height="134">
-	<tr>
-		<td height="130" rowspan="2">
-		<p align="center">
-		<font face="Tahoma">
-		<img border="0" src="Download/Softwares/Hinh_Anh/photoshopcs2-03.jpg" width="245" height="147" align="left"></font></td>
-		<td height="39" width="1182">
-		<h2 style="font-style: normal; text-decoration: none; color: #0066FF; font-family: Tahoma; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255)">
-		<font size="3">Adobe Photoshop CS2-Ph&#7847;n m&#7873;m ch&#7881;nh s&#7917;a &#7843;nh chuyên nghi&#7879;p</font></h2></td>
-	</tr>
-	<tr>
-		<td height="89" width="1182">
-		<p align="justify">
-		<strong style="font-style: normal; font-weight: 400; text-decoration: none; color: rgb(51, 51, 51); font-family: &quot;Tahoma&quot;; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255)">
-		<span style="font-size: 11pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Photoshop là m&#7897;t &#7913;ng d&#7909;ng ch&#7881;nh s&#7917;a 
-		&#7843;nh chuyên nghi&#7879;p t&#7915; hãng Adobe và &#273;i&#7875;m &#273;&#7863;c bi&#7879;t &#7903; b&#7843;n CS2 này là nó 
-		&#273;&#432;&#7907;c cung c&#7845;p hoàn toàn mi&#7877;n phí. N&#7871;u b&#7841;n là ng&#432;&#7901;i th&#432;&#7901;ng xuyên ch&#7881;nh 
-		s&#7917;a các b&#7913;c &#7843;nh cho phù h&#7907;p v&#7899;i nhu c&#7847;u s&#7917; d&#7909;ng c&#7911;a mình, v&#7853;y thì 
-		Photoshop CS2 là l&#7921;a ch&#7885;n hàng &#273;&#7847;u không nên b&#7887; qua.&nbsp;&nbsp;&nbsp; 
-		</span> </strong>
-		<span style="color: rgb(0, 0, 0); font-family: Tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Softwares/PhotoshopCS2.htm">
-		<span style="font-size: 11pt">
-		<img border="0" id="img15" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img15',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img15',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img15',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img15',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></span></a></span></td>
-	</tr>
-</table>
-
-<table border="0" width="94%" id="table4" height="193">
-	<tr>
-		<td colspan="2" height="25">
-		<hr> 
-		</td>
-	</tr>
-	<tr>
-		<td height="162" rowspan="2" width="19%">
-		<p align="center">
-		<font face="Tahoma">
-		<img border="0" src="Data/Hinh_Anh/SinhVienIT.Net---autoclick-2-2.png" width="239" height="122" align="left"></font></td>
-		<td height="52" width="81%">
-		<span style="font-weight: 700">
-		<font face="Tahoma" style="font-size: 12pt" color="#0066FF">AutoClick 
-		2.2- T&#7921; &#273;&#7897;ng click chu&#7897;t dành cho games ho&#7863;c t&#7863;ng bông</font></span></td>
-	</tr>
-	<tr>
-		<td height="108" width="81%">
-		<h3 class="intro" style="text-align: justify; color: #333333; font-family: Tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 10px; background-color: rgb(255, 255, 255)">
-		<strong><span style="font-size: 11pt; font-weight: 400">&nbsp;</span></strong><span style="color: rgb(20, 20, 20); font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none">Auto Click là ch&#432;&#417;ng trình r&#7845;t h&#7919;u ích cho nh&#7919;ng ai mu&#7889;n t&#7921; &#273;&#7897;ng click 
-		chu&#7897;t trong 1 s&#7889; game hay trong Paltalk t&#7863;ng bông</span></h3>
-		<p align="center"><i><font face="Tahoma" size="2"><font color="#FF0000">
-		(
-		<a style="text-decoration: none" target="_blank" href="Download/Softwares/AutoClick22.htm">
-		<font color="#FF0000">xem gi&#7899;i thi&#7879;u và hu&#7899;ng d&#7851;n dùng t&#7841;i &#273;ây</font></a></font></a><font color="#FF0000"> 
-		)</font></font></i><font face="Tahoma"><a target="_blank" href="https://www.mediafire.com/file/4ixarjz9h5igoc7/AutoClick_2.2.rar/file"><img border="0" id="img17" src="Data/Hinh_Anh/button1.jpg" height="20" width="100" alt="T&#7843;i v&#7873;" onmouseover="FP_swapImg(1,0,/*id*/'img17',/*url*/'Data/Hinh_Anh/button2.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img17',/*url*/'Data/Hinh_Anh/button1.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img17',/*url*/'Data/Hinh_Anh/button3.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img17',/*url*/'Data/Hinh_Anh/button2.jpg')" fp-style="fp-btn: Brick Column 9" fp-title="T&#7843;i v&#7873;" align="right"></a></font><p>&nbsp;</td>
-	</tr>
-</table>
+    </div>
 
 </body>
-
 </html>

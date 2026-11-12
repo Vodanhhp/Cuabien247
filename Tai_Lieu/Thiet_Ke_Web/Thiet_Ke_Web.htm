@@ -1,206 +1,283 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Thi&#7871;t K&#7871; Website</title>
-<style type="text/css">
-        .lienket{       
-            background-color: white;
-            color: black;
-            border: 2px solid #73AD21;
-            border-radius:5px;
-            padding: 10px 20px;
-            text-align: center;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài Liệu Thiết Kế Website | CuaBien247</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-page: #ffffff;
+            --bg-card: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-size: 14.5px;
+            padding: 20px;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eff6ff;
+        }
+
+        .page-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eff6ff;
+            color: var(--primary);
+            border: 1px solid #bfdbfe;
             text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            font-family: "Lucida Sans Unicode";
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s ease;
         }
-        .lienket:hover{
-            background-color: #73AD21;
-            color:white;
+
+        .btn-back:hover {
+            background: var(--primary);
+            color: #ffffff;
         }
-        .lienket:active{
-            background-color: green;
-            border-color: green;
+
+        .doc-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
-    </style
+
+        .doc-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 18px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: all 0.2s ease;
+        }
+
+        .doc-card:hover {
+            background: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .doc-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex: 1;
+        }
+
+        /* Huy hiệu loại tệp PDF / RAR / ZIP */
+        .file-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 12px;
+            flex-shrink: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-pdf {
+            background: #fee2e2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+
+        .badge-archive {
+            background: #f3e8ff;
+            color: #7e22ce;
+            border: 1px solid #e9d5ff;
+        }
+
+        .doc-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .doc-title {
+            font-size: 15.5px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .doc-desc {
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
+
+        .doc-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+        }
+
+        .btn-download:hover {
+            background: var(--primary-hover);
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 12px; }
+            .doc-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .btn-download {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
+<body>
 
-<script language="JavaScript">
-<!--
-function FP_swapImg() {//v1.0
- var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- elm.$src=elm.src; elm.src=args[n+1]; } }
-}
+    <div class="page-header">
+        <h1 class="page-title">🌐 Tài Liệu Thiết Kế Website</h1>
+        <a href="javascript:history.back()" class="btn-back">← Quay lại danh mục</a>
+    </div>
 
-function FP_preloadImgs() {//v1.0
- var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-}
+    <div class="doc-list">
 
-function FP_getObjectByID(id,o) {//v1.0
- var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- return null;
-}
-// -->
-</script>
+        <!-- Tài liệu 1 -->
+        <div class="doc-card">
+            <div class="doc-left">
+                <div class="file-badge badge-pdf">PDF</div>
+                <div class="doc-info">
+                    <h3 class="doc-title">Microsoft FrontPage 2002 toàn tập</h3>
+                    <p class="doc-desc">Hướng dẫn sử dụng phần mềm soạn thảo và chỉnh sửa Website.</p>
+                    <div class="doc-meta">
+                        <span>📄 Định dạng: PDF (.pdf)</span>
+                        <span>💾 Dung lượng: 1.23 MB</span>
+                    </div>
+                </div>
+            </div>
+            <a href="http://www.mediafire.com/file/cuj3zikiwf04qk7/microsoft-frontpage-2002-toan-tap.pdf/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
 
+        <!-- Tài liệu 2 -->
+        <div class="doc-card">
+            <div class="doc-left">
+                <div class="file-badge badge-pdf">PDF</div>
+                <div class="doc-info">
+                    <h3 class="doc-title">HTML căn bản</h3>
+                    <p class="doc-desc">Giáo trình HTML căn bản, đầy đủ các ví dụ minh họa cụ thể.</p>
+                    <div class="doc-meta">
+                        <span>📄 Định dạng: PDF (.pdf)</span>
+                        <span>💾 Dung lượng: 2.46 MB</span>
+                    </div>
+                </div>
+            </div>
+            <a href="http://www.mediafire.com/file/l13rqtkn7lgaz1f/HTML_can_ban.pdf/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
 
-<body onload="FP_preloadImgs(/*url*/'../../Download/Hardwares/buttonB.jpg', /*url*/'../../Download/Hardwares/buttonC.jpg', /*url*/'../../Download/Hardwares/buttonE.jpg', /*url*/'../../Download/Hardwares/buttonF.jpg')">
+        <!-- Tài liệu 3 -->
+        <div class="doc-card">
+            <div class="doc-left">
+                <div class="file-badge badge-archive">RAR</div>
+                <div class="doc-info">
+                    <h3 class="doc-title">Tài liệu JavaScript</h3>
+                    <p class="doc-desc">Bộ giáo trình và mã nguồn học lập trình JavaScript căn bản.</p>
+                    <div class="doc-meta">
+                        <span>📦 Định dạng: Tệp nén (.rar)</span>
+                        <span>💾 Dung lượng: 736.72 MB</span>
+                    </div>
+                </div>
+            </div>
+            <a href="http://www.mediafire.com/file/g8tn91keb9roi4l/tailieujvscript.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
 
-<table border="0" width="99%" id="table1">
-	<tr>
-		<td height="87" rowspan="2" width="8%">
-		<img border="0" src="../../Data/Hinh_Anh/PDF-mo-file-logo200.png" width="94" height="94"></td>
-		<td height="33" width="92%">
-		<b><font face="Tahoma" color="#0066FF">Microsoft Frontpage 2002 to�n t&#7853;p</font></b></td>
-	</tr>
-	<tr>
-		<td height="52" width="92%">
-		<font face="Tahoma">Ph&#7847;n m&#7873;n so&#7841;n th&#7843;o, ch&#7881;nh s&#7917;a Website</font><a target="_blank" href="http://www.mediafire.com/file/cuj3zikiwf04qk7/microsoft-frontpage-2002-toan-tap.pdf/file"><img border="0" id="img36" src="../../Download/Hardwares/buttonA.jpg" height="22" width="110" alt="Download" onmouseover="FP_swapImg(1,0,/*id*/'img36',/*url*/'../../Download/Hardwares/buttonB.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img36',/*url*/'../../Download/Hardwares/buttonA.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img36',/*url*/'../../Download/Hardwares/buttonC.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img36',/*url*/'../../Download/Hardwares/buttonB.jpg')" fp-style="fp-btn: Embossed Capsule 1; fp-font-size: 11; fp-orig: 0" fp-title="Download" align="right"></a></td>
-	</tr>
-	<tr>
-		<td colspan="2" height="28">
-		<hr> 
-		</td>
-	</tr>
-	<tr>
-		<td height="83" rowspan="2" width="8%">
-		<img border="0" src="../../Data/Hinh_Anh/PDF-mo-file-logo200.png" width="94" height="98"></td>
-		<td height="29" width="92%">
-		<b><font face="Tahoma" color="#3366FF">HTML c&#259;n b&#7843;n</font></b></td>
-	</tr>
-	<tr>
-		<td height="52" width="92%">
-		<font face="Tahoma">Gi�o tr�nh HTML c&#259;n b&#7843;n, &#273;&#7847;y &#273;&#7911; c�c v� d&#7909; c&#7909; th&#7875;</font><font face="Tahoma" style="font-size: 11pt"><a target="_blank" href="http://www.mediafire.com/file/l13rqtkn7lgaz1f/HTML_can_ban.pdf/file"><img border="0" id="img37" src="../../Download/Hardwares/buttonD.jpg" height="22" width="110" alt="Download" onmouseover="FP_swapImg(1,0,/*id*/'img37',/*url*/'../../Download/Hardwares/buttonE.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img37',/*url*/'../../Download/Hardwares/buttonD.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img37',/*url*/'../../Download/Hardwares/buttonF.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img37',/*url*/'../../Download/Hardwares/buttonE.jpg')" fp-style="fp-btn: Embossed Capsule 1; fp-font-size: 11; fp-orig: 0" fp-title="Download" align="right"></a></font></td>
-	</tr>
-	<tr>
-		<td colspan="2" height="18">
-		<hr> 
-		</td>
-		</tr>
-	<tr>
-		<td height="81" rowspan="2" width="8%">
-		<img border="0" src="../../Data/Hinh_Anh/Annotation%202019-07-23%20220700.jpg" width="94" height="101"></td>
-		<td height="21" width="92%">
-		<b><font face="Tahoma" color="#3366FF">T�i li&#7879;u JavaScript</font></b></td>
-	</tr>
-	<tr>
-		<td height="58" width="92%">
-		<font face="Tahoma" style="font-size: 11pt">&nbsp;Gi�o tr�nh JavaScript&nbsp; 
-		c&#259;n b&#7843;n<a target="_blank" href="http://www.mediafire.com/file/g8tn91keb9roi4l/tailieujvscript.rar/file"><img border="0" id="img38" src="../../Download/Hardwares/buttonD.jpg" height="22" width="110" alt="Download" onmouseover="FP_swapImg(1,0,/*id*/'img38',/*url*/'../../Download/Hardwares/buttonE.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img38',/*url*/'../../Download/Hardwares/buttonD.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img38',/*url*/'../../Download/Hardwares/buttonF.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img38',/*url*/'../../Download/Hardwares/buttonE.jpg')" fp-style="fp-btn: Embossed Capsule 1; fp-font-size: 11; fp-orig: 0" fp-title="Download" align="right"></a></font></td>
-	</tr>
-	<tr>
-		<td colspan="2" height="18">
-		<hr> 
-		</td>
-		</tr>
-	<tr>
-		<td height="82" rowspan="2" width="8%">
-		<img border="0" src="../../Data/Hinh_Anh/Annotation%202019-07-23%20220700.jpg" width="94" height="101"></td>
-		<td height="28" width="92%">
-		<b><font face="Tahoma" size="3" color="#0066FF">Thi&#7871;t k&#7871; Web v&#7899;i&nbsp; 
-		Dreamweaver</font></b></td>
-	</tr>
-	<tr>
-		<td height="52" width="92%">
-		<font face="Tahoma" style="font-size: 11pt">T�i li&#7879;u thi&#7871;t k&#7871; Web &#273;&#7897;ng, 
-		di&#7877;n &#273;�n<a target="_blank" href="http://www.mediafire.com/file/f8gt1gimuh3dxc6/Thiet_Ke_Web_Voi_Dreamweaver_2.zip/file"><img border="0" id="img39" src="../../Download/Hardwares/buttonD.jpg" height="22" width="110" alt="Download" onmouseover="FP_swapImg(1,0,/*id*/'img39',/*url*/'../../Download/Hardwares/buttonE.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img39',/*url*/'../../Download/Hardwares/buttonD.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img39',/*url*/'../../Download/Hardwares/buttonF.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img39',/*url*/'../../Download/Hardwares/buttonE.jpg')" fp-style="fp-btn: Embossed Capsule 1; fp-font-size: 11; fp-orig: 0" fp-title="Download" align="right"></a></font></td>
-	</tr>
-	<tr>
-		<td colspan="2" height="22">
-		<hr> 
-		</td>
-		</tr>
-	<tr>
-		<td height="89" rowspan="2" width="8%">
-		<img border="0" src="../../Data/Hinh_Anh/Annotation%202019-07-23%20220700.jpg" width="94" height="101"></td>
-		<td height="35" width="92%">
-		<b><font face="Tahoma" color="#0066FF">JavaScript H&#432;&#7899;ng D&#7851;n H&#7885;c Qua V� 
-		D&#7909; - FPT Ebook</font></b></td>
-	</tr>
-	<tr>
-		<td height="52" width="92%">
-		<font face="Tahoma">JavaScript H&#432;&#7899;ng D&#7851;n H&#7885;c Qua V� D&#7909; - FPT Ebook</font><font face="Tahoma" style="font-size: 11pt"><a target="_blank" href="http://www.mediafire.com/file/e25d4pw9u42zfe5/JavaScript_H&#432;&#7899;ng_D&#7851;n_H&#7885;c_Qua_V�_D&#7909;_-_FPT_Ebook.zip/file"><img border="0" id="img40" src="../../Download/Hardwares/buttonD.jpg" height="22" width="110" alt="Download" onmouseover="FP_swapImg(1,0,/*id*/'img40',/*url*/'../../Download/Hardwares/buttonE.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img40',/*url*/'../../Download/Hardwares/buttonD.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img40',/*url*/'../../Download/Hardwares/buttonF.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img40',/*url*/'../../Download/Hardwares/buttonE.jpg')" fp-style="fp-btn: Embossed Capsule 1; fp-font-size: 11; fp-orig: 0" fp-title="Download" align="right"></a></font></td>
-	</tr>
-	<tr>
-		<td colspan="2" height="21">
-		<hr> 
-		</td>
-		</tr>
-	<tr>
-		<td height="83" rowspan="2" width="8%">
-		<p align="center">
-		<img border="0" src="../../Data/Hinh_Anh/Annotation%202019-07-23%20220700.jpg" width="94" height="101" align="left"></td>
-		<td height="29" width="92%">
-		<b><font face="Tahoma" color="#3366FF">Gi�o tr�nh JavaScript ti&#7871;ng vi&#7879;t 
-		c&#417; b&#7843;n</font></b></td>
-	</tr>
-	<tr>
-		<td height="52" width="92%">
-		<font face="Tahoma" style="font-size: 11pt">Giao trinh Javascript tieng 
-		viet co ban<a target="_blank" href="http://www.mediafire.com/file/3so4jf9wgd1imox/Giao_trinh_Javascript_tieng_viet_co_ban.zip/file"><img border="0" id="img41" src="../../Download/Hardwares/buttonD.jpg" height="22" width="110" alt="Download" onmouseover="FP_swapImg(1,0,/*id*/'img41',/*url*/'../../Download/Hardwares/buttonE.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img41',/*url*/'../../Download/Hardwares/buttonD.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img41',/*url*/'../../Download/Hardwares/buttonF.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img41',/*url*/'../../Download/Hardwares/buttonE.jpg')" fp-style="fp-btn: Embossed Capsule 1; fp-font-size: 11; fp-orig: 0" fp-title="Download" align="right"></a></font></td>
-	</tr>
-	<tr>
-		<td colspan="2" height="18">
-		<hr> 
-		</td>
-		</tr>
-	<tr>
-		<td colspan="2" height="18">
+        <!-- Tài liệu 4 -->
+        <div class="doc-card">
+            <div class="doc-left">
+                <div class="file-badge badge-archive">ZIP</div>
+                <div class="doc-info">
+                    <h3 class="doc-title">Thiết kế Web với Dreamweaver</h3>
+                    <p class="doc-desc">Tài liệu hướng dẫn thiết kế Web động và xây dựng diễn đàn.</p>
+                    <div class="doc-meta">
+                        <span>📦 Định dạng: Tệp nén (.zip)</span>
+                        <span>💾 Dung lượng: 570.09 MB</span>
+                    </div>
+                </div>
+            </div>
+            <a href="http://www.mediafire.com/file/f8gt1gimuh3dxc6/Thiet_Ke_Web_Voi_Dreamweaver_2.zip/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
 
-<table border="0" width="99%" id="table2">
-	<tr>
-		<td height="83" rowspan="2" width="8%">
-		<p align="center">
-		<img border="0" src="../../Data/Hinh_Anh/PDF-mo-file-logo200.png" width="89" height="91" align="left"></td>
-		<td height="29" width="92%">
-		<b><font face="Tahoma" color="#3366FF">HTML5 &amp; CSS3 to�n t&#7853;p</font></b></td>
-	</tr>
-	<tr>
-		<td height="52" width="92%">
-		<font face="Tahoma" style="font-size: 11pt">T�i li&#7879;u HTML5 &amp; CSS3 to�n 
-		t&#7853;p ( nhi&#7873;u v� d&#7909; minh h&#7885;a k�m theo..)<a target="_blank" href="http://www.mediafire.com/file/k095ioxyo2jxwhh/TaiLieu-HTML5-CSS3.rar/file"><img border="0" id="img42" src="../../Download/Hardwares/buttonD.jpg" height="22" width="110" alt="Download" onmouseover="FP_swapImg(1,0,/*id*/'img42',/*url*/'../../Download/Hardwares/buttonE.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img42',/*url*/'../../Download/Hardwares/buttonD.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img42',/*url*/'../../Download/Hardwares/buttonF.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img42',/*url*/'../../Download/Hardwares/buttonE.jpg')" fp-style="fp-btn: Embossed Capsule 1; fp-font-size: 11; fp-orig: 0" fp-title="Download" align="right"></a></font></td>
-	</tr>
-</table>
+        <!-- Tài liệu 5 -->
+        <div class="doc-card">
+            <div class="doc-left">
+                <div class="file-badge badge-archive">ZIP</div>
+                <div class="doc-info">
+                    <h3 class="doc-title">JavaScript Hướng Dẫn Học Qua Ví Dụ - FPT Ebook</h3>
+                    <p class="doc-desc">Sách điện tử thực hành JavaScript thông qua các ví dụ trực quan.</p>
+                    <div class="doc-meta">
+                        <span>📦 Định dạng: Tệp nén (.zip)</span>
+                        <span>💾 Dung lượng: 12.51 MB</span>
+                    </div>
+                </div>
+            </div>
+            <a href="https://mediafire.com" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
 
-		</td>
-		</tr>
-	<tr>
-		<td colspan="2" height="18">
-		<hr> 
-		</td>
-		</tr>
-	<tr>
-		<td colspan="2" height="18">
-
-<table border="0" width="99%" id="table3">
-	<tr>
-		<td height="83" rowspan="2" width="8%">
-		<p align="center">
-		<img border="0" src="../../Data/Hinh_Anh/PDF-mo-file-logo200.png" width="95" height="94" align="left"></td>
-		<td height="29" width="92%">
-		<b><font face="Tahoma" color="#3366FF">Gi�o Tr�nh PHP</font></b></td>
-	</tr>
-	<tr>
-		<td height="52" width="92%">
-		<font face="Tahoma" style="font-size: 11pt">Tr&#7885;n b&#7897; gi�o tr�nh PHP 4 
-		Module<a target="_blank" href="http://www.mediafire.com/folder/q0rwxdjpvyvd5/PHP"><img border="0" id="img43" src="../../Download/Hardwares/buttonD.jpg" height="22" width="110" alt="Download" onmouseover="FP_swapImg(1,0,/*id*/'img43',/*url*/'../../Download/Hardwares/buttonE.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img43',/*url*/'../../Download/Hardwares/buttonD.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img43',/*url*/'../../Download/Hardwares/buttonF.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img43',/*url*/'../../Download/Hardwares/buttonE.jpg')" fp-style="fp-btn: Embossed Capsule 1; fp-font-size: 11; fp-orig: 0" fp-title="Download" align="right"></a></font></td>
-	</tr>
-</table>
-
-		</td>
-		</tr>
-	</table>
+    </div>
 
 </body>
-
 </html>

@@ -1,439 +1,255 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Download_Frame</title>
-   
- <style type="text/css">
-        .lienket{       
-            background-color: white;
-            color: black;
-            border: 2px solid #73AD21;
-            border-radius:5px;
-            padding: 10px 20px;
-            text-align: center;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kho Táº£i Driver Tá»± Äá»™ng Cho Windows | CuaBien247</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-page: #ffffff;
+            --bg-card: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-size: 14.5px;
+            padding: 20px;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eff6ff;
+        }
+
+        .page-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eff6ff;
+            color: var(--primary);
+            border: 1px solid #bfdbfe;
             text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            font-family: "Lucida Sans Unicode";
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s ease;
         }
-        .lienket:hover{
-            background-color: #73AD21;
-            color:white;
+
+        .btn-back:hover {
+            background: var(--primary);
+            color: #ffffff;
         }
-        .lienket:active{
-            background-color: green;
-            border-color: green;
+
+        /* Tháº» bÃ i ná»•i báº­t */
+        .featured-card {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 22px;
+            transition: all 0.2s ease;
+        }
+
+        .featured-card:hover {
+            background: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.08);
+        }
+
+        .featured-thumb {
+            width: 240px;
+            height: 185px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: #ffffff;
+        }
+
+        .featured-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .featured-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            line-height: 1.4;
+        }
+
+        .featured-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12.5px;
+            color: var(--text-muted);
+        }
+
+        .featured-desc {
+            font-size: 14px;
+            color: var(--text-dark);
+            text-align: justify;
+            margin-top: 4px;
+        }
+
+        .featured-footer {
+            margin-top: auto;
+            padding-top: 8px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .btn-more:hover {
+            background: var(--primary-hover);
+        }
+
+        /* LÆ°á»›i cÃ¡c bá»™ Driver khÃ¡c bÃªn dÆ°á»›i */
+        .sub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 14px;
+        }
+
+        .sub-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.2s ease;
+        }
+
+        .sub-card:hover {
+            background: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .sub-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.4;
+        }
+
+        .sub-card span {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        @media (max-width: 720px) {
+            body { padding: 12px; }
+            .featured-card {
+                flex-direction: column;
+            }
+            .featured-thumb {
+                width: 100%;
+                height: 200px;
+            }
+            .btn-more {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
-
-<script language="JavaScript">
-<!--
-function FP_preloadImgs() {//v1.0
- var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-}
-
-function FP_swapImg() {//v1.0
- var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- elm.$src=elm.src; elm.src=args[n+1]; } }
-}
-
-function FP_getObjectByID(id,o) {//v1.0
- var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- return null;
-}
-// -->
-</script>
-
 </head>
+<body>
 
-<body onload="FP_preloadImgs(/*url*/'Data/Hinh_Anh/button10.jpg', /*url*/'Data/Hinh_Anh/button11.jpg', /*url*/'Data/Hinh_Anh/button15.jpg', /*url*/'Data/Hinh_Anh/button16.jpg')">
+    <div class="page-header">
+        <h1 class="page-title">ðŸ’¿ Kho Táº£i Bá»™ Driver Tá»± Äá»™ng Cho Windows</h1>
+        <a href="javascript:history.back()" class="btn-back">â† Quay láº¡i danh má»¥c</a>
+    </div>
 
-  
-<table border="0" width="99%" id="table1" style="border-left-width: 0px; border-right-width: 0px; border-top-width: 0px">
-	<tr>
-		<td width="1%" rowspan="2" style="border-left-style: none; border-left-width: medium; border-right-style: none; border-right-width: medium; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 1px">&nbsp;</td>
-		<td colspan="3" height="259" style="border-style: none; border-width: medium">
-		&nbsp;<h2 class="contentheading" style="padding: 0px; font-weight: bold; line-height: 1.5; text-transform: uppercase; color: #006BB9; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:5px">
-		<font size="3">WANDRIVER 7 (EASYDRV7) ENGLISH - B&#7896; DRIVER T&#7920; &#272;&#7896;NG, &#272;&#7846;Y &#272;&#7910; CHO WINDOWS</font></h2>
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<img border="0" src="Data/Hinh_Anh/aee5027dc417accb1130a99c16e150ad.jpeg" align="left" hspace="1" class="chitiet" width="254" height="197"><div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-				<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 209.391px;">
-					<dd class="modified" style="margin: 0px; padding: 0px 0px 2px; font-size: 11.508px;">
-					<font size="2">C&#7853;p nh&#7853;t ngày Th&#7913; t&#432;, 10 /1/ 2018 22:46</font></dd>
-					<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-					<font size="2">B&#7903;i Lâm Tính</font></dd>
-					<dd class="hits" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-					<font size="2">L&#432;&#7907;t xem: 123839</font></dd>
-					<dt>&nbsp;</dt>
-				</dl>
-				<p>&nbsp;</p>
-				<p>&nbsp;</div>
-			<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-				<p style="margin: 0px 0px 10px; padding: 0px;" align="justify">
-				<font style="font-size: 11pt">B&#7897; 
-				Offline Wandriver nay &#273;ã &#273;&#7893;i thành EasyDrv là m&#7897;t công c&#7909; ph&#7847;n 
-				m&#7873;m cài Driver b&#7883; thi&#7871;u cho Windows m&#7897;t cách nhanh chóng và hi&#7879;u 
-				qu&#7843; &#273;&#7863;c bi&#7879;t Wandriver 7 &#273;&#432;&#7907;c c&#7843;i ti&#7871;n h&#417;n các phiên b&#7843;n tr&#7903; v&#7873; 
-				sau. &#7902; bài vi&#7871;t tr&#432;&#7899;c TIMT có gi&#7899;i thi&#7879;u &#273;&#7871;n các b&#7841;n b&#7897; 
-				Wandriver 7 m&#7899;i nh&#7845;t nh&#432;ng ch&#7881; là ti&#7871;ng trung gây b&#7845;t ti&#7879;n trong 
-				quá trình thao tác và khó s&#7917; d&#7909;ng. Xin chân thành c&#7843;m &#417;n Ghoster 
-				Lehait &#273;ã rebuild l&#7841;i b&#7843;n ti&#7871;ng anh m&#7899;i nh&#7845;t này</font><a target="_self" href="Download/Drivers/EazyDrv7_full.htm"><span style="font-size: 11pt"><img border="0" id="img1" src="Data/Hinh_Anh/buttonF.jpg" height="20" width="100" alt="xem thêm" fp-style="fp-btn: Brick Column 9" fp-title="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'Data/Hinh_Anh/button10.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'Data/Hinh_Anh/buttonF.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'Data/Hinh_Anh/button11.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'Data/Hinh_Anh/button10.jpg')" align="right"></span></a></p></div>
-		</div>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="3" style="border-left-style: none; border-left-width: medium; border-right-style: none; border-right-width: medium; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 1px">
-		&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%" height="93" style="border-bottom-style: none; border-bottom-width: medium">&nbsp;</td>
-		<td width="50%" height="93" style="border-right-style: solid; border-right-width: 1px; border-bottom-style: none; border-bottom-width: medium">
-		<h2 class="contentheading" style="padding: 0px; font-weight: bold; line-height: 1.5; font-size: 15px; color: #006BB9; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:5px">
-		Wandriver 7 (EasyDrv7) - B&#7897; Driver T&#7921; &#272;&#7897;ng, &#272;&#7847;y &#272;&#7911; Cho Windows</h2>
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<ul class="actions" style="margin: 0px; padding: 0px; list-style: none; float: right;">
-				<li class="print-icon" style="line-height: 19.2px; display: inline; margin: 0px; padding: 0px; background: none">
-				</li>
-			</ul>
-			<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 191.391px;">
-				<dd class="modified" style="margin: 0px; padding: 0px 0px 2px; font-size: 11.508px;">
-				C&#7853;p nh&#7853;t ngày Th&#7913; t&#432;, 26 /7/ 2017 13:11</dd>
-				<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-				B&#7903;i Ti&#7879;n Ích Máy Tính</dd>
-			</dl>
-		</div>
-		</td>
-		<td width="1%" height="93" style="border-bottom-style: none; border-bottom-width: medium">&nbsp;</td>
-		<td width="47%" height="93" style="border-bottom-style: none; border-bottom-width: medium">
-		<h2 class="contentheading" style="padding: 0px; font-weight: bold; line-height: 1.5; font-size: 15px; color: #006BB9; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:5px">
-		Wandriver 6.5 Ti&#7871;ng Anh + Ti&#7871;ng Vi&#7879;t - B&#7897; Driver T&#7921; &#272;&#7897;ng, &#272;&#7847;y &#272;&#7911; Cho 
-		Windows</h2>
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<ul class="actions" style="margin: 0px; padding: 0px; list-style: none; float: right;">
-				<li class="print-icon" style="line-height: 19.2px; display: inline; margin: 0px; padding: 0px; background: none">
-				</li>
-			</ul>
-			<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 192px;">
-				<dd class="modified" style="margin: 0px; padding: 0px 0px 2px; font-size: 11.508px;">
-				C&#7853;p nh&#7853;t ngày Th&#7913; t&#432;, 02 /8/ 2017 19:54</dd>
-				<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-				B&#7903;i Ti&#7879;n Ích Máy Tính</dd>
-			</dl>
-		</div></td>
-	</tr>
-	<tr>
-		<td width="1%" height="179" style="border-left-style: none; border-left-width: medium; border-right-style: none; border-right-width: medium; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 1px">&nbsp;</td>
-		<td width="50%" height="179" style="border-left-style: none; border-left-width: medium; border-right-style: solid; border-right-width: 1px; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 1px">
-		<p align="justify">
-		<img style="display: block; margin-left: auto; margin-right: auto;" src="Data/Hinh_Anh/1c00f83a9aba0551bf86d4875fb382b4.jpeg" alt="wandriver 7 cai dat driver day du cho windows" align="left" width="183" height="120"><span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none">N&#259;m 
-		2017 b&#7897; ph&#7847;n m&#7873;m driver t&#7893;ng h&#7907;p Offline Wandriver huy&#7873;n tho&#7841;i &#273;ã &#273;&#7893;i 
-		tên thành&nbsp;EasyDrv và ch&#7881; phát hành các b&#7897; driver cho Windows 10 và 
-		Windows 7. Các b&#7841;n có nhu c&#7847;u s&#7917; d&#7909;ng cho Windows XP ho&#7863;c 8.1 thì có th&#7875; 
-		quay l&#7841;i v&#7899;i b&#7897; Wandriver 6.6</span><span style="font-family: tahoma; font-size: 11pt; color: #000000; letter-spacing: normal; background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		</span>
-		<span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none">
-		<a target="_self" href="Download/Drivers/EazyDrv7_full.htm">
-		<img border="0" id="img2" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9" fp-title="xem thêm" align="right"></a></span></td>
-		<td width="1%" height="179" style="border-right-style: none; border-right-width: medium; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 1px">&nbsp;</td>
-		<td width="47%" height="179" style="border-left-style: none; border-left-width: medium; border-right-style: none; border-right-width: medium; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 1px">
-		<p align="justify">
-		<span style="font-size: 11pt">
-		<img style="display: block; margin-left: auto; margin-right: auto;" src="https://www.tienichmaytinh.com/cache/ytools/237694ab89b1fcd526866b0060d0d906.jpeg" alt="wandriver 6.5 tieng anh tieng viet" align="left" width="180" height="117"></span><span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none">Ti&#7879;n 
-		Ích Máy Tính &#273;ã gi&#7899;i thi&#7879;u &#273;&#7871;n các b&#7841;n b&#7897; Wandriver - Easy DriverPack 
-		6.5 m&#7899;i nh&#7845;t &#273;&#7871;n th&#7901;i &#273;i&#7875;m hi&#7879;n t&#7841;i. Tuy nhiên do là b&#7843;n nguyên g&#7889;c t&#7915; 
-		Wandriver nên ngôn ng&#7919; Trung Qu&#7889;c nhìn khá khó ch&#7883;u và khó s&#7917; d&#7909;ng. &#272;ã 
-		b&#7893; sung b&#7843;n c&#7853;p nh&#7853;t m&#7899;i nh&#7845;t h&#7895; tr&#7907; t&#7889;t cho Windows 10.<a target="_self" href="Download/Drivers/EasyDrv65.htm"><img border="0" id="img3" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-	</tr>
-	<tr>
-		<td width="1%" style="border-bottom-style: none; border-bottom-width: medium">&nbsp;</td>
-		<td width="50%" style="border-right-style: solid; border-right-width: 1px; border-bottom-style: none; border-bottom-width: medium">
-		<h2 class="contentheading" style="font-weight: bold; line-height: 1.5; font-size: 15px; color: #006BB9; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 5px; padding: 0px; background-color: rgb(255, 255, 255)">
-		Download DriverPack Solution 17 - B&#7897; Driver T&#7921; &#272;&#7897;ng, &#272;&#7847;y &#272;&#7911; Cho Windows</h2>
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<ul class="actions" style="margin: 0px; padding: 0px; list-style: none; float: right;">
-				<li class="print-icon" style="line-height: 19.2px; display: inline; margin: 0px; padding: 0px; background: none">
-				</li>
-			</ul>
-			<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 191.391px;">
-				<dd class="modified" style="margin: 0px; padding: 0px 0px 2px; font-size: 11.508px;">
-				C&#7853;p nh&#7853;t ngày Th&#7913; hai, 06 /11/ 2017 10:25</dd>
-				<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-				B&#7903;i Ti&#7879;n Ích Máy Tính</dd>
-			</dl>
-		</div>
-&nbsp;</td>
-		<td width="1%" style="border-bottom-style: none; border-bottom-width: medium">&nbsp;</td>
-		<td width="47%" style="border-bottom-style: none; border-bottom-width: medium">
-		<h2 class="contentheading" style="font-weight: bold; line-height: 1.5; font-size: 15px; color: #006BB9; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 5px; padding: 0px; background-color: rgb(255, 255, 255)">
-		Wandriver 6.5 - B&#7897; Driver T&#7921; &#272;&#7897;ng, &#272;&#7847;y &#272;&#7911; Cho Windows</h2>
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<ul class="actions" style="margin: 0px; padding: 0px; list-style: none; float: right;">
-				<li class="print-icon" style="line-height: 19.2px; display: inline; margin: 0px; padding: 0px; background: none">
-				</li>
-			</ul>
-			<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 192px;">
-				<dd class="modified" style="margin: 0px; padding: 0px 0px 2px; font-size: 11.508px;">
-				C&#7853;p nh&#7853;t ngày Th&#7913; t&#432;, 02 /8/ 2017 17:16</dd>
-				<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-				B&#7903;i Ti&#7879;n Ích Máy Tính</dd>
-			</dl>
-		</div>
-&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%" style="border-left-style: none; border-left-width: medium; border-right-style: none; border-right-width: medium; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 1px" height="157">&nbsp;</td>
-		<td width="50%" style="border-left-style: none; border-left-width: medium; border-right-style: solid; border-right-width: 1px; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 1px" height="157">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p align="justify">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/092108e9d4d979d7444c56117718f6bd.jpeg" alt="Download DriverPack Solution 17" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;"></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="margin: 0px 0px 10px; padding: 0px; text-align: justify;">
-			<span style="font-size: 11pt">B&#7841;n v&#7915;a cài l&#7841;i Windows, &#273;ang ch&#432;a bi&#7871;t cách t&#7843;i và cài &#273;&#7863;t Driver 
-			nh&#432; th&#7871; nào hay b&#7841;n là m&#7897;t k&#7929; thu&#7853;t viên chuyên &#273;i cài Win d&#7841;o cho 
-			khách, cài nhi&#7873;u th&#7875; lo&#7841;i và ng&#7841;i dùng Wandriver c&#7911;a Trung Qu&#7889;c thì 
-			b&#7897; DriverPack Solution là m&#7897;t l&#7921;a ch&#7885;n tuy&#7879;t v&#7901;i. Nó có kh&#7843; n&#259;ng t&#7921; 
-			&#273;&#7897;ng nh&#7853;n di&#7879;n và cài &#273;&#7863;t &#273;&#7847;y &#273;&#7911; 98% Driver cho t&#7845;t c&#7843; các lo&#7841;i máy 
-			tính cài Windows XP - Windows 10.</span></div>
-		<span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Drivers/DriverPackSolution17.htm">
-		<img border="0" id="img5" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-		<td width="1%" style="border-right-style: none; border-right-width: medium; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 1px" height="157">&nbsp;</td>
-		<td width="47%" style="border-left-style: none; border-left-width: medium; border-right-style: none; border-right-width: medium; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 1px" height="157">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p align="justify">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/3bde23426249a0fd468531a1464e0a65.jpeg" alt="wandriver 6.5" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;" width="176" height="116"></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="padding: 0px; font-size: 11pt; line-height: 15.808px; text-align: justify; margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:10px">
-			<span style="margin: 0px; padding: 0px; color: rgb(0, 0, 0);">M&#7899;i 
-			&#273;ây hãng phát tri&#7875;n b&#7897; Driver t&#7921; &#273;&#7897;ng c&#7911;a Trung Qu&#7889;c &#273;ã cho ra m&#7855;t 
-			Wandriver 6.5 m&#7899;i nh&#7845;t &#273;&#7871;n th&#7901;i &#273;i&#7875;m hi&#7879;n t&#7841;i, c&#7853;p nh&#7853;t thêm nhi&#7873;u 
-			c&#7845;u hình m&#7899;i và ch&#7841;y t&#7889;t trên Windows 10.</span></div>
-		<span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Drivers/Wandrive65.htm">
-		<img border="0" id="img4" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-	</tr>
-	<tr>
-		<td width="1%">&nbsp;</td>
-		<td width="50%" style="border-right-style: solid; border-right-width: 1px">
-		<h2 class="contentheading" style="font-weight: bold; line-height: 1.5; font-size: 15px; color: #006BB9; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 5px; padding: 0px; background-color: rgb(255, 255, 255)">
-		Wandriver 6.6 Ti&#7871;ng Anh + Ti&#7871;ng Vi&#7879;t - B&#7897; Driver T&#7921; &#272;&#7897;ng, &#272;&#7847;y &#272;&#7911; Cho 
-		Windows</h2>
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<ul class="actions" style="margin: 0px; padding: 0px; list-style: none; float: right;">
-				<li class="print-icon" style="line-height: 19.2px; display: inline; margin: 0px; padding: 0px; background: none">
-				</li>
-			</ul>
-			<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 191.391px;">
-				<dd class="modified" style="margin: 0px; padding: 0px 0px 2px; font-size: 11.508px;">
-				C&#7853;p nh&#7853;t ngày Th&#7913; t&#432;, 02 /8/ 2017 19:24</dd>
-				<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-				B&#7903;i Ti&#7879;n Ích Máy Tính</dd>
-			</dl>
-		</div>
-&nbsp;</td>
-		<td width="1%">&nbsp;</td>
-		<td width="47%">
-		<h2 class="contentheading" style="font-weight: bold; line-height: 1.5; font-size: 15px; color: #006BB9; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 5px; padding: 0px; background-color: rgb(255, 255, 255)">
-		Wandriver 6.3 Ti&#7871;ng Vi&#7879;t - B&#7897; Driver T&#7921; &#272;&#7897;ng, &#272;&#7847;y &#272;&#7911; Cho Windows</h2>
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<ul class="actions" style="margin: 0px; padding: 0px; list-style: none; float: right;">
-				<li class="print-icon" style="line-height: 19.2px; display: inline; margin: 0px; padding: 0px; background: none">
-				</li>
-			</ul>
-			<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 192px;">
-				<dd class="modified" style="margin: 0px; padding: 0px 0px 2px; font-size: 11.508px;">
-				C&#7853;p nh&#7853;t ngày Th&#7913; t&#432;, 02 /8/ 2017 19:32</dd>
-				<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-				B&#7903;i Ti&#7879;n Ích Máy Tính</dd>
-			</dl>
-		</div>
-&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%" style="border-bottom-style: solid; border-bottom-width: 1px" height="159">&nbsp;</td>
-		<td width="50%" style="border-right-style: solid; border-right-width: 1px; border-bottom-style: solid; border-bottom-width: 1px" height="159">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p align="justify">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/fffa6bbaac7449e6029955481854f847.jpeg" alt="Wandriver 6.6 Tieng Anh Tieng Viet" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;"></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="margin: 0px 0px 10px; padding: 0px; text-align: justify;">
-			<span style="font-size: 11pt">M&#7899;i &#273;ây Wandriver hay còn g&#7885;i là&nbsp;Easy DriverPack &#273;ã &#273;&#432;&#7907;c nhà s&#7843;n 
-			xu&#7845;t Trung Qu&#7889;c cho ra phiên b&#7843;n m&#7899;i nh&#7845;t Wandriver 6.6. Hi&#7879;n t&#7841;i 
-			trên t&#7845;t c&#7843; các Website và di&#7877;n &#273;àn chia s&#7867; m&#7899;i ch&#7881; có phiên b&#7843;n 
-			ti&#7871;ng Trung khá là khó nhìn. Vì v&#7853;y Ti&#7879;n Ích Máy Tính &#273;ã Anh - Vi&#7879;t 
-			hóa b&#7897; driver này d&#7921;a trên công c&#7909; c&#7911;a Daniel Dac.</span></p>
-			<p style="margin: 0px 0px 10px; padding: 0px; text-align: justify;">&nbsp;</div>
-		<span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Drivers/Wandriver66.htm">
-		<img border="0" id="img7" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img7',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img7',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img7',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img7',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-		<td width="1%" style="border-bottom-style: solid; border-bottom-width: 1px" height="159">&nbsp;</td>
-		<td width="47%" style="border-bottom-style: solid; border-bottom-width: 1px" height="159">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/bdaa69d96f904138f6979e991b5b8a76.jpeg" alt="wandriver 6 3" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;" width="182" height="117"></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="margin: 10px 0px; padding: 0px; color: rgb(0, 107, 185); font-family: tahoma; font-size: 12px; line-height: 19.2px; " align="justify">
-			<span style="font-size: 11pt; color: rgb(0, 0, 0); margin: 0px; padding: 0px">&#7902; bài 
-			vi&#7871;t tr&#432;&#7899;c TIMT &#273;ã gi&#7899;i thi&#7879;u &#273;&#7871;n các b&#7841;n b&#7897; Wandriver 6.3 phiên b&#7843;n 
-			Ti&#7871;ng Vi&#7879;t. Bài vi&#7871;t này s&#7869; ti&#7871;p t&#7909;c gi&#7899;i thi&#7879;u &#273;&#7871;n các b&#7841;n b&#7897; 
-			Driver m&#7899;i nh&#7845;t &#273;ã &#273;&#432;&#7907;c Vi&#7879;t hóa s&#7917; d&#7909;ng ti&#7879;n l&#7907;i, nhanh chóng nh&#432;ng 
-			v&#7851;n &#273;&#7847;y &#273;&#7911; driver cho Win XP - 8.1.</span><p style="margin: 10px 0px; padding: 0px; color: rgb(0, 107, 185); font-family: tahoma; font-size: 12px; line-height: 19.2px; " align="justify">
-			<span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)"><a target="_self" href="Download/Drivers/Wandriver63.htm"><img border="0" id="img6" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img6',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img6',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img6',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img6',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span><p style="margin: 10px 0px; padding: 0px; color: rgb(0, 107, 185); font-family: tahoma; font-size: 12px; line-height: 19.2px; " align="justify">
-			&nbsp;</div>
-		</td>
-	</tr>
-	<tr>
-		<td width="1%">&nbsp;</td>
-		<td width="50%" style="border-right-style: solid; border-right-width: 1px">
-		<h2 class="contentheading" style="padding: 0px; font-weight: bold; line-height: 1.5; font-size: 15px; color: #006BB9; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:5px">
-		Wandriver 6.2 English - B&#7897; Driver T&#7921; &#272;&#7897;ng M&#7899;i Nh&#7845;t Cho Windows</h2>
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<ul class="actions" style="margin: 0px; padding: 0px; list-style: none; float: right;">
-				<li class="print-icon" style="line-height: 19.2px; display: inline; margin: 0px; padding: 0px; background: none">
-				</li>
-			</ul>
-			<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 191.391px;">
-				<dd class="modified" style="margin: 0px; padding: 0px 0px 2px; font-size: 11.508px;">
-				C&#7853;p nh&#7853;t ngày Th&#7913; t&#432;, 02 /8/ 2017 20:25</dd>
-				<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-				B&#7903;i Ti&#7879;n Ích Máy Tính</dd>
-			</dl>
-		</div>
-&nbsp;</td>
-		<td width="1%">&nbsp;</td>
-		<td width="47%">
-		<h2 class="contentheading" style="padding: 0px; font-weight: bold; line-height: 1.5; font-size: 15px; color: #006BB9; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:5px">
-		Wandriver v6.0 - B&#7897; Driver T&#7921; &#272;&#7897;ng, &#272;&#7847;y &#272;&#7911; Cho Win XP,Win 7 Và Win 8</h2>
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<ul class="actions" style="margin: 0px; padding: 0px; list-style: none; float: right;">
-				<li class="print-icon" style="line-height: 19.2px; display: inline; margin: 0px; padding: 0px; background: none">
-				</li>
-			</ul>
-			<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 192px;">
-				<dd class="modified" style="margin: 0px; padding: 0px 0px 2px; font-size: 11.508px;">
-				C&#7853;p nh&#7853;t ngày Th&#7913; t&#432;, 02 /8/ 2017 21:02</dd>
-				<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-				B&#7903;i Ti&#7879;n Ích Máy Tính</dd>
-			</dl>
-		</div>
-&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%" style="border-bottom-style: solid; border-bottom-width: 1px" height="154">&nbsp;</td>
-		<td width="50%" style="border-right-style: solid; border-right-width: 1px; border-bottom-style: solid; border-bottom-width: 1px" height="154">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p align="justify">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/f458b1e3d133ad040ef33714ef0c73e4.jpeg" alt="Wandriver 6.2" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;"></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="margin: 0px 0px 10px; padding: 0px; line-height: 19.2px; text-align: justify;">
-			<span style="font-size: 11pt; color: rgb(0, 0, 0); margin: 0px; padding: 0px">&#272;&#7889;i 
-			v&#7899;i các KTV &#273;&#7863;c bi&#7879;t là các ghoster ch&#7855;c không còn l&#7841; l&#7851;m gì v&#7899;i cái 
-			tên Wandriver - B&#7897; driver &#273;&#432;&#7907;c c&#7853;p nh&#7853;t th&#432;&#7901;ng xuyên, t&#7921; &#273;&#7897;ng và r&#7845;t 
-			ti&#7879;n l&#7907;i, h&#7895; tr&#7907; các phiên b&#7843;n Windows t&#7915; Windows XP &#273;&#7871;n 8.1.</span></p>
-			<p style="margin: 0px 0px 10px; padding: 0px; line-height: 19.2px; text-align: justify;">&nbsp;</div>
-		<span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Drivers/EasyDrv65.htm">
-		<img border="0" id="img9" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img9',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img9',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img9',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img9',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-		<td width="1%" style="border-bottom-style: solid; border-bottom-width: 1px" height="154">&nbsp;</td>
-		<td width="47%" style="border-bottom-style: solid; border-bottom-width: 1px" height="154">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p align="justify">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/8d80ab9ff39e88b70336a2e2a53afaf8.jpeg" alt="60" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;"></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="margin: 0px 0px 10px; padding: 0px; text-align: justify;">
-			<span style="font-size: 11pt">WanDriver v6.0.2014.0322 (Easy DriverPacks) là phiên b&#7843;n m&#7899;i nh&#7845;t 
-			c&#7911;a công c&#7909; WanDriver có th&#7875; c&#7853;p nh&#7853;t Driver Offline cho Windows Xp, 
-			Windows 7 (x86-x64), dung l&#432;&#7907;ng nh&#7887; g&#7885;n, phù h&#7907;p cho vào USB mang 
-			theo s&#7917;a ch&#7919;a m&#7885;i lúc m&#7885;i n&#417;i.</span></p>
-			<p style="margin: 0px 0px 10px; padding: 0px; text-align: justify;">&nbsp;</div>
-		<span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Drivers/EasyDrv65.htm">
-		<img border="0" id="img8" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img8',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img8',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img8',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img8',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></td>
-	</tr>
-	<tr>
-		<td width="1%">&nbsp;</td>
-		<td width="50%" style="border-right-style: solid; border-right-width: 1px">
-		<h2 class="contentheading" style="padding: 0px; font-weight: bold; line-height: 1.5; font-size: 15px; color: #006BB9; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:5px">
-		Wandriver v6.1 - B&#7897; Driver T&#7921; &#272;&#7897;ng, &#272;&#7847;y &#272;&#7911; M&#7899;i Nh&#7845;t Cho Win XP,Win 7 Và 
-		Win 8</h2>
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<ul class="actions" style="margin: 0px; padding: 0px; list-style: none; float: right;">
-				<li class="print-icon" style="line-height: 19.2px; display: inline; margin: 0px; padding: 0px; background: none">
-				</li>
-			</ul>
-			<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 191.391px;">
-				<dd class="modified" style="margin: 0px; padding: 0px 0px 2px; font-size: 11.508px;">
-				C&#7853;p nh&#7853;t ngày Th&#7913; t&#432;, 02 /8/ 2017 20:43</dd>
-				<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-				B&#7903;i Ti&#7879;n Ích Máy Tính</dd>
-			</dl>
-		</div>
-&nbsp;</td>
-		<td width="1%">&nbsp;</td>
-		<td width="47%">
-		<h2 class="contentheading" style="padding: 0px; font-weight: bold; line-height: 1.5; font-size: 15px; color: #006BB9; font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:5px">
-		Wandriver 5.3.3 - B&#7897; Driver &#272;&#7847;y &#272;&#7911; Cho Win XP,Win 7 Và Win 8</h2>
-		<div class="info-head-blog clearfix" style="margin: 0px; padding: 0px; font-size: 12px; clear: none; overflow: hidden; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<ul class="actions" style="margin: 0px; padding: 0px; list-style: none; float: right;">
-				<li class="print-icon" style="line-height: 19.2px; display: inline; margin: 0px; padding: 0px; background: none">
-				</li>
-			</ul>
-			<dl class="article-info" style="margin: 0px; padding: 0px; float: left; line-height: 17px; width: 192px;">
-				<dd class="modified" style="margin: 0px; padding: 0px 0px 2px; font-size: 11.508px;">
-				C&#7853;p nh&#7853;t ngày Th&#7913; t&#432;, 02 /8/ 2017 20:50</dd>
-				<dd class="createdby" style="margin: 0px; padding: 0px; font-size: 11.04px;">
-				B&#7903;i Ti&#7879;n Ích Máy Tính</dd>
-			</dl>
-		</div>
-&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%" height="67">&nbsp;</td>
-		<td width="50%" height="67" style="border-right-style: solid; border-right-width: 1px">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p align="justify">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/45944298ab98b44400ac67b7202c4cac.jpeg" alt="61" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;"></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="margin: 0px 0px 10px; padding: 0px; text-align: justify;">
-			<span style="font-size: 11pt">WanDriver v6.1.2014.0516&nbsp;(Easy DriverPacks) là phiên b&#7843;n m&#7899;i nh&#7845;t 
-			c&#7911;a công c&#7909; WanDriver có th&#7875; c&#7853;p nh&#7853;t Driver Offline cho Windows Xp, 
-			Windows 7 (x86-x64), dung l&#432;&#7907;ng nh&#7887; g&#7885;n, phù h&#7907;p cho vào USB mang 
-			theo s&#7917;a ch&#7919;a m&#7885;i lúc m&#7885;i n&#417;i.</span><span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)"><a target="_self" href="Download/Drivers/EasyDrv65.htm"><img border="0" id="img11" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img11',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img11',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img11',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img11',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></div>
-		</td>
-		<td width="1%" height="67">&nbsp;</td>
-		<td width="47%" height="67">
-		<div class="image-content image-intro ifloat" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p align="justify">
-			<img src="https://www.tienichmaytinh.com/cache/ytools/3c95ec0d727677e7d4b398466321c757.jpeg" alt="533" style="margin-top: 0px !important; margin-right: auto; margin-bottom: 0px !important; margin-left: auto; padding: 0px; float: left; display: block;"></div>
-		<div class="article-content item-content" style="margin: 0px; padding: 0px; font-size: 12px; color: rgb(0, 0, 0); font-family: tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
-			<p style="margin: 10px 0px; padding: 0px; font-family: arial; " align="justify">
-			<span style="font-size: 11pt; color: rgb(0, 0, 0); margin: 0px; padding: 0px">Universal Driver Assistant hay còn g&#7885;i là WanDrv (Easy Driver Pack) 
-			v5.33 là b&#7843;n m&#7899;i nh&#7845;t &#273;&#7843;m b&#7843;o c&#7853;p nh&#7853;t &#273;&#7847;y &#273;&#7911; driver cho máy tính 
-			c&#7911;a b&#7841;n, h&#7895; tr&#7907; Windows XP/7/8 32bit và 64bit. Link t&#7843;i t&#7915; baidui 
-			m&#7897;t trang IT l&#7899;n c&#7911;a Trung Qu&#7889;c t&#7889;c &#273;&#7897; maxspeed an toàn. Mình &#273;ã 
-			upload lên host an toàn t&#7889;c &#273;&#7897; cao cho các b&#7841;n,</span><span style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)"><a target="_self" href="Download/Drivers/EasyDrv65.htm"><img border="0" id="img10" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem thêm" onmouseover="FP_swapImg(1,0,/*id*/'img10',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img10',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img10',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img10',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem thêm" align="right"></a></span></div>
-&nbsp;</td>
-	</tr>
-	<tr>
-		<td width="1%" height="28">&nbsp;</td>
-		<td width="50%" height="28">
-		&nbsp;</td>
-		<td width="1%" height="28">&nbsp;</td>
-		<td width="47%" height="28">
-		&nbsp;</td>
-	</tr>
-</table>
+    <!-- BÃ i viáº¿t ná»•i báº­t -->
+    <div class="featured-card">
+        <div class="featured-thumb">
+            <img src="Data/Hinh_Anh/aee5027dc417accb1130a99c16e150ad.jpeg" alt="Wandriver 7 (EasyDrv7) English">
+        </div>
+        <div class="featured-body">
+            <h2 class="featured-title">WANDRIVER 7 (EASYDRV7) ENGLISH - Bá»˜ DRIVER Tá»° Äá»˜NG, Äáº¦Y Äá»¦ CHO WINDOWS</h2>
+            <div class="featured-meta">
+                <span>ðŸ“… Cáº­p nháº­t: Thá»© tÆ°, 10/01/2018</span>
+                <span>âœï¸ TÃ¡c giáº£: LÃ¢m TÃ­nh</span>
+                <span>ðŸ‘ï¸ LÆ°á»£t xem: 123,839</span>
+            </div>
+            <p class="featured-desc">Bá»™ Offline Wandriver nay Ä‘Ã£ Ä‘á»•i thÃ nh EasyDrv lÃ  má»™t cÃ´ng cá»¥ pháº§n má»m cÃ i Driver bá»‹ thiáº¿u cho Windows má»™t cÃ¡ch nhanh chÃ³ng vÃ  hiá»‡u quáº£, Ä‘áº·c biá»‡t Wandriver 7 Ä‘Æ°á»£c cáº£i tiáº¿n máº¡nh máº½. Báº£n rebuild tiáº¿ng Anh má»›i nháº¥t nÃ y giÃºp thao tÃ¡c dá»… dÃ ng vÃ  trá»±c quan hÆ¡n nhiá»u so vá»›i báº£n gá»‘c tiáº¿ng Trung.</p>
+            <div class="featured-footer">
+                <a href="Download/Drivers/EazyDrv7_full.htm" target="_self" class="btn-more">ðŸ‘ Xem thÃªm & Táº£i vá»</a>
+            </div>
+        </div>
+    </div>
 
-<p>&nbsp;</p>
+    <!-- Danh sÃ¡ch cÃ¡c bá»™ Driver liÃªn quan bÃªn dÆ°á»›i (Báº¡n nhá»› cáº­p nháº­t láº¡i href="#" cho cÃ¡c má»¥c bÃªn dÆ°á»›i theo file gá»‘c) -->
+    <div class="sub-grid">
+        <a href="Download/Drivers/EazyDrv7_full.htm" target="_self" class="sub-card">
+            <h3>Wandriver 7 (EasyDrv7) - Bá»™ Driver Tá»± Äá»™ng, Äáº§y Äá»§ Cho Windows</h3>
+            <span>Xem chi tiáº¿t â†’</span>
+        </a>
+    </div>
 
 </body>
-
 </html>

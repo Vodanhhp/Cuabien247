@@ -1,168 +1,234 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>T&#7893;ng h&#7907;p room, apk ti&#7879;n �ch cho Android</title>
-<style type="text/css">
-        .lienket{       
-            background-color: white;
-            color: black;
-            border: 2px solid #73AD21;
-            border-radius:5px;
-            padding: 10px 20px;
-            text-align: center;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng Hợp ROM & APK Tiện Ích Cho Android | CuaBien247</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --android-green: #16a34a;
+            --bg-page: #ffffff;
+            --bg-card: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-size: 14.5px;
+            padding: 20px;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eff6ff;
+        }
+
+        .page-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eff6ff;
+            color: var(--primary);
+            border: 1px solid #bfdbfe;
             text-decoration: none;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .app-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .app-card {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 18px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: all 0.2s ease;
+        }
+
+        .app-card:hover {
+            background: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .app-thumb {
+            width: 100px;
+            height: 100px;
+            flex-shrink: 0;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .app-thumb img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .app-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .app-badge {
             display: inline-block;
+            width: fit-content;
+            background: #dcfce7;
+            color: var(--android-green);
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 999px;
+        }
+
+        .app-title {
             font-size: 16px;
-            font-family: "Lucida Sans Unicode";
+            font-weight: 700;
+            color: var(--text-dark);
         }
-        .lienket:hover{
-            background-color: #73AD21;
-            color:white;
+
+        .app-desc {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            text-align: justify;
         }
-        .lienket:active{
-            background-color: green;
-            border-color: green;
+
+        .app-action {
+            align-self: center;
+            flex-shrink: 0;
         }
-    </style
+
+        .btn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 9px 18px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+        }
+
+        .btn-more:hover {
+            background: var(--primary-hover);
+        }
+
+        @media (max-width: 680px) {
+            body { padding: 12px; }
+            .app-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .app-action {
+                width: 100%;
+            }
+            .btn-more {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
+<body>
 
-<script language="JavaScript">
-<!--
-function FP_swapImg() {//v1.0
- var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- elm.$src=elm.src; elm.src=args[n+1]; } }
-}
+    <div class="page-header">
+        <h1 class="page-title">🤖 Tổng Hợp ROM & APK Tiện Ích Cho Android</h1>
+        <a href="javascript:history.back()" class="btn-back">← Quay lại danh mục</a>
+    </div>
 
-function FP_preloadImgs() {//v1.0
- var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-}
+    <div class="app-list">
 
-function FP_getObjectByID(id,o) {//v1.0
- var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- return null;
-}
-// -->
-</script>
+        <!-- Ứng dụng 1 -->
+        <div class="app-card">
+            <div class="app-thumb">
+                <img src="Download/Android/uXTLwVY95vfoVAa3fQ9EPR4ga7H7Iw2qsFS1SC9N_xtUFcSBUvwxGNMG3-EZ8fTNF84=h500.png" alt="Download KingRoot - Root điện thoại Android">
+            </div>
+            <div class="app-info">
+                <span class="app-badge">Android Tool</span>
+                <h3 class="app-title">Download KingRoot - Root điện thoại Android</h3>
+                <p class="app-desc">KingRoot có khả năng root, unroot trực tiếp trên thiết bị Android hoặc thực hiện gỡ ứng dụng, bật tắt ứng dụng tự chạy, quản lý quyền root. Ưu điểm của công cụ này là root nhanh và an toàn, hoàn toàn tự động và không yêu cầu sự can thiệp phức tạp của người dùng.</p>
+            </div>
+            <div class="app-action">
+                <a href="Download/Android/King_Root.htm" target="_self" class="btn-more">👁 Xem thêm</a>
+            </div>
+        </div>
 
+        <!-- Ứng dụng 2 (Bạn nhớ điền đúng đường link href của LBE Security Master từ file gốc vào chữ href="#" bên dưới) -->
+        <div class="app-card">
+            <div class="app-thumb">
+                <img src="Download/Android/Untitled.png" alt="LBE Security Master 5 Việt hóa">
+            </div>
+            <div class="app-info">
+                <span class="app-badge">Root + Unroot • Việt Hóa</span>
+                <h3 class="app-title">[Root+unroot] LBE Security Master 5 Việt hóa - Quản lý phần mềm, tiết kiệm pin và bảo mật tổng hợp</h3>
+                <p class="app-desc">Phần mềm chặn các ứng dụng gửi SMS tốn phí, quản lý quyền truy cập, tối ưu tiết kiệm pin và bảo mật toàn diện cho thiết bị Android được đánh giá rất cao trên diễn đàn XDA và Tinh Tế, đã được biên dịch hoàn chỉnh sang tiếng Việt.</p>
+            </div>
+            <div class="app-action">
+                <a href="#" target="_self" class="btn-more">👁 Xem thêm</a>
+            </div>
+        </div>
 
-<body onload="FP_preloadImgs(/*url*/'Data/Hinh_Anh/button16.jpg', /*url*/'Data/Hinh_Anh/button15.jpg')">
-
-<table border="0" width="97%" id="table1" height="1092">
-	<tr>
-		<td width="10%" height="150" rowspan="2">
-		<p align="center">
-		<img class="irc_mi" src="Download/Android/uXTLwVY95vfoVAa3fQ9EPR4ga7H7Iw2qsFS1SC9N_xtUFcSBUvwxGNMG3-EZ8fTNF84=h500.png" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" alt="H�nh &#7843;nh c� li�n quan" width="122" height="110" style="margin-top: 6px;" data-iml="1561814858696"></td>
-		<td width="89%" height="39">
-		<h2 class="tit5" style="font-size: 11pt; font-style: normal; font-weight: 700; text-decoration: none; color: #0066FF; font-family: Tahoma; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255)">
-		Download KingRoot - Root &#273;i&#7879;n tho&#7841;i Android</h2>
-		</td>
-	</tr>
-	<tr>
-		<td width="89%" height="109">
-		<h1 style="font-style: normal; text-decoration: none; color: rgb(51, 51, 51); font-family: 'Tahoma'; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; padding: 0px; background-color: rgb(255, 255, 255); margin-left:4px; margin-right:7px; margin-top:5px; margin-bottom:0px" align="left">
-		<span style="font-weight: 400"><font size="3">KingRoot c� kh&#7843; n&#259;ng root, 
-		unroot tr&#7921;c ti&#7871;p tr�n thi&#7871;t b&#7883; Android ho&#7863;c th&#7921;c hi&#7879;n g&#7905; &#7913;ng d&#7909;ng, b&#7853;t 
-		t&#7855;t &#7913;ng d&#7909;ng t&#7921; ch&#7841;y, qu&#7843;n l� quy&#7873;n root. &#431;u &#273;i&#7875;m c&#7911;a c�ng c&#7909; n�y l� 
-		root nhanh v� an to�n, ho�n to�n t&#7921; &#273;&#7897;ng v� kh�ng y�u c&#7847;u s&#7921; can thi&#7879;p 
-		c&#7911;a ng&#432;&#7901;i d�ng. S&#7917; d&#7909;ng KingRoot ch�nh l� c�ch &#273;&#417;n gi&#7843;n nh&#7845;t &#273;&#7875; b&#7841;n l�m 
-		ch&#7911; c�c t�nh n&#259;ng c&#7911;a thi&#7871;t b&#7883;.</font></span></h1>
-		<p>
-		<span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Android/King_Root.htm">
-		<img border="0" id="img12" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem th�m" onmouseover="FP_swapImg(1,0,/*id*/'img12',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img12',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img12',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img12',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem th�m" align="right"></a></span></td>
-	</tr>
-	<tr>
-		<td colspan="2" height="34">
-		<hr> 
-		</td>
-	</tr>
-	<tr>
-		<td height="165" rowspan="2"><p align="center">
-		<img border="0" src="Download/Android/Untitled.png" width="130" height="116" align="left"><p align="center">
-		</p>
-		<p>&nbsp;</td>
-		<td height="61">
-		<h1 style="overflow: hidden; zoom: 1; color: #0066FF; font-family: Tahoma; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255)">
-		<font style="font-size: 11pt">[Root+unroot] LBE Security Master 5 Vi&#7879;t h�a - qu&#7843;n l� 
-		ph&#7847;n m&#7873;m, ti&#7871;t ki&#7879;m pin v� b&#7843;o m&#7853;t t&#7893;ng h&#7907;p</font></h1>
-		</td>
-	</tr>
-	<tr>
-		<td height="102">
-		<p align="justify">
-		<span style="color: rgb(20, 20, 20); font-family: Tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none">
-		T�nh c&#7901; m�nh t�m ph&#7847;n m&#7873;m ch&#7863;n g&#7917;i c�c &#7913;ng d&#7909;ng g&#7917;i SMS t&#7889;n ph� v� th&#7845;y 
-		m&#7897;t mod c&#7911;a tinhte &#273;� &#273;&#259;ng gi&#7899;i thi&#7879;u c&#7911;a phi�n b&#7843;n c&#361; ph&#7847;n m&#7873;m n�y. 
-		M�nh t�m th�m th&#7845;y b�n XDA &#273;�nh gi� ph&#7847;n m&#7873;m n�y r&#7845;t cao, l�c &#273;&#7845;y phi�n 
-		b&#7843;n m&#7899;i nh&#7845;t ch&#432;a c� c&#7843; b&#7843;n d&#7883;ch ti&#7871;ng anh, m�nh d�ng google d&#7883;ch qua 
-		ti&#7871;ng anh &#273;&#7875; d�ng, m�nh up l�n &#273;� v� &#273;&#432;&#7907;c m&#7897;t th�nh vi�n h&#432;&#7899;ng d&#7851;n d&#7883;ch 
-		th�m cho ho�n thi&#7879;n ... khi c� c� m&#7897;t ng&#432;&#7901;i vi&#7879;t tr�n XDA n�i b�n tinhte 
-		c� th&#7875; c� ng&#432;&#7901;i c&#7847;n n�n m�nh d&#7883;ch th�m qua ti&#7871;ng Vi&#7879;t lu�n</span><br style="color: rgb(20, 20, 20); font-family: Tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial">
-		<span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 11pt; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">
-		<a target="_self" href="Download/Android/LBE_sercurity.htm">
-		<img border="0" id="img13" src="Data/Hinh_Anh/button14.jpg" height="20" width="100" alt="xem th�m" onmouseover="FP_swapImg(1,0,/*id*/'img13',/*url*/'Data/Hinh_Anh/button15.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img13',/*url*/'Data/Hinh_Anh/button14.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img13',/*url*/'Data/Hinh_Anh/button16.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img13',/*url*/'Data/Hinh_Anh/button15.jpg')" fp-style="fp-btn: Brick Column 9; fp-orig: 0" fp-title="xem th�m" align="right"></a></span></td>
-	</tr>
-	<tr>
-		<td height="306" colspan="2">
-		&nbsp;</td>
-	</tr>
-	<tr>
-		<td height="75" colspan="2">
-		<p align="center">
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2">
-		<h1 class="Topic_center" style="font-style: normal; font-variant: normal; font-weight: bold; font-family: Tahoma, Arial, Helvetica; width: 452px; text-align: justify; color: #0066FF; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; border-bottom: 0px solid rgb(252, 135, 0); padding-left: 0px; padding-right: 10px; padding-top: 0px; padding-bottom: 1px">
-		&nbsp;</h1>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2" height="125">
-		&nbsp;</td>
-	</tr>
-	<tr>
-		<td colspan="2">
-		&nbsp;</td>
-	</tr>
-</table>
-
-<table border="0" width="94%" id="table2" height="89">
-	<tr>
-		<td colspan="2" height="22">
-		&nbsp;</td>
-	</tr>
-	<tr>
-		<td height="21" width="85%">
-		&nbsp;</td>
-		<td height="21" width="15%">
-		&nbsp;</td>
-	</tr>
-	<tr>
-		<td colspan="2" height="21">
-		&nbsp;</td>
-	</tr>
-	<tr>
-		<td colspan="2" height="21">
-		&nbsp;<p>&nbsp;</td>
-	</tr>
-	<tr>
-		<td colspan="2" height="21">
-		<p>&nbsp;</td>
-	</tr>
-</table>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+    </div>
 
 </body>
-
 </html>
