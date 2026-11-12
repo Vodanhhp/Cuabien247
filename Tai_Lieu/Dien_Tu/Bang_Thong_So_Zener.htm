@@ -1,87 +1,150 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>B&#7843;ng th�ng s&#7889; Diod Zener</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Thông Số Diod Zener | CuaBien247</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-page: #ffffff;
+            --bg-item: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 10px;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-size: 14.5px;
+            padding: 20px;
+        }
+
+        /* Thanh tiêu đề và nút quay lại */
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eff6ff;
+        }
+
+        .page-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eff6ff;
+            color: var(--primary);
+            border: 1px solid #bfdbfe;
+            text-decoration: none;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        /* Danh sách trang bảng tra cứu */
+        .sheet-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .sheet-card {
+            width: 100%;
+            max-width: 820px;
+            background: var(--bg-item);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+
+        .sheet-label {
+            display: inline-block;
+            background: #e2e8f0;
+            color: var(--text-dark);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 3px 12px;
+            border-radius: 999px;
+            margin-bottom: 10px;
+        }
+
+        .sheet-card img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            .sheet-card { padding: 8px; }
+            .page-title { font-size: 17px; }
+        }
+    </style>
+</head>
 <body>
 
-<table border="0" width="71%">
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h1.jpg" width="634" height="718"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h2.jpg" width="621" height="715"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h3.jpg" width="567" height="732"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h4.jpg" width="599" height="715"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h5.jpg" width="635" height="721"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h6.jpg" width="794" height="718"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h7.jpg" width="755" height="716"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h8.jpg" width="750" height="719"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h9.jpg" width="682" height="720"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h10.jpg" width="663" height="720"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h11.jpg" width="769" height="717"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h12.jpg" width="726" height="718"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h13.jpg" width="692" height="718"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h14.jpg" width="652" height="717"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h15.jpg" width="720" height="717"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h16.jpg" width="725" height="715"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td><img border="0" src="h17.jpg" width="761" height="715"></td>
-	</tr>
-	<tr>
-		<td width="64">&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-</table>
+    <div class="page-header">
+        <h1 class="page-title">📟 Bảng Tra Cứu Thông Số Diod Zener</h1>
+        <a href="javascript:history.back()" class="btn-back">← Quay lại danh mục</a>
+    </div>
+
+    <div class="sheet-gallery">
+        <div class="sheet-card"><span class="sheet-label">Trang 1 / 17</span><img src="h1.jpg" alt="Bảng thông số Diod Zener trang 1" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 2 / 17</span><img src="h2.jpg" alt="Bảng thông số Diod Zener trang 2" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 3 / 17</span><img src="h3.jpg" alt="Bảng thông số Diod Zener trang 3" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 4 / 17</span><img src="h4.jpg" alt="Bảng thông số Diod Zener trang 4" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 5 / 17</span><img src="h5.jpg" alt="Bảng thông số Diod Zener trang 5" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 6 / 17</span><img src="h6.jpg" alt="Bảng thông số Diod Zener trang 6" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 7 / 17</span><img src="h7.jpg" alt="Bảng thông số Diod Zener trang 7" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 8 / 17</span><img src="h8.jpg" alt="Bảng thông số Diod Zener trang 8" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 9 / 17</span><img src="h9.jpg" alt="Bảng thông số Diod Zener trang 9" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 10 / 17</span><img src="h10.jpg" alt="Bảng thông số Diod Zener trang 10" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 11 / 17</span><img src="h11.jpg" alt="Bảng thông số Diod Zener trang 11" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 12 / 17</span><img src="h12.jpg" alt="Bảng thông số Diod Zener trang 12" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 13 / 17</span><img src="h13.jpg" alt="Bảng thông số Diod Zener trang 13" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 14 / 17</span><img src="h14.jpg" alt="Bảng thông số Diod Zener trang 14" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 15 / 17</span><img src="h15.jpg" alt="Bảng thông số Diod Zener trang 15" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 16 / 17</span><img src="h16.jpg" alt="Bảng thông số Diod Zener trang 16" loading="lazy"></div>
+        <div class="sheet-card"><span class="sheet-label">Trang 17 / 17</span><img src="h17.jpg" alt="Bảng thông số Diod Zener trang 17" loading="lazy"></div>
+    </div>
 
 </body>
-
 </html>

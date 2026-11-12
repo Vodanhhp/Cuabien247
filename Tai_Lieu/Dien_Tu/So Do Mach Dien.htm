@@ -1,62 +1,210 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>S&#417; &#273;&#7891; M&#7841;ch &#272;i&#7879;n</title>
-<base target="_self">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơ Đồ Mạch Điện | CuaBien247</title>
+    <base target="_self">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-page: #ffffff;
+            --bg-item: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 10px;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-size: 14.5px;
+            padding: 20px;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eff6ff;
+        }
+
+        .page-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eff6ff;
+            color: var(--primary);
+            border: 1px solid #bfdbfe;
+            text-decoration: none;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        /* Lưới các danh mục sơ đồ */
+        .schematic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 14px;
+        }
+
+        .schematic-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 16px 18px;
+            background: var(--bg-item);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.2s ease;
+        }
+
+        .schematic-card:hover {
+            background: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .card-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: #eff6ff;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .card-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .schematic-card:hover .card-title {
+            color: var(--primary);
+        }
+
+        .card-arrow {
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 16px;
+            transition: transform 0.2s ease;
+        }
+
+        .schematic-card:hover .card-arrow {
+            color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            .schematic-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
 <body>
 
-<table border="0" width="100%">
-	<tr>
-		<td><b><font face="Tahoma" color="#0066FF">
-		<a href="Schematic/TV.html" style="text-decoration: none">
-		<font color="#0099FF">S&#417; &#273;&#7891; 
-		Nguy�n L� TV</font></a></font></b><p>&nbsp;</td>
-	</tr>
-</table>
-<table border="0" width="100%">
-	<tr>
-		<td><b><font face="Tahoma" color="#0066FF">
-		<a href="Schematic/Bep_Tu.htm" style="text-decoration: none">
-		<font color="#0099FF">S&#417; &#273;&#7891; M&#7841;ch &#272;i&#7879;n 
-		B&#7871;p T&#7915;</font></a></font></b><p>&nbsp;</td>
-	</tr>
-	<tr>
-		<td><b><font face="Tahoma" color="#0066FF">
-		<a href="Schematic/Nguon_Xung.htm" style="text-decoration: none">
-		<font color="#0099FF">S&#417; &#273;&#7891; M&#7841;ch 
-		Ngu&#7891;n&nbsp;Xung</font></a></font></b><p>&nbsp;</td>
-	</tr>
-</table>
-<table border="0" width="100%">
-	<tr>
-		<td><b><font face="Tahoma" color="#0066FF">
-		<a href="Schematic/Amply.htm" style="text-decoration: none">
-		<font color="#0099FF">S&#417; &#273;&#7891; M&#7841;ch &#272;i&#7879;n 
-		Amply</font></a></font></b><p>&nbsp;</td>
-	</tr>
-</table>
-<table border="0" width="100%">
-	<tr>
-		<td><b><font face="Tahoma" color="#0066FF">
-		<a href="Schematic/Nguon_ATX.htm" style="text-decoration: none">
-		<font color="#0099FF">S&#417; &#273;&#7891; M&#7841;ch &#272;i&#7879;n ngu&#7891;n ATX</font></a></font></b><p>&nbsp;</td>
-	</tr>
-</table>
-<table border="0" width="100%">
-	<tr>
-		<td><b><font face="Tahoma" color="#0066FF">
-		<a style="text-decoration: none" href="Schematic/Mainboard.htm">
-		<font color="#0099FF">
-		<a style="text-decoration: none" href="Schematic/Mainboard.htm">
-		<font color="#0099FF">S&#417; &#273;&#7891; Mainboard</font></a></font></a></font><a style="text-decoration: none" href="Schematic/Mainboard.htm"><font face="Tahoma" color="#0099FF"> 
-		PC</font></a></b><p>&nbsp;</td>
-	</tr>
-</table>
+    <div class="page-header">
+        <h1 class="page-title">🔌 Kho Sơ Đồ Mạch Điện (Schematic)</h1>
+        <a href="javascript:history.back()" class="btn-back">← Quay lại danh mục</a>
+    </div>
+
+    <div class="schematic-grid">
+
+        <a class="schematic-card" href="Schematic/TV.html">
+            <div class="card-left">
+                <span class="card-icon">📺</span>
+                <span class="card-title">Sơ đồ Nguyên Lý TV</span>
+            </div>
+            <span class="card-arrow">→</span>
+        </a>
+
+        <a class="schematic-card" href="Schematic/Bep_Tu.htm">
+            <div class="card-left">
+                <span class="card-icon">🍳</span>
+                <span class="card-title">Sơ đồ Mạch Điện Bếp Từ</span>
+            </div>
+            <span class="card-arrow">→</span>
+        </a>
+
+        <a class="schematic-card" href="Schematic/Nguon_Xung.htm">
+            <div class="card-left">
+                <span class="card-icon">⚡</span>
+                <span class="card-title">Sơ đồ Mạch Nguồn Xung</span>
+            </div>
+            <span class="card-arrow">→</span>
+        </a>
+
+        <a class="schematic-card" href="Schematic/Amply.htm">
+            <div class="card-left">
+                <span class="card-icon">🔊</span>
+                <span class="card-title">Sơ đồ Mạch Điện Amply</span>
+            </div>
+            <span class="card-arrow">→</span>
+        </a>
+
+        <a class="schematic-card" href="Schematic/Nguon_ATX.htm">
+            <div class="card-left">
+                <span class="card-icon">🔌</span>
+                <span class="card-title">Sơ đồ Mạch Điện Nguồn ATX</span>
+            </div>
+            <span class="card-arrow">→</span>
+        </a>
+
+        <a class="schematic-card" href="Schematic/Mainboard.htm">
+            <div class="card-left">
+                <span class="card-icon">🖥️</span>
+                <span class="card-title">Sơ đồ Mainboard PC</span>
+            </div>
+            <span class="card-arrow">→</span>
+        </a>
+
+    </div>
 
 </body>
-
 </html>

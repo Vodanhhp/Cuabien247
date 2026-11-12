@@ -1,88 +1,214 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Th�ng s&#7889; c&#7911;a t&#7909; qu� �p ZNR</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Số Của Tụ Quá Áp ZNR | CuaBien247</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --accent-red: #dc2626;
+            --bg-page: #ffffff;
+            --bg-subtle: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 10px;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-size: 14.5px;
+            padding: 20px;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eff6ff;
+        }
+
+        .page-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eff6ff;
+            color: var(--primary);
+            text-decoration: none;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid #bfdbfe;
+            transition: all 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        /* Khung bảng dữ liệu */
+        .table-container {
+            max-width: 720px;
+            margin: 0 auto;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .znr-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .znr-table th {
+            background: #0f172a;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 14px 16px;
+            font-size: 14.5px;
+            border: 1px solid #1e293b;
+        }
+
+        .znr-table td {
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            font-size: 15px;
+        }
+
+        .znr-table tbody tr:hover td {
+            background-color: #f8fafc;
+        }
+
+        /* Nhóm điện áp +100V / +220V */
+        .group-cell {
+            background-color: #fef2f2 !important;
+            color: var(--accent-red);
+            font-weight: 700;
+            font-size: 15.5px;
+            width: 18%;
+        }
+
+        /* Mã tụ (201, 221, 391...) */
+        .code-cell {
+            background-color: #eff6ff !important;
+            color: var(--primary);
+            font-weight: 700;
+            width: 22%;
+        }
+
+        .val-cell {
+            font-weight: 500;
+            color: var(--text-dark);
+            width: 30%;
+        }
+
+        .note-box {
+            max-width: 720px;
+            margin: 16px auto 0;
+            padding: 12px 16px;
+            background: var(--bg-subtle);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            .znr-table th, .znr-table td { padding: 10px 8px; font-size: 13.5px; }
+        }
+    </style>
+</head>
 <body>
 
-<p align="left"><font face="Tahoma" size="5" color="#0066FF">&nbsp;</font><font face="Tahoma" size="5" color="#0099FF">Th�ng s&#7889; c&#7911;a 
-t&#7909; qu� �p ZNR</font></p>
-<table border="1" width="54%">
-	<tr>
-		<td colspan="2" bgcolor="#C0C0C0" align="center">
-		<p align="center"><font face="Tahoma" size="4" color="#0099FF">Ph�n Lo&#7841;i</font></td>
-		<td width="23%" bgcolor="#C0C0C0" align="center">
-		<p align="center"><font face="Tahoma" size="4" color="#0099FF">�p &#273;�nh 
-		th&#7911;ng AC</font></td>
-		<td width="28%" bgcolor="#C0C0C0" align="center">
-		<p align="center"><font face="Tahoma" size="4" color="#0099FF">�p &#273;�nh 
-		th&#7911;ng DC</font></td>
-	</tr>
-	<tr>
-		<td rowspan="2" width="7%" bgcolor="#C0C0C0" align="center">
-		<p align="center"><font face="Tahoma" size="4" color="#FF0000">+ 100V</font></td>
-		<td width="12%" bgcolor="#C0C0C0" align="center">
-		<p align="center"><font face="Tahoma" size="4" color="#0099FF">201</font></td>
-		<td width="23%" align="center">
-		<p align="center"><font face="Tahoma" size="4">130</font></td>
-		<td width="28%" align="center">
-		<p align="center"><font face="Tahoma" size="4">170</font></td>
-	</tr>
-	<tr>
-		<td width="12%" bgcolor="#C0C0C0" align="center">
-		<p align="center"><font face="Tahoma" size="4" color="#0099FF">221</font></td>
-		<td width="23%" align="center">
-		<p align="center"><font face="Tahoma" size="4">140</font></td>
-		<td width="28%" align="center">
-		<p align="center"><font face="Tahoma" size="4">180</font></td>
-	</tr>
-	<tr>
-		<td rowspan="5" width="7%" bgcolor="#C0C0C0" align="center">
-		<p align="center"><font face="Tahoma" size="4" color="#FF0000">+220V</font></td>
-		<td width="12%" bgcolor="#C0C0C0" align="center">
-		<p align="center"><font face="Tahoma" size="4" color="#0099FF">391</font></td>
-		<td width="23%" align="center">
-		<p align="center"><font face="Tahoma" size="4">250</font></td>
-		<td width="28%" align="center">
-		<p align="center"><font face="Tahoma" size="4">320</font></td>
-	</tr>
-	<tr>
-		<td width="12%" bgcolor="#C0C0C0" align="center">
-		<p align="center"><font face="Tahoma" size="4" color="#0099FF">431</font></td>
-		<td width="23%" align="center">
-		<p align="center"><font face="Tahoma" size="4">275</font></td>
-		<td width="28%" align="center">
-		<p align="center"><font face="Tahoma" size="4">350</font></td>
-	</tr>
-	<tr>
-		<td width="12%" bgcolor="#C0C0C0" align="center">
-		<p align="center"><font face="Tahoma" size="4" color="#0099FF">471</font></td>
-		<td width="23%" align="center">
-		<p align="center"><font face="Tahoma" size="4">300</font></td>
-		<td width="28%" align="center">
-		<p align="center"><font face="Tahoma" size="4">335</font></td>
-	</tr>
-	<tr>
-		<td width="12%" bgcolor="#C0C0C0" align="center">
-		<p align="center"><font face="Tahoma" size="4" color="#0099FF">681</font></td>
-		<td width="23%" align="center">
-		<p align="center"><font face="Tahoma" size="4">420</font></td>
-		<td width="28%" align="center">
-		<p align="center"><font face="Tahoma" size="4">560</font></td>
-	</tr>
-	<tr>
-		<td width="12%" bgcolor="#C0C0C0" align="center">
-		<p align="center"><font face="Tahoma" size="4" color="#0099FF">621</font></td>
-		<td width="23%" align="center">
-		<p align="center"><font face="Tahoma" size="4">385</font></td>
-		<td width="28%" align="center">
-		<p align="center"><font face="Tahoma" size="4">505</font></td>
-	</tr>
-</table>
+    <div class="page-header">
+        <h1 class="page-title">⚡ Thông Số Của Tụ Quá Áp ZNR (Varistor)</h1>
+        <a href="javascript:history.back()" class="btn-back">← Quay lại danh mục</a>
+    </div>
+
+    <div class="table-container">
+        <table class="znr-table">
+            <thead>
+                <tr>
+                    <th colspan="2">Phân Loại</th>
+                    <th>Áp đánh thủng AC (V)</th>
+                    <th>Áp đánh thủng DC (V)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2" class="group-cell">+ 100V</td>
+                    <td class="code-cell">201</td>
+                    <td class="val-cell">130</td>
+                    <td class="val-cell">170</td>
+                </tr>
+                <tr>
+                    <td class="code-cell">221</td>
+                    <td class="val-cell">140</td>
+                    <td class="val-cell">180</td>
+                </tr>
+                <tr>
+                    <td rowspan="5" class="group-cell">+ 220V</td>
+                    <td class="code-cell">391</td>
+                    <td class="val-cell">250</td>
+                    <td class="val-cell">320</td>
+                </tr>
+                <tr>
+                    <td class="code-cell">431</td>
+                    <td class="val-cell">275</td>
+                    <td class="val-cell">350</td>
+                </tr>
+                <tr>
+                    <td class="code-cell">471</td>
+                    <td class="val-cell">300</td>
+                    <td class="val-cell">335</td>
+                </tr>
+                <tr>
+                    <td class="code-cell">681</td>
+                    <td class="val-cell">420</td>
+                    <td class="val-cell">560</td>
+                </tr>
+                <tr>
+                    <td class="code-cell">621</td>
+                    <td class="val-cell">385</td>
+                    <td class="val-cell">505</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="note-box">
+        <strong>Lưu ý kỹ thuật:</strong> Tụ bảo vệ quá áp ZNR (Varistor) thường được mắc song song sau cầu chì ở đầu vào nguồn AC để bảo vệ mạch khi điện áp tăng đột biến.
+    </div>
 
 </body>
-
 </html>
