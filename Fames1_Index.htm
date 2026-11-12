@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame1_Welcome</title>
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            padding: 12px;
+            background-color: #ffffff;
+        }
+
+        /* Thiết kế dạng các card bài viết hiện đại, mượt mà */
+        .post-card {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            background: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .post-card:last-of-type {
+            border-bottom: none;
+        }
+
+        /* Hình ảnh tự động co giãn thông minh, không bao giờ bị vỡ khung */
+        .post-img {
+            flex: 0 0 240px;
+            max-width: 100%;
+        }
+
+        .post-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid #e2e8f0;
+            display: block;
+        }
+
+        .post-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .post-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0056b3;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .post-desc {
+            font-size: 13.5px;
+            color: #475569;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        /* Nút xem thêm tinh tế */
+        .btn-more {
+            display: inline-block;
+            background: #2563eb;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 12.5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .btn-more:hover {
+            background: #1d4ed8;
+        }
+
+        /* Khung danh ngôn cuối trang */
+        .quote-box {
+            margin-top: 20px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #2563eb;
+            padding: 16px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .quote-box p {
+            font-size: 14px;
+            color: #0056b3;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .quote-box i {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .quote-box a {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 12.5px;
+            color: #2563eb;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* Tối ưu riêng cho màn hình điện thoại (Mobile) */
+        @media (max-width: 768px) {
+            .post-card {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+            .post-img {
+                flex: none;
+                width: 100%;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+
+    <script language="JavaScript">
+        // Giữ lại hàm đổi ảnh nút bấm gốc của bạn (nếu cần)
+        function FP_swapImg() {
+            var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length; n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm; elm.$src=elm.src; elm.src=args[n+1]; } }
+        }
+        function FP_preloadImgs() {
+            var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array(); for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+        }
+        function FP_getObjectByID(id,o) {
+            var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id); else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el; if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c) for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; } f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements; for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } } return null;
+        }
+    </script>
+</head>
+
+<body onload="FP_preloadImgs('Data/Hinh_Anh/button16.jpg', 'Data/Hinh_Anh/button15.jpg')">
+
+    <!-- BÀI 1: INTERNET DOWNLOAD MANAGER -->
+    <div class="post-card">
+        <div class="post-img">
+            <img src="Data/Hinh_Anh/download-idm-2018.jpg" alt="IDM">
+        </div>
+        <div class="post-content">
+            <h2 class="post-title">Internet Download Manager (IDM) - Tải file tốc độ cao, hỗ trợ mọi định dạng</h2>
+            <p class="post-desc">
+                Phần mềm <a href="https://taimienphi.vn/download-internet-download-manager-idm-5" style="color: #0056b3;">IDM</a> hay Internet Download Manager giúp bạn tải nhiều file, định dạng từ trên internet về máy tính của mình như các file Video, EXE, RAR, ZIP... IDM tương thích với hầu hết các trình duyệt web như Chrome, Firefox, tự động bắt link download mà không cần bạn phải gán link.
+            </p>
+            <a class="btn-more" target="_self" href="Download/Softwares/Internet_Download_Manager.htm">Xem thêm »</a>
+        </div>
+    </div>
+
+    <!-- BÀI 2: WANDRIVER 7 -->
+    <div class="post-card">
+        <div class="post-img">
+            <img src="Data/Hinh_Anh/aee5027dc417accb1130a99c16e150ad.jpeg" alt="Wandriver 7">
+        </div>
+        <div class="post-content">
+            <h2 class="post-title">WANDRIVER 7 (EASYDRV7) ENGLISH - BỘ DRIVER TỰ ĐỘNG, ĐẦY ĐỦ CHO WINDOWS</h2>
+            <p class="post-desc">
+                Bộ Offline Wandriver nay đã đổi thành EasyDrv là một công cụ phần mềm cài Driver bị thiếu cho Windows một cách nhanh chóng và hiệu quả. Phiên bản tiếng Anh được rebuild lại bởi Ghoster Lehait giúp thao tác thuận tiện và dễ sử dụng hơn rất nhiều.
+            </p>
+            <a class="btn-more" target="_self" href="Download/Drivers/EazyDrv7_full.htm">Xem thêm »</a>
+        </div>
+    </div>
+
+    <!-- BÀI 3: WINDOWS 10 VERSION 1809 -->
+    <div class="post-card">
+        <div class="post-img">
+            <img src="Data/Hinh_Anh/c58ac4b50cfcd69523db6c8364df24ea.jpeg" alt="Windows 10 1809">
+        </div>
+        <div class="post-content">
+            <h2 class="post-title">DOWNLOAD ISO WINDOWS 10 VERSION 1809 CHÍNH THỨC</h2>
+            <p class="post-desc">
+                Sau một thời gian dài kể từ khi Windows 10 October 2018 được công bố, Microsoft đã cho phát hành chính thức file ISO bộ cài của Windows 10 Version 1809 mới nhất. Bạn có thể tham khảo bài viết để cập nhật hoặc cài mới dễ dàng.
+            </p>
+            <a class="btn-more" target="_self" href="Download/Windows/Windows10_1809.htm">Xem thêm »</a>
+        </div>
+    </div>
+
+    <!-- KHUNG DANH NGÔN -->
+    <div class="quote-box">
+        <p>"Không có con đường nào dẫn tới vinh quang lại trải đầy hoa."</p>
+        <i>There is no road of flowers leading to glory.</i><br>
+        <a target="_blank" href="https://danhngoncuocsong.vn/tac-gia/la-fontaine.html">— La Fontaine</a>
+    </div>
+
+</body>
+</html>

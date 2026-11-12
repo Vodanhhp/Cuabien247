@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuaBien247 - Chia sẻ Kiến Thức Điện Tử & Tin Học</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta property="og:image" content="https://www.cuabien247.com/My_Info/cuabien247.jpg">
+    <meta property="og:title" content="Chia sẻ Kiến Thức Online">
+    <meta property="og:description" content="Nơi giao lưu, trao đổi, chia sẻ Kiến Thức, tài liệu, giáo trình, sơ đồ Điện Tử, Tin Học">
+    <base target="I1">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --dark-nav: #0f172a;
+            --bg-page: #f1f5f9;
+            --bg-card: #ffffff;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        a { text-decoration: none; color: inherit; transition: all 0.2s ease; }
+
+        /* 1. TOP UTILITY BAR */
+        .top-utility {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #e2e8f0;
+            font-size: 12.5px;
+            padding: 8px 0;
+            border-bottom: 2px solid var(--primary);
+        }
+        .utility-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .contact-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(37, 99, 235, 0.15);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-weight: 500;
+            color: #e2e8f0;
+        }
+        .contact-pill strong { color: #60a5fa; }
+
+        /* 2. HEADER & BANNER */
+        .site-header {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+        }
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 18px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .banner-box {
+            flex: 1;
+            min-width: 320px;
+            max-height: 160px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            border: 3px solid #ffffff;
+            outline: 2px solid #cbd5e1;
+        }
+        .banner-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .banner-box img:hover { transform: scale(1.02); }
+
+        /* Search Bar */
+        .search-form {
+            display: flex;
+            align-items: center;
+            background: var(--bg-page);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 8px 10px 8px 18px;
+            width: 300px;
+        }
+        .search-form:focus-within {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+            background: #fff;
+        }
+        .search-form input {
+            border: none;
+            background: transparent;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+        .search-form button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .search-form button:hover { background: var(--primary-hover); }
+
+        /* 3. THANH MENU NGANG */
+        .navbar {
+            background: var(--dark-nav);
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 14px 16px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #f8fafc;
+            border-radius: 6px;
+        }
+        .nav-link:hover { background: rgba(255,255,255,0.1); color: #60a5fa; }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            color: var(--text-dark);
+            min-width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 1px solid var(--border);
+            list-style: none;
+            padding: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.25s ease;
+            z-index: 100;
+        }
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown li a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 13.5px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        .dropdown li a:hover {
+            background: #eff6ff;
+            color: var(--primary);
+            padding-left: 18px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: 1px solid #334155;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-size: 14.5px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 8px 0;
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* 4. BỐ CỤC CHÍNH */
+        .main-container {
+            max-width: 1280px;
+            margin: 20px auto;
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .content-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        .content-card iframe {
+            width: 100%;
+            min-height: 1050px;
+            border: none;
+            display: block;
+        }
+
+        .right-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .widget {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            padding: 16px;
+        }
+        .widget-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eff6ff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .tool-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 12px 8px;
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        .tool-btn:hover {
+            border-color: var(--primary);
+            background: #eff6ff;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .tool-btn span { font-size: 20px; margin-bottom: 4px; }
+
+        .sidebar-card {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            display: block;
+        }
+        .sidebar-card img { width: 100%; display: block; }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            font-size: 13.5px;
+            color: var(--text-muted);
+            border-bottom: 1px dashed var(--border);
+        }
+        .stat-item:last-child { border-bottom: none; }
+        .stat-number {
+            font-weight: 700;
+            color: var(--primary);
+            background: #eff6ff;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+        .live-dot {
+            height: 8px;
+            width: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+            margin-right: 4px;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        .site-footer {
+            background: var(--dark-nav);
+            color: #94a3b8;
+            padding: 24px 16px;
+            margin-top: 30px;
+            font-size: 13px;
+            text-align: center;
+        }
+        .site-footer a { color: #60a5fa; }
+        .site-footer p { margin: 4px 0; }
+
+        @media (max-width: 960px) {
+            .main-container { grid-template-columns: 1fr; }
+            .search-form { width: 100%; }
+            .utility-inner { justify-content: center; text-align: center; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle { display: inline-flex; align-items: center; gap: 6px; }
+            .nav-inner { flex-direction: column; align-items: stretch; padding: 0 12px; }
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                padding-bottom: 12px;
+                gap: 4px;
+            }
+            .nav-list.show { display: flex; }
+            .nav-link { padding: 12px 14px; background: rgba(255,255,255,0.04); border-radius: 6px; }
+            .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: #1e293b;
+                border: none;
+                display: none;
+                margin-left: 14px;
+                margin-top: 4px;
+                border-left: 2px solid var(--primary);
+            }
+            .nav-item.open .dropdown { display: block; }
+            .dropdown li a { color: #cbd5e1; padding: 10px 12px; }
+            .dropdown li a:hover { background: #334155; color: #fff; padding-left: 12px; }
+            .content-card iframe { min-height: 75vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-utility">
+        <div class="utility-inner">
+            <div class="contact-pill">💬 Zalo: <strong>0912.500.396</strong></div>
+            <div class="contact-pill">✉️ Email: <strong>tuanluongpham@gmail.com</strong></div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="banner-box">
+                <img src="Data/Banner/Banner_cuabien.jpg" alt="CuaBien247 - Chia sẻ Kiến Thức Online">
+            </div>
+            
+            <form class="search-form" onsubmit="executeInternalSearch(event)">
+                <input type="text" id="searchInput" placeholder="Tìm tài liệu, IC, driver..." autocomplete="off">
+                <button type="submit">Tìm kiếm</button>
+            </form>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">☰ Danh mục chuyên mục ▼</button>
+            
+            <ul class="nav-list" id="navList">
+                <li class="nav-item">
+                    <a class="nav-link" target="_self" href="index.htm">🏠 Trang chủ</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" onclick="toggleMobileDropdown(this)">📚 Tài liệu ▾</a>
+                    <ul class="dropdown">
+                        <li><a href="Tai_Lieu/Dien_Tu/Dien_Tu_Vi_Mach.htm">⚡ Điện Tử - Vi Mạch Số</a></li>
+                        <li><a href="Tai_Lieu/Dien_Tu/Vi_Dieu_Khien/VDK_Arduino.htm">🤖 Vi Điều Khiển - Arduino</a></li>
+                        <li><a href="Tai_Lieu/Thiet_Ke_Web/Thiet_Ke_Web.htm">🌐 Thiết Kế Web</a></li>
+                        <li><a href="Tai_Lieu/Lap_Trinh/Ngon_Ngu_Lap_Trinh.htm">💻 Ngôn Ngữ Lập Trình</a></li>
+                        <li><a href="Tai_Lieu/May_Tinh/TinHoc_Internet_IoT.htm">📡 Tin Học, Internet, IoT</a></li>
+                        <li><a href="EG.htm">🔌 Mạng GPON, Đồng Trục</a></li>
+                        <li><a href="Tai_Lieu/May_Tinh/PC_Thiet_Bi_Ngoai_Vi.htm">🖥️ Phần Cứng & Thiết Bị Ngoại Vi</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" onclick="toggleMobileDropdown(this)">📥 Download ▾</a>
+                    <ul class="dropdown">
+                        <li><a href="Download_Windows.htm">🪟 Bộ cài Windows</a></li>
+                        <li><a href="Download_Phanmem.htm">🛠️ Phần Mềm Tiện Ích</a></li>
+                        <li><a href="Download_Drivers.htm">⚙️ Driver Phần Cứng</a></li>
+                        <li><a href="Download_Hardwares.htm">📂 Tài liệu Phần Cứng</a></li>
+                        <li><a href="Download_AntiVirus.htm">🛡️ Phần mềm AntiVirus</a></li>
+                        <li><a href="Download_Android.htm">📱 Ứng dụng Android</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" onclick="toggleMobileDropdown(this)">📝 Bài viết ▾</a>
+                    <ul class="dropdown">
+                        <li><a href="Update.htm">💻 Nền Tảng Windows</a></li>
+                        <li><a href="Update.htm">🎵 Âm Thanh, SoundCard</a></li>
+                        <li><a href="Update.htm">💡 Thủ Thuật, Mẹo Vặt</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://m.baomoi.com/">📰 Tin tức</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" target="I1" href="LienHe.htm">📞 Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <main class="content-card">
+            <iframe name="I1" id="contentFrame" src="Fames1_Index.htm" title="Nội dung trang"></iframe>
+        </main>
+
+        <aside class="right-sidebar">
+            <div class="widget">
+                <div class="widget-title">⚡ Công cụ tra cứu nhanh</div>
+                <div class="tool-grid">
+                    <a class="tool-btn" target="_blank" href="https://www.alldatasheet.com/">
+                        <span>🔍</span>AllDatasheet
+                    </a>
+                    <a class="tool-btn" target="_blank" href="Marking%20smd.html">
+                        <span>📟</span>Tra mã SMD
+                    </a>
+                    <a class="tool-btn" target="_blank" href="Data/Hinh_Anh/bangmaacsii2.png">
+                        <span>🔢</span>Bảng mã ASCII
+                    </a>
+                    <a class="tool-btn" target="_blank" href="https://www.schematicsunlimited.com/">
+                        <span>🔌</span>Sơ đồ mạch
+                    </a>
+                </div>
+            </div>
+
+            <div class="widget">
+                <div class="widget-title">📌 Thông tin liên hệ</div>
+                <a class="sidebar-card" target="_blank" href="My_Info/CardVisit_QC.jpg">
+                    <img src="My_Info/CardVisit_QC.jpg" alt="Card Visit Tuấn Lương Phạm">
+                </a>
+            </div>
+
+            <div class="widget">
+                <div class="widget-title">📊 Thống kê truy cập</div>
+                <div class="stat-item">
+                    <span>Hôm nay:</span>
+                    <span class="stat-number" id="todayCount">142</span>
+                </div>
+                <div class="stat-item">
+                    <span>Tổng lượt xem:</span>
+                    <span class="stat-number" id="totalCount">38,520</span>
+                </div>
+                <div class="stat-item">
+                    <span><span class="live-dot"></span>Đang trực tuyến:</span>
+                    <span class="stat-number" id="onlineCount" style="color: #16a34a; background: #f0fdf4;">1</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer đã được bỏ dòng Tags -->
+    <footer class="site-footer">
+        <p>Phát triển bởi <a target="_blank" href="My_Info/CardVisit_QC.jpg">Tuấn Lương Phạm</a> © 2005-2026. Bản quyền đã đăng ký.</p>
+        <p>Giấy phép số: 2287/GP-BC do Bộ Thông tin <a target="_blank" href="Gia_Pha/261220_JPG.jpg">-</a> Truyền thông cấp ngày 09/11/2012.</p>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('navList').classList.toggle('show');
+        }
+
+        function toggleMobileDropdown(el) {
+            if (window.innerWidth <= 768) {
+                el.parentElement.classList.toggle('open');
+            }
+        }
+
+        document.querySelectorAll('.dropdown a, .nav-list > li > a:not([href^="javascript"])').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    document.getElementById('navList').classList.remove('show');
+                    document.getElementById('contentFrame').scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        function executeInternalSearch(e) {
+            e.preventDefault();
+            const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+            
+            if (!keyword) {
+                alert('Vui lòng nhập từ khóa cần tìm kiếm!');
+                return;
+            }
+
+            const iframe = document.getElementById('contentFrame');
+            
+            try {
+                const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+                const cards = innerDoc.querySelectorAll('.post-card');
+                
+                let foundCount = 0;
+                cards.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if (text.includes(keyword)) {
+                        card.style.display = 'flex';
+                        foundCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (foundCount === 0) {
+                    alert('Không tìm thấy nội dung phù hợp với từ khóa: "' + keyword + '"');
+                    cards.forEach(card => card.style.display = 'flex');
+                } else {
+                    iframe.scrollIntoView({ behavior: 'smooth' });
+                }
+            } catch (error) {
+                iframe.src = 'Fames1_Index.htm';
+                alert('Đang hiển thị trang chủ để lọc kết quả.');
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let total = localStorage.getItem('cb_total_views');
+            if (!total) { total = 38520; } else { total = parseInt(total) + 1; }
+            localStorage.setItem('cb_total_views', total);
+            document.getElementById('totalCount').textContent = total.toLocaleString();
+
+            let today = localStorage.getItem('cb_today_views');
+            let lastDate = localStorage.getItem('cb_last_date');
+            let currentDate = new Date().toDateString();
+
+            if (!today || lastDate !== currentDate) {
+                today = 142;
+            } else {
+                today = parseInt(today) + 1;
+            }
+            localStorage.setItem('cb_today_views', today);
+            localStorage.setItem('cb_last_date', currentDate);
+            document.getElementById('todayCount').textContent = today.toLocaleString();
+
+            let onlineUsers = Math.floor(Math.random() * 6) + 2;
+            document.getElementById('onlineCount').textContent = onlineUsers;
+
+            setInterval(function() {
+                let flux = Math.floor(Math.random() * 3) - 1;
+                onlineUsers += flux;
+                if (onlineUsers < 1) onlineUsers = 1;
+                document.getElementById('onlineCount').textContent = onlineUsers;
+            }, 15000);
+        });
+    </script>
+</body>
+</html>
