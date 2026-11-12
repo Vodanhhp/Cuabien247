@@ -1,235 +1,247 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Code Pic16F877A</title>
-<base target="_blank">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Demo PIC16F877A | CuaBien247</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-page: #ffffff;
+            --bg-card: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 10px;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-size: 14.5px;
+            padding: 20px;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eff6ff;
+        }
+
+        .page-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eff6ff;
+            color: var(--primary);
+            border: 1px solid #bfdbfe;
+            text-decoration: none;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        /* Thanh tìm kiếm nhanh bài code */
+        .filter-bar {
+            margin-bottom: 18px;
+        }
+
+        .filter-input {
+            width: 100%;
+            padding: 10px 16px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font-size: 14px;
+            outline: none;
+            background: var(--bg-card);
+            transition: border-color 0.2s ease;
+        }
+
+        .filter-input:focus {
+            border-color: var(--primary);
+            background: #ffffff;
+        }
+
+        /* Lưới 2 cột danh sách bài code */
+        .code-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 12px;
+        }
+
+        .code-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: all 0.2s ease;
+        }
+
+        .code-card:hover {
+            background: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .code-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 0;
+        }
+
+        .code-badge {
+            background: #f3e8ff;
+            color: #7e22ce;
+            border: 1px solid #e9d5ff;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 4px 8px;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .code-name {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: var(--text-dark);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 12.5px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: background 0.2s ease;
+        }
+
+        .btn-download:hover {
+            background: var(--primary-hover);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            .code-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
 <body>
 
-<p><font face="Tahoma" color="#0099FF" size="4">&nbsp; Code Demo Pic16F877A</font></p>
+    <div class="page-header">
+        <h1 class="page-title">💾 Kho Code Demo PIC16F877A (CCS C)</h1>
+        <a href="javascript:history.back()" class="btn-back">← Quay lại danh mục</a>
+    </div>
 
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<font face="Tahoma" color="#0099FF">
-		<a href="https://www.mediafire.com/file/9680w3hhc32s77k/16LED_SangDon.rar/file" style="text-decoration: none">
-		<font color="#0099FF">16LED_SangDon</font></a></font></td>
-	</tr>
-</table>
+    <div class="filter-bar">
+        <input type="text" id="searchCode" class="filter-input" placeholder="🔍 Gõ tên bài code cần tìm nhanh (ví dụ: LCD, PWM, Timer1, DS18B20...)" onkeyup="filterCodes()">
+    </div>
 
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<font face="Tahoma" color="#0099FF">
-		<a href="https://www.mediafire.com/file/y4bu56h1t96ys1z/16LED_SangDon2.rar/file" style="text-decoration: none">
-		<font color="#0099FF">16LED_SangDon2</font></a></font></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<font face="Tahoma">
-		<a href="https://www.mediafire.com/file/o1pbpixopopv9os/8LEDdon.rar/file" style="text-decoration: none">
-		<font color="#0099FF">8LED_don</font></a></font></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/7gmfu3sp5fg9kke/ADC_LCD_DoDienAp.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">ADC_LCD_&#272;oienAp</font></a></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/dkasmma74fr2jym/ADC_LM35_LCD.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">ADC_LM35_LCD</font></a></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/4k6sclu449ar2bo/ADC_LM35_LCD_Timer1.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">ADC_LM35_LCD</font></a><font face="Tahoma" color="#0099FF">_Timer1</font></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/952rtkro90bg5gz/ADC_SinAC-XungVuongDC.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">ADC_SinAC_XungVuongDC</font></a></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/bnt0h3el38w1808/DongHo_LCD1.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">Dongho_LCD1</font></a></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/1g227txtb76dzse/DongHo_LCD1_Timer1.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">Dongho_LCD1_Timer1</font></a></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/714fakt4ov5nvld/DS18B20_LCD.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">DS18B20_LCD</font></a></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/29s7jw9o5vlbvvs/IC74595_8Led7_Timer1.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">IC74595_8LED7_Timer1</font></a></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/xkffjr79tcevgzj/LCD1.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">LCD1</font></a></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/g8c3a1y1k78lp3d/LCD2.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">LCD2</font></a></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/unkn69khwvkpsn2/Led7thanh.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">Led7Thanh</font></a></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/qqbqjn7f3qra36z/Led7thanh_Timer1.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">Led7thanh_Timer1</font></a></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<a href="https://www.mediafire.com/file/wl58d97wgyvy03t/Timer_DongHo.rar/file" style="text-decoration: none">
-		<font face="Tahoma" color="#0099FF">
-		<a href="https://www.mediafire.com/file/8yogwzdhgyup51k/Led7thanh_Timer1_IC74595_LCD.rar/file" style="text-decoration: none">
-		<font color="#0099FF">Led7thanh_Timer1</font></a></font></a><a href="https://www.mediafire.com/file/8yogwzdhgyup51k/Led7thanh_Timer1_IC74595_LCD.rar/file" style="text-decoration: none"><font face="Tahoma" color="#0099FF">_IC74595_LCD</font></a></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<font face="Tahoma" color="#0099FF">
-		<a href="https://www.mediafire.com/file/91d1asmwc6q3wck/PWM1.rar/file" style="text-decoration: none">
-		<font color="#0099FF">PWM1</font></a></font></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<font face="Tahoma" color="#0099FF">
-		<a href="https://www.mediafire.com/file/xcc7l8bv9d0t3e8/PWM1_Triac.rar/file" style="text-decoration: none">
-		<font color="#0099FF">PWM1_Triac</font></a></font></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<font face="Tahoma" color="#0099FF">
-		<a href="https://www.mediafire.com/file/fz9n95glry6ixf2/PWM_Button_LCD_Mosfet_Motor.rar/file" style="text-decoration: none">
-		<font color="#0099FF">PWM_Button_LCD_Mosfet_Motor</font></a></font></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<font face="Tahoma" color="#0099FF">
-		<a href="https://www.mediafire.com/file/r8g4j0haros15ci/PWM_Button_LCD_Triac.rar/file" style="text-decoration: none">
-		<font color="#0099FF">PWM_Button_LCD_Triac</font></a></font></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<font face="Tahoma" color="#0099FF">
-		<a href="https://www.mediafire.com/file/eu1z7jn8b36pcd4/RS232_Pic_Pic_LCD_Motor.rar/file" style="text-decoration: none">
-		<font color="#0099FF">RS232_Pic_Pic_LCD_Motor</font></a></font></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		<font face="Tahoma" color="#0099FF">
-		<a href="https://www.mediafire.com/file/a9hn83dcs3pwcx6/Timer0.rar/file" style="text-decoration: none">
-		<font color="#0099FF">Timer0</font></a></font></td>
-	</tr>
-</table>
-
-<table border="0" width="100%">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td width="94%">
-		&nbsp;</td>
-	</tr>
-</table>
-
-<p>&nbsp;</p>
-
-</body>
-
-</html>
+    <div class="code-grid" id="codeGrid">
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">16LED_SangDon</span></div>
+            <a href="https://www.mediafire.com/file/9680w3hhc32s77k/16LED_SangDon.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">16LED_SangDon2</span></div>
+            <a href="https://www.mediafire.com/file/y4bu56h1t96ys1z/16LED_SangDon2.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">8LED_don</span></div>
+            <a href="https://www.mediafire.com/file/o1pbpixopopv9os/8LEDdon.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">ADC_LCD_DoDienAp</span></div>
+            <a href="https://www.mediafire.com/file/7gmfu3sp5fg9kke/ADC_LCD_DoDienAp.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">ADC_LM35_LCD</span></div>
+            <a href="https://www.mediafire.com/file/dkasmma74fr2jym/ADC_LM35_LCD.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">ADC_LM35_LCD_Timer1</span></div>
+            <a href="https://www.mediafire.com/file/4k6sclu449ar2bo/ADC_LM35_LCD_Timer1.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">ADC_SinAC_XungVuongDC</span></div>
+            <a href="https://www.mediafire.com/file/952rtkro90bg5gz/ADC_SinAC-XungVuongDC.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">DongHo_LCD1</span></div>
+            <a href="https://www.mediafire.com/file/bnt0h3el38w1808/DongHo_LCD1.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">DongHo_LCD1_Timer1</span></div>
+            <a href="https://www.mediafire.com/file/1g227txtb76dzse/DongHo_LCD1_Timer1.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">DS18B20_LCD</span></div>
+            <a href="https://www.mediafire.com/file/714fakt4ov5nvld/DS18B20_LCD.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">IC74595_8LED7_Timer1</span></div>
+            <a href="https://www.mediafire.com/file/29s7jw9o5vlbvvs/IC74595_8Led7_Timer1.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">LCD1</span></div>
+            <a href="https://www.mediafire.com/file/xkffjr79tcevgzj/LCD1.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">LCD2</span></div>
+            <a href="https://www.mediafire.com/file/g8c3a1y1k78lp3d/LCD2.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">Led7Thanh</span></div>
+            <a href="https://www.mediafire.com/file/unkn69khwvkpsn2/Led7thanh.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">Led7thanh_Timer1</span></div>
+            <a href="https://www.mediafire.com/file/qqbqjn7f3qra36z/Led7thanh_Timer1.rar/file" target="_blank" class="btn-download">📥 Tải về</a>
+        </div>
+        <div class="code-card">
+            <div class="code-left"><span class="code-badge">RAR</span><span class="code-name">Led7thanh_Timer1_IC74595_LCD</span></div>
