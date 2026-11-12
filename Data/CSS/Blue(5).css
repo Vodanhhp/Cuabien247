@@ -1,0 +1,73 @@
+﻿.OnlineCounterControl {margin-bottom:4px;}
+
+.OnlineCounterControl .Table_khung {
+	table-layout: fixed;
+	width: 100%;
+}
+
+.OnlineCounterControl .TRight_khung {
+	width: 10px;
+	height: 30px;
+	background-image: url('../BlueImages/TR.jpg');
+}
+.OnlineCounterControl .TLeft_khung {
+	width: 10px;
+	height: 30px;
+	background-image: url('../BlueImages/TL.jpg');
+}
+
+.OnlineCounterControl .TCenter_khung {
+	height: 30px;
+	line-height:30px;
+	background: url('../BlueImages/TC.jpg') no-repeat left top;
+	color: #ffffff;
+	font:bold Arial 9pt;
+	background-color: #1267B7;
+}
+
+.OnlineCounterControl .BLeft_khung {
+	width: 10px;
+	height: 15px;
+	background: url('../BlueImages/BL.gif') no-repeat left top ;
+}
+.OnlineCounterControl .BRight_khung { 
+	width: 10px;
+	height: 15px;
+	background: url('../BlueImages/BR.gif') no-repeat left top;
+}
+
+.OnlineCounterControl .BCenter_khung {
+	background: url('../BlueImages/BC.gif') repeat-x left top;
+	height: 15px;
+}
+.OnlineCounterControl .BorderLeft_khung {
+	width: 10px;
+	background: url('../BlueImages/BoL.gif') repeat-y;
+}
+.OnlineCounterControl .BorderRight_khung {
+	width: 10px;
+	background: url('../BlueImages/BoR.gif') repeat-y;
+}
+
+.OnlineCounterControl .icon_khung 
+{
+	float: left; height:100%; margin-right: 1px;
+}
+.OnlineCounterControl .OnlineContainer
+{	
+	
+}
+.OnlineCounterControl .Header {color:#FDF391; font: bold 9pt Arial; float:left; padding-top:8px;}
+
+.OnlineCounterControl .OnlineContainer tr td
+{
+	padding:5px;
+}
+.OnlineCounterControl .Header {line-height:30px;color:#FDF391; font: bold 9pt Arial; float:left; padding-top:8px;}
+.OnlineCounterControl .CounterTitle {width: 120px; color:#0F74A8; padding-bottom:3px; padding-top:3px;}
+.OnlineCounterControl .OnlineNumber {color:#0F74A8;}
+
+.trCounterOnlineMember{
+	display:none;
+}
+

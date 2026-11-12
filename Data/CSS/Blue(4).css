@@ -1,0 +1,91 @@
+﻿.LoginControl
+{
+	margin-bottom:4px;
+}
+.TRight_login {
+	width: 7px;
+	height: 64px;
+	background-image: url('../blueimages/TRight_login.png');
+}
+.TLeft_login {
+	width: 7px;
+	height: 64px;
+	background-image: url('../blueimages/TLeft_login.png');
+	background-repeat: no-repeat;
+}
+.BLeft_login {
+	background-position: left top;
+	width: 7px;
+	height: 15px;
+	background-image: url('../blueimages/BLeft_login.png');
+	background-repeat: no-repeat;
+}
+.BRight_login {
+	background-position: left top;
+	width: 7px;
+	height: 15px;
+	background-image: url('../blueimages/BRight_login.png');
+	background-repeat: no-repeat;
+}
+.TCenter_login {
+	background-position: left top;
+	height: 64px;
+	background-image: url('../blueimages/TCenter_Login.jpg');
+	background-color: #0C6ED2;
+	background-repeat: no-repeat;
+}
+
+.TCenter_login .LoginHeader
+{
+	font:bold 14pt Arial; color:#ffffff;
+	margin-left:55px;
+}
+
+.BCenter_login {
+	background-position: left top;
+	background-image: url('../blueimages/BCenter_Login.jpg');
+	background-repeat: repeat-x;
+	height: 15px;
+}
+.BoderLeft_login {
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #1c7bc4;
+	width: 7px;
+}
+.BorderRight_Login {
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #1c7bc4;
+	width: 7px;
+	empty-cells: show;
+}
+.TableLogin {
+	table-layout: fixed;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #264978;
+}
+
+.SignIn .input_text {width:92%; font:normal 9pt Arial}
+
+.SignIn .cell_LoginName, .tdUserName {padding-top:16px; padding-bottom:3px;}
+.SignIn .cell_Password, .tdPassword {padding-top:2px; padding-bottom:8px;}
+.SignIn .cell_Login{padding-top:8px; padding-bottom:8px; border-bottom: dashed 1px #c0c0c0; text-align:center ;}
+.SignIn .Login {font: normal 9pt Arial; width:90px; height: 24px; color:#000000 !important;}
+.SignIn .cell_Register, .cell_ForgottenPassword {padding-top:8px;}
+
+.LogOn .cell_Hello, .cell_EmployeeName {padding-top:4px; padding-bottom:4px; text-align:center; font-weight:bold;}
+.LogOn .EmployeeName {color:#ff0000;}
+.LogOn .LogOn_Separate {border-top:dashed 1px #c0c0c0;}
+.LogOn .cell_SignOut, .cell_PersonalInfo, cell_ManagementInfo {padding-bottom: 5px;}
+
+.LoginContainer .Error {text-align:justify; padding-top:6px; padding-bottom:6px; color:Red; font:normal 9pt Arial; border-bottom:dashed 1px #c0c0c0;}
+.SendPassword .cell_EmailTitle {padding-top:8px; padding-bottom:3px;}
+.SendPassword .cell_Email {padding-bottom:6px; text-align:center ;}
+.SendPassword .cell_SendPassword {padding-bottom:3px; text-align:center;}
+.SendPassword .cell_SendPassword .SenMail, .Back { padding-left:6px; padding-right:6px;}
+
+

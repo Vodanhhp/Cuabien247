@@ -1,0 +1,82 @@
+﻿.NewInfoControl{
+	margin-bottom:4px;
+}
+.NewInfoControl .Table_Khung {
+	border-style: none;
+	table-layout: fixed;
+}
+
+.NewInfoControl .TCenter_khung {
+	height: 25px;
+	background: url('../BlueImages/T.jpg') repeat-x;
+	line-height: 25px;
+	color: #FFFFFF;
+}
+
+.NewInfoControl .TRight_khung {
+	width: 1px;
+	height: 25px;
+	background: url('../BlueImages/T.jpg') repeat-x;
+}
+.NewInfoControl .TLeft_khung {
+	width: 1px;
+	height: 25px;
+	background: url('../BlueImages/T.jpg') repeat-x;
+}
+
+/******* Center ********************/
+.NewInfoControl .BoderLeft_khung {
+	width: 1px;
+	background: url('../BlueImages/VBorder.jpg') left repeat-y;
+	height: 210px;
+}
+.NewInfoControl .BorderRight_khung {
+	width: 1px;
+	background: url('../BlueImages/VBorder.jpg') right repeat-y;
+	height: 210px;
+}
+.NewInfoControl .Center_Container {
+	height: 210px; padding-left:6px; padding-right:6px; padding-top:1px; padding-bottom:4px;
+	background: url("../BlueImages/Cbg.jpg") repeat-x bottom;
+}
+/**********************************/
+
+
+.NewInfoControl .BCenter_khung {
+	background: url('../BlueImages/HBorder.jpg')  bottom repeat-x;
+	height: 1px; font: normal 1pt Arial ; 
+}
+.NewInfoControl .BLeft_khung {
+	width: 1px;
+	height: 1px;
+	background: url('../BlueImages/BL.gif') repeat-y left;
+	background-repeat: no-repeat;
+}
+.NewInfoControl .BRight_khung {
+	width: 1px;
+	height: 1px;
+	background: url('../BlueImages/BR.gif') repeat-y right;
+}
+
+.NewInfoControl .Header {font:bold 10pt Arial; color:#ffffff; float:left;padding-top:4px;}
+.NewInfoControl .Marquee {height:210px; width:100%}
+.NewInfoControl .icon_khung {
+	float: left;
+	width: 1px;
+	height: 100%;
+	margin-right: 5px;
+}
+.NewInfoControl .Link 
+{
+	font: normal 9pt Arial; color:navy; text-decoration:none;
+}
+
+.NewInfoControl  .Link:hover
+{
+	font: normal 9pt Arial; color:black; text-decoration:underline;
+}
+.NewInfoControl .Item 
+{
+	text-align:justify; padding:3px; padding-left:14px; background:url("../BlueImages/nutvuong.jpg") no-repeat left center;
+}
+

@@ -1,0 +1,229 @@
+﻿.DIV_MenuSystem 
+{
+	background-color:#096DD1; padding:2px;
+	border: solid 1px #2684CE ;
+}
+.DIV_MenuSystem1
+{ 
+	background-color:#096DD1 ; padding-bottom:4px; border:solid 1px #C0CDD5;
+	background: url("../BlueImages/menubg.jpg") repeat-x  bottom;
+}
+.MenuSystem {width:100%; /*border:solid 1px gray;*/ display:table;}
+
+
+
+.MenuSystem .rootGroup
+{
+	height: 24px;
+	/*border-bottom: solid 1px #004080;
+	border-top: solid 1px #BFDBFF;
+	*/
+	cursor:pointer;
+	padding:1px 0px 1px 1px ;
+	color: #ffffff;
+	width:100%; 
+	background:  url('../BlueImages/phantach.jpg') repeat-x bottom!important;
+}
+.tableGroup 
+{
+	border:0px; 
+	margin-top:3px; margin-bottom:3px;
+}
+
+.MenuSystem .rootGroup:hover
+{
+	height: 24px;
+	/*border-bottom: solid 1px #70B9F0;*/
+	cursor:pointer;
+	padding:1px 0px 1px 1px ;
+
+}
+
+.MenuSystem .expandedGroup 
+{	width:7px;
+	height: 24px;
+	background: url('../images/expandGroup.png') no-repeat 2px center;	
+
+}
+
+.MenuSystem .collapsedGroup 
+{
+	background: url('../blueimages/menubg1.gif') no-repeat 4px center;	
+	width:16px;
+	height: 24px;
+}
+
+.rootGroup .text 
+{
+	height: 24px;
+	color: #ffffff;
+	font-family: Arial, Tahoma;
+	font-size:9pt;
+	font-weight:bold;
+	cursor:pointer ;
+	text-align:justify;	
+	padding-right:3px;
+}
+
+.rootGroup .text:hover
+{
+	color: #ffff00;
+	font-family:  Arial, Tahoma;
+	font-size:9pt;
+	cursor:pointer ;
+}
+
+.rootGroup A
+{
+	color: #ffffff;
+	font-family: Arial, Tahoma;
+	font-size:9pt;
+	font-weight:bold;
+	cursor:pointer ;
+	text-decoration:none;
+}
+
+.rootGroup A:hover
+{
+	font-family:  Arial, Tahoma;
+	font-size:9pt;
+	cursor:pointer ;
+	font-weight:bold;	
+	text-decoration:none;
+	color: #ffff00;
+	
+}
+
+.SubMenu 
+{	width:100%;
+	height:22px;
+	border:solid 1px #F0F0F0;
+	padding-top:2px;
+	padding-bottom:2px;
+	background-color:#C3D9FD;
+	border:0px;	
+}
+
+.SubMenu .verticalbar
+{
+	width:4px;
+	background-image: url('../images/SubVertical.gif');
+	background-repeat: repeat-y;
+	background-position:right ;	
+}
+
+.SubMenu .text
+{
+	padding-left: 22px;
+	padding-top:2px;
+	padding-bottom:2px;
+	padding-right:4px;
+	color: #1A1C1D;
+	font-family: Arial, Verdana;
+	font-size:9pt;
+	cursor:pointer ;
+	height:22px;
+	text-align:justify;
+	border-bottom: solid 1px #F5F5F5;
+	background: url('../BlueImages/subarrow.gif') no-repeat  6px center;
+}
+
+.SubMenu .text:hover
+{
+	padding-top:2px;
+	padding-bottom:2px;
+	padding-right:4px;
+	color: navy;
+	font-family: Arial, Verdana;
+	font-size:9pt;
+	cursor:pointer ;
+	font-weight:normal;
+	height:22px;
+	text-align:justify;
+	border-bottom: solid 1px #F5F5F5;
+}
+
+.SubMenu A
+{
+	color: #1A1C1D;
+	font-family: Arial, Verdana;
+	font-size:9pt;
+	cursor:pointer ;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.SubMenu A:hover
+{
+	color: navy;
+	font-family:Arial,  Verdana;
+	font-size:9pt;
+	cursor:pointer ;
+	font-weight:normal;
+	text-decoration:none;
+	
+}
+
+
+.PopupMenu 
+{
+	width:190px;
+	position:absolute;
+	border: solid 1px gray;
+	background-color:#FEFEE1;
+}
+
+.PopupMenu .child
+{
+	width:1px;
+}
+
+.PopupMenu A 
+{
+	color: #000000;
+	font-size:9pt;
+	font-family:Arial,  Verdana;
+	cursor:pointer ;
+	font-weight:bold;	
+	text-decoration:none;
+}
+
+.PopupMenu A:hover
+{
+	color: #FF0000;
+	font-size:9pt;
+	font-family:Arial,  Verdana;
+	cursor:pointer ;
+	font-weight:bold;	
+	text-decoration:none;
+}
+
+.PopupMenu .text 
+{
+	padding: 2px 2px 2px 20px;
+	color: #000000;
+	font-family:Arial,  Verdana;
+	font-size:9pt;
+	cursor: pointer ;
+	height:22px;
+	text-align:justify;
+	border-bottom: solid 1px #F5F5F5;	
+}
+
+.PopupMenu .text:hover
+{
+	padding:2px 7px 2px 20px;
+	color: #ff0000;
+	font-family:Arial,  Verdana;
+	font-size:9pt;
+	cursor:pointer ;
+	height:22px;
+	text-align:justify;
+	border-bottom: solid 1px #F5F5F5;
+	font-weight:bold;	
+}
+
+
+/*                  KẾT THÚC KHAI BÁO STYLE CHO MENUSYSTEM                             */  
+/***************************************************************************************/
+

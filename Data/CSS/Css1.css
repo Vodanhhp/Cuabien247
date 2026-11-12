@@ -1,0 +1,137 @@
+ <style type="text/css">
+        .lienket{       
+            background-color: white;
+            color: black;
+            border: 2px solid #73AD21;
+            border-radius:5px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: "Lucida Sans Unicode";
+        }
+        .lienket:hover{
+            background-color: #73AD21;
+            color:white;
+        }
+        .lienket:active{
+            background-color: green;
+            border-color: green;
+        }
+    </style>
+    
+     <style type="text/css">
+        .hinhanh{       
+            background-color: white;
+            color: black;
+          
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: "Lucida Sans Unicode";
+        }
+        .hinhanh:hover{
+            background-color: #73AD21;
+            color:white;
+        }
+        .hinhanh:active{
+            background-color: green;
+            border-color: green;
+        }
+    </style>
+
+<style>
+/*==Reset CSS==*/
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+/*==Style c&#417; b&#7843;n cho website==*/
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+/*==Style cho menu===*/
+#menu ul {
+  background: #1F568B;
+  list-style-type: none;
+  text-align: center;
+}
+#menu li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
+
+</style>
+ <style type="text/css">
+        .doimauchu{       
+            background-color: white;
+            color: white;
+          
+           
+        }
+        .doimauchu:hover{
+            
+            color:yeallow;
+        }
+        .doimauchu:active{
+            background-color: green;
+            border-color: green;
+        }
+    </style>
+    
+ <style type="text/css">
+        .doimauchu2{       
+            background-color: white;
+            color: white;
+          
+           
+        }
+        .doimauchu2:hover{
+            
+            color:yeallow;
+        }
+        .doimauchu2:active{
+            background-color: white;
+            border-color: blue;
+        }
+    </style>
+      <style type="text/css">
+        .chitiet{       
+            background-color: white;
+            color: black;
+            border: 2px solid #73AD21;
+            border-radius:5px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: "Lucida Sans Unicode";
+        }
+        .chitiet:hover{
+            background-color: #73AD21;
+            color:white;
+        }
+        .chitiet:active{
+            background-color: gray;
+            border-color: gray;
+        }
+    </style>

@@ -1,0 +1,83 @@
+﻿.WeblinksControl {margin-bottom:4px;}
+
+.WeblinksControl .Table_khung {
+	table-layout: fixed;
+	width: 100%;
+}
+
+.WeblinksControl .TRight_khung {
+	width: 10px;
+	height: 30px;
+	background-image: url('../Blueimages/TR.jpg');
+}
+.WeblinksControl .TLeft_khung {
+	width: 10px;
+	height: 30px;
+	background-image: url('../Blueimages/TL.jpg');
+}
+
+.WeblinksControl .TCenter_khung {
+	height: 30px;
+	line-height:30px;
+	background: url('../Blueimages/TC.jpg') no-repeat left top;
+	color: #ffffff;
+	font:bold Arial 9pt;
+	background-color: #0D69BE;
+}
+
+.WeblinksControl .BLeft_khung {
+	width: 10px;
+	height: 15px;
+	background: url('../Blueimages/BL.gif') no-repeat left top ;
+}
+.WeblinksControl .BRight_khung { 
+	width: 10px;
+	height: 15px;
+	background: url('../Blueimages/BR.gif') no-repeat left top;
+}
+
+.WeblinksControl .BCenter_khung {
+	background: url('../Blueimages/BC.gif') repeat-x left top;
+	height: 15px;
+}
+.WeblinksControl .BorderLeft_khung {
+	width: 10px;
+	background: url('../Blueimages/BoL.gif') repeat-y;
+}
+.WeblinksControl .BorderRight_khung {
+	width: 10px;
+	background: url('../Blueimages/BoR.gif') repeat-y;
+}
+
+.WeblinksControl .icon_khung 
+{
+	float: left; height:100%; margin-right: 1px;
+}
+.WeblinksControl .OnlineContainer
+{	
+	
+}
+.WeblinksControl .Header {color:#FDF391; font: bold 9pt Arial; float:left; padding-top:8px;}
+
+
+.WeblinksControl .Node 
+{
+	font: normal 9pt Arial; color:Black; 
+	padding-left:4px; padding-right:4px;
+	padding-top:3px; padding-bottom:3px;
+	text-decoration:none;
+}
+.WeblinksControl .NodeOver 
+{
+	font: normal 9pt Arial; color:blue;
+	padding-left:4px; padding-right:4px;
+	padding-top:3px; padding-bottom:3px;
+	text-decoration:underline;
+}
+.WeblinksControl .NodeSelected 
+{
+	font: normal 9pt Arial; color:#ffffff; background-color:Navy; 
+	padding-left:4px; padding-right:4px;
+	padding-top:3px; padding-bottom:3px;
+	text-decoration:none;
+}

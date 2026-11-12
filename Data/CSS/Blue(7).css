@@ -1,0 +1,55 @@
+﻿.OrganizationListControl
+{
+	margin-bottom:4px;
+}
+
+.OrganizationListControl .Content
+{
+	background-color:#ffffff!important;
+	/*background:url(Images/lightbluebg.jpg) repeat-x bottom;*/
+	padding:0px!important;
+}
+
+.OrganizationListControl .Content .divOrganizationList
+{
+	background:url("../Images/lightbluebg.jpg") repeat-x bottom;
+	width:100%;
+}
+
+
+.OrganizationListControl .tblOrgnizationList TD {width:50%; }
+
+.OrganizationListControl .OrganizationLink
+{
+	color:#006595; font:bold 9pt Arial; margin-right:3px; margin-left:3px; padding-left:14px; background: url("../BlueImages/bullet.gif") no-repeat 2px center;
+}
+
+.OrganizationListControl .OrganizationLink:hover
+{
+	color:#F77B1B;
+}
+
+.OrganizationListControl .ItemLink
+{
+	padding-top:3px; padding-bottom:3px; padding-left:16px;
+	background:url("../Images/nutvuong.jpg") no-repeat 5px center;
+}
+
+.OrganizationListControl .link 
+{
+	 color:#006595; font:normal 9pt Arial; text-decoration:none;
+}
+.OrganizationListControl .link:hover {color:#F77B1B;}
+
+.OrganizationListControl .Date
+{
+	color:Gray ;font:normal 9pt Arial;
+}
+
+.closeBtn
+    {
+        float: right;
+        background: url("../images/close_Btn.png") top left no-repeat;
+        width: 16px;
+        height: 16px;
+    }

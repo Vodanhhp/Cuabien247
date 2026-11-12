@@ -1,0 +1,43 @@
+  <script type="text/javascript">
+
+        function setDockingHeight() {
+
+            var l, c, r, max;
+
+            l = 0; c = 0, r = 0;
+
+
+
+            if (LeftBar != null)
+
+                l = LeftBar.offsetHeight;
+
+            if (typeof (RightBar) != 'undefined')
+
+                r = RightBar.offsetHeight;
+
+
+
+            c = Content.offsetHeight;
+
+            max = l;
+
+            if (max < c) { max = c; };
+
+            if (max < r) { max = r; };
+
+
+
+            if (LeftBar != null)
+
+                LeftBar.style.height = max + 'px';
+
+            Content.style.height = max + 'px';
+
+            if (typeof (RightBar) != 'undefined')
+
+                RightBar.style.height = max + 'px';
+
+        }
+
+    </script>

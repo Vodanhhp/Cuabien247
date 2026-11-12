@@ -1,0 +1,168 @@
+﻿
+.TopMenuControl {
+    background-color: #BFDBFF;
+    empty-cells: show;
+    margin-top: -3px;
+    padding-bottom: 0;
+    padding-top: 2px;
+    text-align: right;
+    width: 100%;
+}
+.TopMenuControl .topmenu * {
+    font: bold 9pt Arial;
+    height: 25px;
+    padding-top: 3px;
+}
+.subtopmenu-search {
+    width: 203px;
+}
+.tdHome {
+    display: none;
+}
+.TopMenuControl .atopmenu * {
+    font: bold 9pt Arial;
+    height: 25px;
+    padding-top: 3px;
+}
+.topmenucontrol-separate {
+    background-color: #FCD067;
+    height: 3px;
+    width: 100%;
+}
+.TopMenuControl .topmenu, .atopmenu {
+    cursor: pointer;
+}
+.TopMenuControl .Date {
+    color: #263B55;
+    float: left;
+    font: bold 9pt Arial !important;
+    left: 0;
+    margin-top: 6px !important;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: relative;
+}
+.TopMenuControl .topmenu .topleft {
+    background: url("../BlueImages/leftborder.gif") no-repeat scroll left top transparent;
+    width: 8px;
+}
+.TopMenuControl .topmenu .topright {
+    background: url("../BlueImages/rightborder.gif") no-repeat scroll left top transparent;
+    width: 8px;
+}
+.TopMenuControl .topmenu .topcontent {
+    background: url("../BlueImages/topmenu_bg.jpg") repeat scroll 0 0 transparent;
+    height: 22px;
+    padding-bottom: 2px;
+    padding-top: 4px;
+}
+.TopMenuControl .topmenu .topseparate {
+    width: 3px !important;
+}
+.TopMenuControl .topmenu .topcontent A {
+    color: #FFF200;
+    font: bold 9pt Arial;
+    height: 21px;
+    text-decoration: none;
+}
+.TopMenuControl .atopmenu .topleft {
+    background: url("../BlueImages/aleftborder.gif") no-repeat scroll left top transparent;
+    width: 8px;
+}
+.TopMenuControl .atopmenu .topright {
+    background: url("../BlueImages/arightborder.gif") no-repeat scroll left top transparent;
+    width: 8px;
+}
+.TopMenuControl .atopmenu .topcontent {
+    background: url("../BlueImages/atopmenu_bg.jpg") repeat scroll 0 0 transparent;
+    height: 22px;
+    padding-bottom: 2px;
+    padding-top: 4px;
+}
+.TopMenuControl .atopmenu .topseparate {
+    width: 3px !important;
+}
+.TopMenuControl .atopmenu .topcontent A {
+    color: #FFFFFF;
+    font: bold 9pt Arial;
+    height: 21px;
+    text-decoration: none;
+}
+.TopMenuControl .topmenu:hover .topleft {
+    background: url("../BlueImages/hleftborder.gif") no-repeat scroll left top transparent;
+}
+.TopMenuControl .topmenu:hover .topright {
+    background: url("../BlueImages/hrightborder.gif") no-repeat scroll left top transparent;
+}
+.TopMenuControl .topmenu:hover .topcontent {
+    background: url("../BlueImages/htopmenu_bg.jpg") repeat scroll 0 0 transparent;
+}
+.TopMenuControl .topmenu:hover .topcontent A {
+    color: #FFFFFF;
+}
+.subtopmenu .subtopmenu-table {
+    table-layout: fixed;
+}
+.subtopmenu .subtopmenu-table .searchbar-table {
+    table-layout: fixed;
+}
+.subtopmenu-main {
+    margin-bottom: 3px;
+}
+.subtopmenu .search-textbox {
+    height: 17px !important;
+    width: 159px !important;
+}
+.subtopmenu {
+    background: none repeat scroll 0 0 #EBF5FF;
+    height: 27px;
+    padding: 2px 4px;
+    width: 100%;
+}
+.subtopmenu .submenu-container .Title-Link {
+    background: url("../BlueImages/nutvuong.gif") no-repeat scroll 4px center transparent;
+    color: navy;
+    margin-right: 16px;
+    padding-left: 16px;
+}
+.subtopmenu .submenu-container .Title-Link:hover {
+    color: #F77233;
+}
+.subtopmenu-icon {
+    background: url("../BlueImages/Rss.gif") no-repeat scroll 3px center transparent;
+    width: 70px;
+}
+.subtopmenu .searchbar {
+    width: 200px;
+}
+.subtopmenu .searchtext {
+    background: url("../BlueImages/bg_search.jpg") repeat scroll 0 0 transparent;
+    height: 23px;
+    padding-left: 3px;
+    padding-right: 3px;
+    vertical-align: middle;
+    width: 160px;
+}
+.subtopmenu .search-textbox {
+    height: 17px !important;
+    width: 160px !important;
+}
+.subtopmenu .submenu-container .submenutop-content {
+    height: 23px;
+    overflow: hidden;
+    padding-top: 6px;
+    text-align: center;
+    width: 100%;
+}
+.subtopmenu .submenu-container .sublink {
+    background: url("../BlueImages/bulletsubmenu.gif") no-repeat scroll left center transparent;
+    color: Navy;
+    font: 9pt Arial;
+    padding-left: 8px;
+    padding-right: 12px;
+    text-decoration: none;
+}
+.subtopmenu .submenu-container .sublink:hover {
+    color: Red;
+}
+

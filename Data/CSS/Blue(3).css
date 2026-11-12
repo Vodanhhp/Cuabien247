@@ -1,0 +1,177 @@
+﻿.ImpressionListControl
+{
+
+	padding-top:6px;
+	padding-bottom:2px;
+	border:solid 1px #1C7BC4;
+	margin-bottom:4px;
+}
+.ImpressionListControl * {font: normal 9pt Arial;}
+
+
+/*************************** Hiển thị theo hàng ********************************/
+.ImpressionTableHorizontal .colSummary 
+{
+	background: #ffffff url("../BlueImages/bluebg.jpg") repeat-x  bottom;
+	padding-right:8px;
+	padding-left:4px;
+	text-align:justify ;
+}
+
+.ImpressionTableHorizontal .colSummary .cellList 
+{
+	background:transparent;
+}
+
+.ImpressionTableHorizontal .colSummary .Summary
+{
+	padding-bottom:8px;
+	border-bottom:solid 1px #c0c0c0;
+	
+}
+
+.ImpressionTableHorizontal .colSummary .Summary img 
+{width:172px !important; height:148px!important; margin-right:10px !important;}
+
+.ImpressionTableHorizontal .colSummary .cellSummaryTitle 
+{
+	padding-left:40px;
+	padding-bottom:4px;
+	height:35px;
+	background: url("../images/icon_tinnoibat.png") no-repeat left center;
+}
+
+.ImpressionTableHorizontal .colSummary .cellDate
+{
+	padding-left:40px; color:Gray; padding-bottom:6px;
+}
+
+.ImpressionTableHorizontal .colSummary .SummaryTitle
+{
+	color:Navy;
+	font: bold 10pt Arial;
+	text-decoration:none; cursor:pointer;
+}
+
+.ImpressionTableHorizontal .colSummary .ImpressionList .Date {color:Gray; font: normal 11px tahoma}
+.ImpressionTableHorizontal .colImage
+{
+	display:none !important;
+	width:0px;
+	text-align:center;
+}
+
+.ImpressionTableHorizontal .ImpressionList
+{
+	margin-top:10px; border:none; background-color:transparent!important
+}
+.ImpressionTableHorizontal .ImpressionList .link 
+{
+	color:#075099;
+	font: normal 9pt Arial;	
+	background-color:transparent;
+}
+.ImpressionTableHorizontal .ImpressionList .link:hover{color:Red;}
+
+.ImpressionTableHorizontal .ImpressionList .ImpressionTitle
+{
+	padding-left:24px;
+	padding-top: 3px; padding-bottom:3px;
+	text-align:justify;
+	background: transparent url("../images/bullet.png") no-repeat 4px center;
+}
+/*******************************************************************************/
+
+
+/*************************** Hiển thị theo cột ********************************/
+.ImpressionTableVertical .colSummary 
+{
+	padding-right:10px;
+	padding-left:4px;
+	background: #ffffff url("../BlueImages/bluebg.jpg") repeat-x  bottom;
+}
+
+.ImpressionTableVertical .colSummary .cellSummaryTitle
+{
+	padding-top:4px;
+	padding-bottom:2px;
+}
+
+.ImpressionTableVertical .colSummary .cellDate
+{
+	padding-top:2px; padding-bottom:4px;
+	color:#EE7D17;
+}
+
+.ImpressionTableVertical .colSummary .SummaryTitle
+{
+	color:Navy;
+	font: bold 10pt Arial;
+	text-decoration:none; cursor:pointer;
+}
+
+.ImpressionTableVertical .colSummary .imagesummary
+{
+	width:100%; text-align:center ; padding-bottom: 4px;
+}
+
+.ImpressionTableVertical .colSummary .imagesummary IMG
+{
+	width:99%!important; height:auto!important;	
+}
+
+.ImpressionTableVertical .colImage 
+{
+	/*
+	border: solid 1px #dedede;
+	background: #ffffff;
+	*/
+	display:none !important;
+	text-align:center;
+	width:0px;
+}
+
+.ImpressionTableVertical .colListTitle
+{
+	width:260px;
+	padding-left:4px; padding-right:8px;
+	text-align:justify ;
+	background: #ffffff url("../BlueImages/bluebg.jpg") repeat-x  bottom;
+}
+
+
+.ImpressionTableVertical .colListTitle .Header
+{
+	height:30px;
+	background: url("../images/icon_tinnoibat.png") no-repeat left center; 
+}
+
+.ImpressionTableVertical .colListTitle .Header .ImpressionLabel
+{
+	color: #EE7D17;
+	font: bold 12pt Tahoma, Arial !important;
+	margin-left:40px;
+}
+
+.ImpressionTableVertical .colListTitle .ImpressionList 
+{
+	background-color:#ffffff !important; border:none !important; margin-bottom:6px;
+}
+
+
+.ImpressionTableVertical .colListTitle .link
+{
+	color:Black;
+	font: normal 9pt Arial;
+}
+.ImpressionTableVertical .colListTitle .link:hover {color:Red;}
+
+.ImpressionTableVertical .colListTitle .ImpressionTitle
+{
+	padding-left:12px;
+	padding-top: 3px; padding-bottom:3px;
+	text-align:justify;
+	background:#ffffff url("../images/bullet.png") no-repeat left center;
+	border-bottom: dashed 1px #d0d0d0;
+}
+
