@@ -87,7 +87,7 @@
             min-width: 320px;
             max-height: 160px;
             overflow: hidden;
-            border-radius: 12px;
+            border-radius: 0; /* Đã bỏ bo tròn góc */
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
             border: 3px solid #ffffff;
             outline: 2px solid #cbd5e1;
@@ -393,12 +393,7 @@
 </head>
 <body>
 
-    <div class="top-utility">
-        <div class="utility-inner">
-            <div class="contact-pill">💬 Zalo: <strong>0912.500.396</strong></div>
-            <div class="contact-pill">✉️ Email: <strong>tuanluongpham@gmail.com</strong></div>
-        </div>
-    </div>
+   
 
     <header class="site-header">
         <div class="header-inner">
@@ -418,9 +413,10 @@
             <button class="mobile-toggle" onclick="toggleMobileMenu()">☰ Danh mục chuyên mục ▼</button>
             
             <ul class="nav-list" id="navList">
-                <li class="nav-item">
-                    <a class="nav-link" target="_self" href="index.htm">🏠 Trang chủ</a>
-                </li>
+               <li class="nav-item">
+    <a href="javascript:window.top.location.reload()" class="nav-link">🏠 Trang chủ</a>
+</li>
+
 
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0)" onclick="toggleMobileDropdown(this)">📚 Tài liệu ▾</a>
